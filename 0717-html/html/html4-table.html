@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>table</title>
+    </head>
+    <body style="padding-bottom:100px">
+<!--        table属性: width  height  border  cellpadding:单元格的内边距  cellspacing:单元格之间的间距
+			border后面不加像素,有的浏览器会把1和0视为t和f.不管写多少数字都只有1.
+			border-collapse:collapse可以把表格的的边框合并.
+-->
+<!--        td属性: rowspan:跨行(上下)  colspan:跨列(左右)-->
+        <table width="500px" border="1" cellpadding="10" cellspacing="0">
+			<!--thead和tbody之间的表格不能跨行合并-->
+            <caption>学生信息表</caption>
+            <colgroup>
+                <col color="red"/>
+            </colgroup>
+            <thead>
+                <tr>
+                    <td colspan="2">姓名 学号</td>
+                    <td>性别</td>
+                    <td>成绩</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">kiana&amp;mei</td>
+                    <td>231</td>
+                    <td>nv</td>
+                    <td>74</td>
+                </tr>
+                <tr>
+                    <td>321</td>
+                    <td>nv</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>himeko</td>
+                    <td>142</td>
+                    <td>nv</td>
+                    <td>93</td>
+                </tr>
+                <tr>
+                    <td>teresa</td>
+                    <td>116</td>
+                    <td>nv</td>
+                    <td>99</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>ft</td>
+                    <td>ft</td>
+                    <td>ft</td>
+                    <td>ft</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

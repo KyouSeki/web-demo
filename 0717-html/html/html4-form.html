@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <title>form</title>
+    </head>
+    <body>
+        <!-- form   action:提交路径 method:提交方法    提交之后每个数据根据name对应-->
+        <form id="" class="" action="3.html" method="get/post" enctype="multipart/form-data">
+            <!--文本框输入-->
+            <label for="aa">姓名：</label>
+            <input type="text" name="userName" id="aa"/><br/>
+            <label for="pwd">密码：</label>
+            <input type="password" name="userpwd" id="pwd"/><br/>
+            <!--单选框 radio-->
+            <label>性别：</label>
+            <input id="boy" type="radio" name="sex"/>
+            <label for="boy">男</label>
+            <input type="radio" name="sex"/>
+            <label>女</label>
+            <input type="radio" name="sex"/>
+            <label>春哥</label><br/>
+            <!--复选框 checkbox -->
+            <label>爱好:</label>
+            <input type="checkbox" name="hobby"/>
+            <label>睡觉</label>
+            <input type="checkbox" name="hobby"/>
+            <label>吃饭</label>
+            <input type="checkbox" name="hobby"/>
+            <label>撸猫</label><br/>
+            <!--文件上传-->
+            <label>文件上传:</label>
+            <input type="file" name="picture"/><br/>
+            <!--提交按钮-->
+            <input type="submit" value="登录"/>
+            <!--image 用图片提交-->
+            <input type="image" src="ges/teresa.jpg"/>
+            <!--hidden 隐藏-->
+            <input type="hidden" value=""/>
+            <!--重置-->
+            <input type="reset"/><br/>
+            
+            <!--下拉选择框-->
+            <label>地址</label>
+            <select>
+                <option>请选择</option>
+                <option>大连</option>
+                <option selected>贵阳</option>
+                <option>上海</option>
+            </select>
+            
+            <!--文字区域-->
+            <textarea cols="80" rows="20">
+            </textarea>
+            <!--按钮-->
+            <button type="button">按钮</button>
+            <hr/>
+            <!--属性 readonly:只读  checked:默认选中  disabled:不可用  selected:默认选中  required:必填-->
+            <input type="text" value="18604030201" readonly/>
+            <br/>
+            <input type="checkbox" checked/>
+            <br/>
+            <button type="submit" disabled>提交</button>
+            <br/>
+<!--			select的value是在option里的,jq获取select的val就可以取到被选中的,js必须取被选中的option的下标的value-->
+            <select name="address">
+                <option>请选择</option>
+                <option value="大年">大连</option>
+                <option value="贵阳" selected>贵阳</option>
+                <option value="上海">上海</option>
+            </select>
+        </form>
+    </body>
+</html>
