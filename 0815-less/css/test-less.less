@@ -1,0 +1,139 @@
+//1.定义了一个变量@color等于red,css中直接调用@color就可以变red.后定义的变量会覆盖先定义的
+@color:orange;
+.box{
+	width: 300px;
+	height: 300px;
+//	background-color: @color;
+	.borderRadius(20px,green);
+}
+
+//2.混合/混入Mixinst
+/*
+定义一个方法.borderRadius()里面可以写样式,此方法可以在别的选择器中调用.borderRadius().
+还可以在()写一个参数@rad,然后调用方法时给@rad传一个参数值,@rad:10px可以给参数设置一个10的默认值
+参数可以写多个,用逗号隔开,调用时必须按顺序写多个参数.
+*/
+
+.borderRadius(){
+	border-radius: 5px;
+}
+.borderRadius(@rad:10px,@bgcolor:red){
+	border-radius: @rad;
+	background-color: @bgcolor;
+}
+.buttonMix(@wid:100px,@rad:5px){
+	width: @wid;
+	height: 60px;
+	border-radius: @rad;
+	border: 0;
+}
+.boxShadow(@x:3px,@y:4px,@blur:5px,@shaColor:#000){
+	box-shadow: @x @y @blur @shaColor;
+//	box-shadow: @arguments;   不考虑处理个别参数时可以用此关键字,表示所有的变量
+}
+.btn{
+	.buttonMix(200px,20px);
+	.boxShadow(4px,5px,6px,#666);
+//	.gradient();
+}
+/*.gradient(@li:linear-gradient,@address:bottom,@graColor1:red,@graColor2:orange){
+	background:@li(to @address,@graColor1,@graColor2);
+}*/
+
+
+
+//3.less里的嵌套规则,可以把子级写在父级里面,和css的语法不一样,(&代表自身,可以搭配伪类选择器使用)
+
+
+.main{
+	height: 500px;
+	overflow: hidden;
+	background-color: #ddd;
+	section{
+		float: left;
+		height: 500px;
+		width: 70%;
+		background-color: greenyellow;
+		.link{
+			display: block;
+			height: 200px;
+			font-size: 30px;
+			background-color: bisque;
+			border-radius: 10px;
+			&:hover{
+				text-decoration: none;
+				color: 000;
+			}
+		}
+		.disabled{
+			background-color: #ddd;
+			color: #fff;
+		}
+	}
+	aside{
+		float: right;
+		height: 500px;
+		width: 25%;
+		background-color: aquamarine;
+	}
+}
+/*
+4.Operation
+	1.四则运算 + - * / :可以对变量进行四则运算.
+	2.支持一些不同单位的换算
+*/
+
+/*
+5.functions
+	亮度
+	lighten(@color,10%),表示比指定颜色亮10%
+	darken(@color,10%),表示比指定颜色暗10%
+	饱和度
+	saturate(@color,10%),比指定颜色浓10%
+	desaturate(@color,10%),比指定颜色浅10%
+	色调
+	spin(@color,+-10);表示在指定颜色色值上加或者减10
+	透明度
+	fadein(@color,10%);
+	fadeout(@color,10%);
+	
+	提取颜色
+	hue(@color); 提取颜色
+	saturation(@color);  提取饱和度
+	lightness(@color)  提取亮度
+*/	
+
+@testColor:darkmagenta;
+@heightTest:100px;
+.item{
+	height: @heightTest;
+	background-color: crimson;
+}
+
+.item2{
+	margin-top: 20px;
+	height: @heightTest*2;
+	background-color:hsl(hue(@testColor),saturation(@testColor),lightness(@testColor));
+	.item-btn	{
+		height: 30px;
+		width: 100px;
+		line-height: 30px;
+		background-color: darkturquoise;
+		color: @color11;
+	}
+}
+
+/*6.命名空间:可以引用别的div里的所有样式*/
+
+.test{
+	.item2 .item-btn;
+}
+
+/*变量范围——Scope
+	在选择器里定义一个变量不会影响到外面的全局变量,js的话重新定义变量全局也会改变
+*/
+@color11:#728fe1;
+.test{
+	@color11:red;
+	color: @color11;
+}

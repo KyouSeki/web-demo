@@ -1,0 +1,89 @@
+/*
+    盒子模型:magrin  border  padding  content(width,height)
+        两种解释模式:正常模式;box大小=border+padding+content
+                   怪异模式;box大小=content
+*/
+body{
+    margin: 0;
+}
+/*
+.box{
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    margin: 50px;
+    border: 10px solid red;
+    background-color: aquamarine;
+    box-sizing: border-box;  css border-box:怪异模式   content-box:正常模式
+}
+*/
+.box{
+    width: 500px;
+}
+.item1{
+    width: 910px;
+    height: 90px;
+    background-color: #14f835;
+    margin-bottom: 20px;
+}
+.item2{
+    margin-bottom: 20px;
+}
+.item2-bd{
+    float: left;
+    width: 290px;
+    height: 180px;
+    background-color: #28f4ed;
+}
+.item2-bd.mar{
+    margin: 0 20px;
+}
+.clear{ zoom:1;}
+.clear:before,
+.clear:after{
+    clear: both;
+    content: "";
+    margin: 0;
+    padding: 0;
+    display: block;
+    visibility: hidden;
+}
+.item3-left{
+    width: 600px;
+    float: left;
+}
+.item3-left1{
+    margin-bottom: 10px;
+}
+.item3-left1-1{
+    float: left;
+    width: 290px;
+    height: 100px;
+    background: #f6f814;
+}
+.item3-right{
+    float: left;
+    width: 290px;
+    height: 210px;
+    margin-left: 20px;
+    background-color: #f87a14;
+}
+.item4{
+    margin-top: 10px;
+    width: 910px;
+}
+.item4-bd{
+    float: left;
+    width: 445px;
+    height: 160px;
+    background-color: #f814f6;
+}
+.right{
+    float: right;
+}
+.item5{
+    width: 910px;
+    height: 60px;
+    margin-top: 20px;
+    background-color: #8a14f8;
+}

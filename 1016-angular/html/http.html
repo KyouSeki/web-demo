@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			.red{
+				color: red;
+			}
+			.pink{
+				background-color: pink;
+			}
+			.gyellow{
+				background-color: greenyellow;
+			}
+		</style>
+		<script src="../js/angular.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myController">
+		<!--<ul>
+			<li ng-repeat="item in items track by $index" ng-bind="item" ng-class="{'red':$first}"></li>
+		</ul>-->
+		<table border="1">
+			<tr ng-class="{'pink':true}">
+				<td>编号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+			</tr>
+			<tr ng-repeat="res in results | limitTo:'4' track by $index" ng-class="{'pink':$odd,'gyellow':$even}">
+				<td>{{res.num}}</td>
+				<td>{{res.name}}</td>
+				<td>{{res.age}}</td>
+			</tr>
+		</table>
+		<script>
+			var app = angular.module("myApp",[]);
+			app.controller("myController",function($scope,$http){
+			
+//			  1.method
+//				可以是 GET/POST/PUT/DELETE/HEAD/JSONP
+//			  2.url:绝对的或者相对的请求目标,接口路径
+//			  3.params(字符串map或者对象)
+//			  	这个键的值是一个字符串map或对象,会被转换成查询字符串追加在URL后面,如果值不是字符串,会被json序列化.
+//			  4.data(字符串或者对象)
+//			  	这个对象中包含了将会被当做消息体发送给服务器的数据,通常在发送POST请求时使用.
+				
+				//另一种写法
+				//$http.get('/url',config).then(successCallback,errorCallback);
+				//$http.post('/url',data,config).then(successCallback,errorCallback);
+				
+				$http({
+					method:"GET",
+					url:"../js/http.json"
+				}).then(function sucessCallback(result){
+					$scope.results = result.data.list;
+				}, function errorCallback(result){
+					
+				})
+				
+				$scope.items = ["aa","bb","cc"];
+				
+//				ng-repeat:
+//					用来遍历一个集合或为集合中的每个元素生成一个模板实例.
+//					集合中的每个元素都会被赋予自己的模板和作用域,同时每个模板实例额作用域中都会暴露一些特殊的属性.
+//					
+					//使用ng-repeat的时候就会生成下面的模板实例,不需要var,直接使用就可以
+//					$index:遍历的进度(0...length-1).
+//					$first:当元素是遍历的第一个时,值为true.
+//					$middle:当元素处于第一个和最后一个元素之间时,值为true.
+//					$last:当元素时遍历的最后一个时,值为true.
+//					$even:当$index值是偶数时,值为true.
+//					$odd:当$index值是奇数时,值为true
+			})
+		</script>
+	</body>
+</html>

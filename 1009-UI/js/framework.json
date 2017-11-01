@@ -1,0 +1,18 @@
+{
+	"point":[{
+		"code":"89757",
+		"name":"翔米1",
+		"num":"2",
+		"status":true
+	},{
+		"code":"89333",
+		"name":"翔米2",
+		"num":"4",
+		"status":true
+	},{
+		"code":"89421",
+		"name":"翔米5",
+		"num":"2",
+		"status":false
+	}]
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<style></style>
+		<script src="../js/angular.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="first">
+			<strong>{{name}}</strong>
+		</div>
+		<div ng-controller="second">
+			<h1>{{name}}</h1>
+		</div>
+		<script>
+			//rootscope 可以连接不同的控制器作用域里的数据
+			var app = angular.module("myApp",[]);
+			app.controller("first",function($scope,$rootScope){
+				$rootScope.name="hello";
+				$scope.name="hello";
+			});
+			app.controller("second",function($scope,$rootScope){
+				$scope.name=$rootScope.name;
+			})	
+		</script>
+	</body>
+</html>

@@ -1,0 +1,4121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bootstrap - 简洁、直观、强悍、移动设备优先的前端开发框架，让web开发更迅速、简单。">
+<meta name="author" content="Bootstrap中文网">
+
+<title>
+  
+    组件 &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS 
+  注意：此文件跟随官网最新版本更新，随时会有改变。建议使用下面v3.0.3版本的CDN链接！
+ -->
+<link href="../dist/css/bootstrap.min.css" tppabs="http://v3.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Hi，如果你要在自己的网站上引入bootstrap样式文件的话，请使用当前最新版本v3.0.3的CDN链接，页面加载速度会更快！
+<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+-->
+
+<!-- Documentation extras -->
+<link href="../docs-assets/css/docs.css" tppabs="http://v3.bootcss.com/docs-assets/css/docs.css" rel="stylesheet">
+<link href="../../cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" tppabs="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+<style>
+body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+pre code { background: transparent; }
+@media (min-width: 768px) {
+    .bs-docs-home .bs-social, 
+    .bs-docs-home .bs-masthead-links {
+      margin-left: 0;
+    }
+}
+
+.bs-docs-section p {
+	line-height: 2;
+}
+
+.bs-docs-section p.lead {
+	line-height: 1.4;
+}
+
+
+</style>
+
+<!--[if lt IE 9]><script src="../docs-assets/js/ie8-responsive-file-warning.js" tppabs="http://v3.bootcss.com/docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="../../cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" tppabs="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+  <script src="../../cdn.bootcss.com/respond.js/1.3.0/respond.min.js" tppabs="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../docs-assets/ico/apple-touch-icon-144-precomposed.png">
+                               <link rel="shortcut icon" href="../docs-assets/ico/favicon.png">
+
+
+
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../index.htm" tppabs="http://v3.bootcss.com/" class="navbar-brand">Bootstrap</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../getting-started/index.htm" tppabs="http://v3.bootcss.com/getting-started">起步</a>
+        </li>
+        <li>
+          <a href="../css/index.htm" tppabs="http://v3.bootcss.com/css">CSS</a>
+        </li>
+        <li class="active">
+          <a href="index.htm" tppabs="http://v3.bootcss.com/components">组件</a>
+        </li>
+        <li>
+          <a href="../javascript/index.htm" tppabs="http://v3.bootcss.com/javascript">JavaScript插件</a>
+        </li>
+        <li>
+          <a href="../customize/index.htm" tppabs="http://v3.bootcss.com/customize">定制</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="../about/index.htm" tppabs="http://v3.bootcss.com/about">关于</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>组件</h1>
+        <p>无数可复用的组件，包括图标，下拉菜单，导航，警告框，弹出框等更多功能。</p>
+        
+      </div>
+    </div>
+
+    <!-- Callout for the old docs link -->
+    
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+                      
+                <li>
+  <a href="#glyphicons">Glyphicons图标</a>
+  <ul class="nav">
+    <li><a href="#glyphicons-glyphs">可用的图标</a></li>
+    <li><a href="#glyphicons-how-to-use">如何使用</a></li>
+    <li><a href="#glyphicons-examples">案例</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#dropdowns">下拉菜单</a>
+  <ul class="nav">
+    <li><a href="#dropdowns-example">案例</a></li>
+    <li><a href="#dropdowns-alignment">对齐选项</a></li>
+    <li><a href="#dropdowns-headers">标题</a></li>
+    <li><a href="#dropdowns-disabled">禁用的菜单项</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#btn-groups">按钮组</a>
+  <ul class="nav">
+    <li><a href="#btn-groups-single">基本案例</a></li>
+    <li><a href="#btn-groups-toolbar">按钮工具栏</a></li>
+    <li><a href="#btn-groups-sizing">尺寸</a></li>
+    <li><a href="#btn-groups-nested">嵌套</a></li>
+    <li><a href="#btn-groups-vertical">垂直排列</a></li>
+    <li><a href="#btn-groups-justified">两端对齐的链接排列</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#btn-dropdowns">按钮式下拉菜单</a>
+  <ul class="nav">
+    <li><a href="#btn-dropdowns-single">单按钮下拉菜单</a></li>
+    <li><a href="#btn-dropdowns-split">分裂式按钮下拉菜单</a></li>
+    <li><a href="#btn-dropdowns-sizing">尺寸</a></li>
+    <li><a href="#btn-dropdowns-dropup">向上弹出式菜单</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#input-groups">输入框组</a>
+  <ul class="nav">
+    <li><a href="#input-groups-basic">基本案例</a></li>
+    <li><a href="#input-groups-sizing">尺寸</a></li>
+    <li><a href="#input-groups-checkboxes-radios">复选框与单选框</a></li>
+    <li><a href="#input-groups-buttons">附加按钮</a></li>
+    <li><a href="#input-groups-buttons-dropdowns">带下拉菜单的按钮</a></li>
+    <li><a href="#input-groups-buttons-segmented">分段按钮</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#nav">导航</a>
+  <ul class="nav">
+    <li><a href="#nav-tabs">标签页</a></li>
+    <li><a href="#nav-pills">胶囊式标签页</a></li>
+    <li><a href="#nav-justified">两端对齐的导航</a></li>
+    <li><a href="#nav-disabled-links">禁用的链接</a></li>
+    <li><a href="#nav-dropdowns">使用下拉菜单</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#navbar">导航条</a>
+  <ul class="nav">
+    <li><a href="#navbar-default">默认的导航条</a></li>
+    <li><a href="#navbar-forms">表单</a></li>
+    <li><a href="#navbar-buttons">按钮</a></li>
+    <li><a href="#navbar-text">文本</a></li>
+    <li><a href="#navbar-links">非导航的链接</a></li>
+    <li><a href="#navbar-component-alignment">组件对齐</a></li>
+    <li><a href="#navbar-fixed-top">固定在顶部</a></li>
+    <li><a href="#navbar-fixed-bottom">固定在底部</a></li>
+    <li><a href="#navbar-static-top">静止在顶部</a></li>
+    <li><a href="#navbar-inverted">反色的导航条</a></li>
+  </ul>
+</li>
+<li><a href="#breadcrumbs">面包屑导航</a></li>
+<li>
+  <a href="#pagination">分页</a>
+  <ul class="nav">
+    <li><a href="#pagination-default">默认分页</a></li>
+    <li><a href="#pagination-pager">翻页</a></li>
+  </ul>
+</li>
+<li><a href="#labels">标签</a></li>
+<li><a href="#badges">徽章</a></li>
+<li><a href="#jumbotron">大屏幕介绍</a></li>
+<li><a href="#page-header">页面标题</a></li>
+<li>
+  <a href="#thumbnails">缩略图</a>
+  <ul class="nav">
+    <li><a href="#thumbnails-default">默认案例</a></li>
+    <li><a href="#thumbnails-custom-content">定制内容</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#alerts">警告框</a>
+  <ul class="nav">
+    <li><a href="#alerts-examples">案例</a></li>
+    <li><a href="#alerts-dismissable">可关闭的警告框</a></li>
+    <li><a href="#alerts-links">警告框中的链接</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#progress">进度条</a>
+  <ul class="nav">
+    <li><a href="#progress-basic">基本案例</a></li>
+    <li><a href="#progress-alternatives">有意义的替换</a></li>
+    <li><a href="#progress-striped">条纹效果</a></li>
+    <li><a href="#progress-animated">运动效果</a></li>
+    <li><a href="#progress-stacked">堆叠效果</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#media">媒体对象</a>
+  <ul class="nav">
+    <li><a href="#media-default">默认媒体</a></li>
+    <li><a href="#media-list">媒体列表</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#list-group">列表组</a>
+  <ul class="nav">
+    <li><a href="#list-group-basic">基本案例</a></li>
+    <li><a href="#list-group-badges">徽章</a></li>
+    <li><a href="#list-group-linked">链接条目</a></li>
+    <li><a href="#list-group-custom-content">定制内容</a></li>
+    <li><a href="#list-group-custom-content">定制内容</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#panels">面版</a>
+  <ul class="nav">
+    <li><a href="#panels-basic">基本案例</a></li>
+    <li><a href="#panels-heading">带标题的面版</a></li>
+    <li><a href="#panels-alternatives">有意义的替换</a></li>
+    <li><a href="#panels-tables">带表格的面版</a>
+    <li><a href="#panels-list-group">带列表组的面版</a>
+  </ul>
+</li>
+<li><a href="#wells">Well</a></li>
+
+                          
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+          
+
+
+  <!-- Glyphicons
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="glyphicons">Glyphicons 图标</h1>
+    </div>
+
+    <h2 id="glyphicons-glyphs">可用的图标</h2>
+    <p>包括200个来自Glyphicon Halflings的字体图标。<a href="javascript:if(confirm('http://glyphicons.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://glyphicons.com/'" tppabs="http://glyphicons.com/">Glyphicons</a> Halflings 一般不允许免费使用，但是他们的作者允许Bootstrap免费使用。为了表示感谢，希望你在使用时加上<a href="javascript:if(confirm('http://glyphicons.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://glyphicons.com/'" tppabs="http://glyphicons.com/">Glyphicons</a> 的链接。</p>
+    <ul class="bs-glyphicons">
+      <li>
+        <span class="glyphicon glyphicon-adjust"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-adjust</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-align-center"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-align-center</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-align-justify"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-align-justify</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-align-left"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-align-left</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-align-right"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-align-right</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-arrow-down"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-arrow-down</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-arrow-left"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-arrow-left</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-arrow-right"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-arrow-right</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-arrow-up"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-arrow-up</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-asterisk"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-asterisk</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-backward"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-backward</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-ban-circle"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-ban-circle</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-barcode"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-barcode</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-bell"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-bell</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-bold"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-bold</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-book"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-book</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-bookmark"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-bookmark</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-briefcase"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-briefcase</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-bullhorn"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-bullhorn</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-calendar</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-camera"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-camera</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-certificate"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-certificate</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-check"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-check</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-chevron-down"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-chevron-down</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-chevron-left</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-chevron-right</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-chevron-up"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-chevron-up</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-circle-arrow-down"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-circle-arrow-down</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-circle-arrow-left"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-circle-arrow-left</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-circle-arrow-right</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-circle-arrow-up"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-circle-arrow-up</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-cloud"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-cloud</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-cloud-download"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-cloud-download</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-cloud-upload"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-cloud-upload</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-cog"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-cog</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-collapse-down"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-collapse-down</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-collapse-up"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-collapse-up</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-comment"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-comment</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-compressed"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-compressed</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-copyright-mark"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-copyright-mark</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-credit-card"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-credit-card</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-cutlery"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-cutlery</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-dashboard"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-dashboard</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-download"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-download</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-download-alt"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-download-alt</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-earphone"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-earphone</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-edit"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-edit</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-eject"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-eject</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-envelope"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-envelope</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-euro"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-euro</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-exclamation-sign"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-exclamation-sign</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-expand"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-expand</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-export"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-export</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-eye-close"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-eye-close</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-eye-open"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-eye-open</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-facetime-video"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-facetime-video</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-fast-backward"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-fast-backward</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-fast-forward"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-fast-forward</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-file"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-file</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-film"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-film</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-filter"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-filter</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-fire"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-fire</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-flag"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-flag</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-flash"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-flash</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-floppy-disk"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-floppy-disk</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-floppy-open"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-floppy-open</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-floppy-remove"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-floppy-remove</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-floppy-save"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-floppy-save</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-floppy-saved"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-floppy-saved</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-folder-close"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-folder-close</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-folder-open"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-folder-open</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-font"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-font</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-forward"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-forward</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-fullscreen"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-fullscreen</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-gbp"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-gbp</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-gift"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-gift</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-glass"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-glass</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-globe"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-globe</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-hand-down"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-hand-down</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-hand-left"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-hand-left</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-hand-right"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-hand-right</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-hand-up"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-hand-up</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-hd-video"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-hd-video</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-hdd"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-hdd</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-header"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-header</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-headphones"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-headphones</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-heart"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-heart</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-heart-empty"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-heart-empty</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-home"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-home</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-import"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-import</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-inbox"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-inbox</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-indent-left"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-indent-left</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-indent-right"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-indent-right</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-info-sign"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-info-sign</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-italic"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-italic</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-leaf"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-leaf</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-link"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-link</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-list</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-list-alt</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-lock"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-lock</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-log-in"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-log-in</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-log-out"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-log-out</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-magnet"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-magnet</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-map-marker"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-map-marker</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-minus"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-minus</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-minus-sign"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-minus-sign</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-move"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-move</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-music"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-music</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-new-window"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-new-window</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-off"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-off</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-ok"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-ok</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-ok-circle"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-ok-circle</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-ok-sign"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-ok-sign</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-open"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-open</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-paperclip"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-paperclip</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-pause"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-pause</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-pencil</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-phone"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-phone</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-phone-alt"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-phone-alt</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-picture"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-picture</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-plane"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-plane</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-play"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-play</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-play-circle"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-play-circle</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-plus"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-plus</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-plus-sign</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-print"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-print</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-pushpin"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-pushpin</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-qrcode"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-qrcode</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-question-sign"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-question-sign</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-random"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-random</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-record"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-record</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-refresh"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-refresh</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-registration-mark"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-registration-mark</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-remove"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-remove</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-remove-circle"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-remove-circle</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-remove-sign"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-remove-sign</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-repeat"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-repeat</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-resize-full"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-resize-full</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-resize-horizontal"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-resize-horizontal</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-resize-small"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-resize-small</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-resize-vertical"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-resize-vertical</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-retweet"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-retweet</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-road"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-road</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-save"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-save</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-saved"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-saved</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-screenshot"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-screenshot</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sd-video"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sd-video</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-search"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-search</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-send"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-send</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-share"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-share</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-share-alt"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-share-alt</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-shopping-cart</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-signal"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-signal</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sort"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sort</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sort-by-alphabet"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sort-by-alphabet</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sort-by-alphabet-alt"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sort-by-alphabet-alt</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sort-by-attributes"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sort-by-attributes</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sort-by-attributes-alt</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sort-by-order"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sort-by-order</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sort-by-order-alt"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sort-by-order-alt</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sound-5-1"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sound-5-1</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sound-6-1"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sound-6-1</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sound-7-1"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sound-7-1</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sound-dolby"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sound-dolby</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-sound-stereo"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-sound-stereo</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-star"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-star</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-star-empty"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-star-empty</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-stats"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-stats</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-step-backward"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-step-backward</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-step-forward"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-step-forward</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-stop"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-stop</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-subtitles"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-subtitles</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-tag"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-tag</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-tags"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-tags</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-tasks"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-tasks</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-text-height"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-text-height</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-text-width"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-text-width</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-th"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-th</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-th-large"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-th-large</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-th-list"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-th-list</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-thumbs-down"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-thumbs-down</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-thumbs-up"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-thumbs-up</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-time"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-time</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-tint"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-tint</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-tower"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-tower</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-transfer"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-transfer</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-trash"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-trash</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-tree-conifer"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-tree-conifer</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-tree-deciduous"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-tree-deciduous</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-unchecked"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-unchecked</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-upload"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-upload</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-usd"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-usd</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-user"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-user</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-volume-down"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-volume-down</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-volume-off"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-volume-off</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-volume-up"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-volume-up</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-warning-sign</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-wrench"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-wrench</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-zoom-in"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-zoom-in</span>
+      </li>
+      <li>
+        <span class="glyphicon glyphicon-zoom-out"></span>
+        <span class="glyphicon-class">glyphicon glyphicon-zoom-out</span>
+      </li>
+    </ul>
+
+
+    <h2 id="glyphicons-how-to-use">如何使用</h2>
+    <p>出于性能的考虑，所有图标都需要基类和单独的图标类。把下面的代码放在任何地方都能使用。为了留下正确的内补（padding），一定要在图标和文本之间加上一个空格。</p>
+    <div class="bs-callout bs-callout-danger">
+      <h4>不要和其它组件混合使用</h4>
+      <p>图标 class 不能和其它元素联合使用，因为这些图标被设计为独立的元素、独立使用。</p>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;span class=&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="glyphicons-examples">案例</h2>
+    <p>把它们放在按钮，工具栏的按钮组中，导航或输入栏的前面都可以。</p>
+    <div class="bs-example">
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-left"></span></button>
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-center"></span></button>
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-right"></span></button>
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-justify"></span></button>
+        </div>
+      </div>
+      <div class="btn-toolbar" role="toolbar">
+        <button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-star"></span> Star</button>
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star"></span> Star</button>
+        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-star"></span> Star</button>
+        <button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-star"></span> Star</button>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-lg&quot;&gt;
+  &lt;span class=&quot;glyphicon glyphicon-star&quot;&gt;&lt;/span&gt; Star
+&lt;/button&gt;</code></pre>
+
+</div>
+
+  </div>
+
+
+  <!-- Dropdowns
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="dropdowns">下拉菜单</h1>
+    </div>
+    <p class="lead">用于显示链接列表的可切换、有上下文的菜单。<a href="../javascript/index.htm#dropdowns" tppabs="http://v3.bootcss.com/javascript/#dropdowns">JavaScript 下拉菜单插件</a>让它有交互性。</p>
+
+    <h3 id="dropdowns-example">案例</h3>
+    <p>将下拉菜单触发器和下拉菜单都包裹在<code>.dropdown</code>里，或者另一个声明了<code>position: relative;</code>的元素。然后添加组成菜单的HTML代码。</p>
+    <div class="bs-example">
+      <div class="dropdown clearfix">
+        <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;dropdown&quot;&gt;
+  &lt;button class=&quot;btn dropdown-toggle sr-only&quot; type=&quot;button&quot; id=&quot;dropdownMenu1&quot; data-toggle=&quot;dropdown&quot;&gt;
+    Dropdown
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dropdownMenu1&quot;&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="dropdowns-alignment">对齐选项</h3>
+    <p>给下拉菜单<code>.dropdown-menu</code>加上<code>.pull-right</code> 使文字右对齐。</p>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;dropdown-menu pull-right&quot; role=&quot;menu&quot; aria-labelledby=&quot;dLabel&quot;&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+    <h3 id="dropdowns-headers">标题</h3>
+    <p>在任何下拉菜单中均可通过添加标题来标明一组动作。</p>
+    <div class="bs-example">
+      <div class="dropdown clearfix">
+        <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu2" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+          <li role="presentation" class="dropdown-header">Dropdown header</li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation" class="dropdown-header">Dropdown header</li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dropdownMenu2&quot;&gt;
+  &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Dropdown header&lt;/li&gt;
+  ...
+  &lt;li role=&quot;presentation&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
+  &lt;li role=&quot;presentation&quot; class=&quot;dropdown-header&quot;&gt;Dropdown header&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+    <h3 id="dropdowns-disabled">禁用的菜单项</h3>
+    <p>给下拉菜单中的<code>&lt;li&gt;</code>加上<code>.disabled</code>禁用链接。</p>
+    <div class="bs-example">
+      <div class="dropdown clearfix">
+        <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu3" data-toggle="dropdown">
+          Dropdown
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Regular link</a></li>
+          <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another link</a></li>
+        </ul>
+      </div>
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot; aria-labelledby=&quot;dropdownMenu3&quot;&gt;
+  &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Regular link&lt;/a&gt;&lt;/li&gt;
+  &lt;li role=&quot;presentation&quot; class=&quot;disabled&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Disabled link&lt;/a&gt;&lt;/li&gt;
+  &lt;li role=&quot;presentation&quot;&gt;&lt;a role=&quot;menuitem&quot; tabindex=&quot;-1&quot; href=&quot;#&quot;&gt;Another link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+  <!-- Button Groups
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="btn-groups">按钮组</h1>
+    </div>
+    <p class="lead">用按钮组把一组按钮放在同一行里。通过使用我们的<a href="../javascript/index.htm#buttons" tppabs="http://v3.bootcss.com/javascript/#buttons">按钮插件</a>，可以设置为单选框或多选框样式及行为。</p>
+
+    <div class="bs-callout bs-callout-info">
+      <h4>按钮组中的工具提示和弹出框需要特别的设置</h4>
+      <p>当为<code>.btn-group</code>中的元素应用工具提示或弹出框时，必须指定<code>container: 'body'</code>选项，这样可以避免不必要的副作用（例如工具提示或弹出框触发时，会让页面元素变宽和/或失去圆角）。</p>
+    </div>
+
+    <h3 id="btn-groups-single">基本案例</h3>
+    <p>把一系列的<code>.btn</code>按钮放入<code>.btn-group</code>。</p>
+    <div class="bs-example">
+      <div class="btn-group" style="margin: 9px 0 5px;">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;btn-group&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Left&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Middle&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Right&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="btn-groups-toolbar">按钮工具栏</h3>
+    <p>把一组<code>&lt;div class="btn-group"&gt;</code>组合进一个<code>&lt;div class="btn-toolbar"&gt;</code>做成更复杂的组件。</p>
+    <div class="bs-example">
+      <div class="btn-toolbar" role="toolbar" style="margin: 0;">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">1</button>
+          <button type="button" class="btn btn-default">2</button>
+          <button type="button" class="btn btn-default">3</button>
+          <button type="button" class="btn btn-default">4</button>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">5</button>
+          <button type="button" class="btn btn-default">6</button>
+          <button type="button" class="btn btn-default">7</button>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">8</button>
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;btn-toolbar&quot; role=&quot;toolbar&quot;&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="btn-groups-sizing">尺寸</h3>
+    <p>只要给<code>.btn-group</code>加上<code>.btn-group-*</code>，而不是给组中每个按钮都应用大小类。</p>
+    <div class="bs-example">
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-lg">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
+      </div>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
+      </div>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-sm">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
+      </div>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-xs">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;btn-group btn-group-lg&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;btn-group&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;btn-group btn-group-sm&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;btn-group btn-group-xs&quot;&gt;...&lt;/div&gt;</code></pre>
+
+</div>
+
+<h3 id="btn-groups-nested">嵌套</h3>
+    <p>想要把下拉菜单混合到一系列按钮中，就把<code>.btn-group</code>放入另一个<code>.btn-group</code>中。</p>
+    <div class="bs-example">
+      <div class="btn-group">
+        <button type="button" class="btn btn-default">1</button>
+        <button type="button" class="btn btn-default">2</button>
+
+        <div class="btn-group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupDrop1">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;btn-group&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;1&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;2&lt;/button&gt;
+
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+      Dropdown
+      &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+<h3 id="btn-groups-vertical">垂直排列</h3>
+  <p>让一组按钮竖直显示而不是水平显示。</p>
+    <div class="bs-example">
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-default">Button</button>
+        <button type="button" class="btn btn-default">Button</button>
+        <div class="btn-group">
+          <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop1">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-default">Button</button>
+        <button type="button" class="btn btn-default">Button</button>
+        <div class="btn-group">
+          <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop2">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop3">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="btnGroupVerticalDrop4">
+            <li><a href="#">Dropdown link</a></li>
+            <li><a href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;btn-group-vertical&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+</div>
+
+<h3 id="btn-groups-justified">两端对齐的链接排列</h3>
+    <p>让一组按钮拉长为相同的尺寸，适应父元素的宽度。对于按钮组中的按钮下拉菜单也同样适用。</p>
+
+    <div class="bs-callout bs-callout-warning">
+      <h4>特定元素的用法</h4>
+      <p>这只适用 <code>&lt;a&gt;</code> 元素，因为 <code>&lt;button&gt;</code> 元素不能应用这些样式并将其所包含的内容两端对齐（就像<code>display: table-cell;</code>之类的表现形式）。<p>
+    </div>
+
+    <div class="bs-example">
+      <div class="btn-group btn-group-justified">
+        <a class="btn btn-default" role="button">Left</a>
+        <a class="btn btn-default" role="button">Middle</a>
+        <a class="btn btn-default" role="button">Right</a>
+      </div>
+      <br>
+      <div class="btn-group btn-group-justified">
+        <a class="btn btn-default" role="button">Left</a>
+        <a class="btn btn-default" role="button">Middle</a>
+        <div class="btn-group">
+          <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Right dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;btn-group btn-group-justified&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+</div>
+
+  </div>
+
+
+
+  <!-- Split button dropdowns
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="btn-dropdowns">按钮式下拉菜单</h1>
+    </div>
+    <p class="lead">把任何按钮放入<code>.btn-group</code>然后加入正确的菜单标记，就可以做成下拉菜单触发器。</p>
+
+    <div class="bs-callout bs-callout-danger">
+      <h4>插件需求</h4>
+      <p>按钮下拉菜单需要你的版本的Bootstrap的<a href="../javascript/index.htm#dropdowns" tppabs="http://v3.bootcss.com/javascript/#dropdowns">下拉菜单插件</a>。</p>
+    </div>
+
+    <h3 id="btn-dropdowns-single">单按钮下拉菜单</h3>
+    <p>只要改变一些基本的标记，就能把按钮变成下拉菜单开关。</p>
+    <div class="bs-example">
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Default <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Primary <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;!-- Single button --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+    Action &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="btn-dropdowns-split">分裂式按钮下拉菜单</h3>
+    <p>相似地，分裂式按钮下拉菜单也需要同样的改变标记，但只要多一个分开的按钮。</p>
+    <div class="bs-example">
+      <div class="btn-group">
+        <button type="button" class="btn btn-default">Default</button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;!-- Split button --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Action&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-danger dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Toggle Dropdown&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="btn-dropdowns-sizing">尺寸</h3>
+    <p>下拉菜单按钮适用所有尺寸的按钮。</p>
+    <div class="bs-example">
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group">
+          <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+            Large button <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group">
+          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+            Small button <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group">
+          <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+            Extra small button <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div><!-- /btn-toolbar -->
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;!-- Large button group --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+  &lt;button class=&quot;btn btn-default btn-lg dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;&gt;
+    Large button &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!-- Small button group --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+  &lt;button class=&quot;btn btn-default btn-sm dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;&gt;
+    Small button &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!-- Extra small button group --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+  &lt;button class=&quot;btn btn-default btn-xs dropdown-toggle&quot; type=&quot;button&quot; data-toggle=&quot;dropdown&quot;&gt;
+    Extra small button &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="btn-dropdowns-dropup">向上弹出式菜单</h3>
+      <p>给父元素添加<code>.dropup</code>就能使触发的下拉菜单在元素上方。</p>
+    <div class="bs-example">
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group dropup">
+          <button type="button" class="btn btn-default">Dropup</button>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group dropup">
+          <button type="button" class="btn btn-primary">Right dropup</button>
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu pull-right" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+      </div>
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;btn-group dropup&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Dropup&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Toggle Dropdown&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;dropdown-menu&quot;&gt;
+    &lt;!-- Dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+  </div>
+
+
+
+
+  <!-- Input groups
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="input-groups">输入框组</h1>
+    </div>
+    <p class="lead">通过在基于文本的输入框前面，后面或是两边加上文字或按钮，可以扩展对表单的控制。用带有<code>.input-group-addon</code>的<code>.input-group</code>，可以给<code>.form-control</code>前面或后面追加元素。</p>
+
+    <div class="bs-callout bs-callout-danger">
+      <h4>跨浏览器兼容性</h4>
+      <p>这里请避免使用 <code>&lt;select&gt;</code> 元素，因为 WebKit 浏览器不能完全支持它的样式。</p>
+    </div>
+    <div class="bs-callout bs-callout-info">
+      <h4>输入框组中的工具提示和弹出框需要特别的设置</h4>
+      <p>When using tooltips or popovers on elements within an <code>.input-group</code>, you'll have to specify the option <code>container: 'body'</code> to avoid unwanted side effects (such as the element growing wider and/or losing its rounded corners when the tooltip or popover is triggered).</p>
+    </div>
+    <div class="bs-callout bs-callout-info">
+      <h4>不要和<code>.form-group</code>混用</h4>
+      <p>不要直接将<code>.input-group</code>和<code>.form-group</code>混合使用，因为<code>.input-group</code>是一个独立的组件。</p>
+    </div>
+
+
+    <h2 id="input-groups-basic">基本案例</h2>
+    <form class="bs-example bs-example-form" role="form">
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" placeholder="Username">
+      </div>
+      <br>
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-addon">.00</span>
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control">
+        <span class="input-group-addon">.00</span>
+      </div>
+    </form>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;input-group&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;$&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;.00&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="input-groups-sizing">尺寸</h2>
+    <p>给<code>.input-group</code>添加标明尺寸的class，它自己和其中的内容都会自动调整尺寸。没必要给每个元素都重复添加尺寸class。</p>
+    <form class="bs-example bs-example-form" role="form">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" placeholder="Username">
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" placeholder="Username">
+      </div>
+      <br>
+      <div class="input-group input-group-sm">
+        <span class="input-group-addon">@</span>
+        <input type="text" class="form-control" placeholder="Username">
+      </div>
+    </form>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;input-group input-group-lg&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group input-group-sm&quot;&gt;
+  &lt;span class=&quot;input-group-addon&quot;&gt;@&lt;/span&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Username&quot;&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="input-groups-checkboxes-radios">复选框与单选框</h2>
+    <p>可以把复选框或单选框放在输入组里而不是文本前。</p>
+    <form class="bs-example bs-example-form">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <input type="checkbox">
+            </span>
+            <input type="text" class="form-control">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <input type="radio">
+            </span>
+            <input type="text" class="form-control">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+    </form>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-lg-6&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;span class=&quot;input-group-addon&quot;&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;
+      &lt;/span&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+    &lt;/div&gt;&lt;!-- /input-group --&gt;
+  &lt;/div&gt;&lt;!-- /.col-lg-6 --&gt;
+  &lt;div class=&quot;col-lg-6&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;span class=&quot;input-group-addon&quot;&gt;
+        &lt;input type=&quot;radio&quot;&gt;
+      &lt;/span&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+    &lt;/div&gt;&lt;!-- /input-group --&gt;
+  &lt;/div&gt;&lt;!-- /.col-lg-6 --&gt;
+&lt;/div&gt;&lt;!-- /.row --&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="input-groups-buttons">附加按钮</h2>
+    <p>输入组里的有点不同，它需要多加一层元素。 你要用 <code>.input-group-btn</code> 包住按钮而不是 <code>.input-group-addon</code>。这是因为默认的浏览器样式不能被覆盖。</p>
+    <form class="bs-example bs-example-form">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+            <input type="text" class="form-control">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+    </form>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-lg-6&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;span class=&quot;input-group-btn&quot;&gt;
+        &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Go!&lt;/button&gt;
+      &lt;/span&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+    &lt;/div&gt;&lt;!-- /input-group --&gt;
+  &lt;/div&gt;&lt;!-- /.col-lg-6 --&gt;
+  &lt;div class=&quot;col-lg-6&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+      &lt;span class=&quot;input-group-btn&quot;&gt;
+        &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Go!&lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;&lt;!-- /input-group --&gt;
+  &lt;/div&gt;&lt;!-- /.col-lg-6 --&gt;
+&lt;/div&gt;&lt;!-- /.row --&gt;</code></pre>
+
+</div>
+
+    <h2 id="input-groups-buttons-dropdowns">带下拉菜单的按钮</h2>
+    <p></p>
+    <form class="bs-example bs-example-form" role="form">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <input type="text" class="form-control">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+              <ul class="dropdown-menu pull-right" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+    </form>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-lg-6&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;div class=&quot;input-group-btn&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Action &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;&lt;!-- /btn-group --&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+    &lt;/div&gt;&lt;!-- /input-group --&gt;
+  &lt;/div&gt;&lt;!-- /.col-lg-6 --&gt;
+  &lt;div class=&quot;col-lg-6&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+      &lt;div class=&quot;input-group-btn&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Action &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;ul class=&quot;dropdown-menu pull-right&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;&lt;!-- /btn-group --&gt;
+    &lt;/div&gt;&lt;!-- /input-group --&gt;
+  &lt;/div&gt;&lt;!-- /.col-lg-6 --&gt;
+&lt;/div&gt;&lt;!-- /.row --&gt;</code></pre>
+
+</div>
+
+    <h2 id="input-groups-buttons-segmented">分段按钮</h2>
+    <form class="bs-example bs-example-form" role="form">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+            <input type="text" class="form-control">
+          </div><!-- /.input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default" tabindex="-1">Action</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu pull-right" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div><!-- /.input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+    </form>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;input-group&quot;&gt;
+  &lt;div class=&quot;input-group-btn&quot;&gt;
+    &lt;!-- Button and dropdown menu --&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;input-group&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+  &lt;div class=&quot;input-group-btn&quot;&gt;
+    &lt;!-- Button and dropdown menu --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+</div>
+
+
+
+  <!-- Navs
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="nav">导航</h1>
+    </div>
+
+    <p class="lead">Bootstrap中可用的导航有相似的标记，用基类<code>.nav</code>开头，这是相似的部分。改变修饰类可以改变样式。</p>
+
+    <h2 id="nav-tabs">标签页</h2>
+    <p>注意<code>.nav-tabs</code>类需要<code>.nav</code>基类。</p>
+    <div class="bs-example">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Messages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+    <div class="bs-callout bs-callout-info">
+      <h4>Requires JavaScript tabs plugin</h4>
+      <p>For tabs with tabbable areas, you must use the <a href="../javascript/index.htm#tabs" tppabs="http://v3.bootcss.com/javascript/#tabs">tabs JavaScript plugin</a>.</p>
+    </div>
+    <h2 id="nav-pills">胶囊式标签页</h2>
+    <p>用相同的 HTML 标记，但要用<code>.nav-pills</code>代替。</p>
+    <div class="bs-example">
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;nav nav-pills&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Messages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+    <p>Pills 可以竖直堆叠。只要加上<code>.nav-stacked</code>。</p>
+    <div class="bs-example">
+      <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;nav nav-pills nav-stacked&quot;&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="nav-justified">两端对齐的导航</h2>
+    <p>在大于768px的屏幕上，通过<code>.nav-justified</code>可以很容易的让标签页或胶囊式标签呈现出同等宽度。在小屏幕上，导航链接呈现堆叠样式。</p>
+    <div class="bs-callout bs-callout-warning">
+      <h4>Safari 和响应式两端对齐导航</h4>
+      <p>Safari有一个bug：对于两端对齐的导航，水平改变浏览器大小将引起绘制错误。此bug可以在<a href="../examples/justified-nav/index.htm" tppabs="http://v3.bootcss.com/examples/justified-nav/">justified nav example</a>页面得到重现。</p>
+    </div>
+    <div class="bs-example">
+      <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+      <br>
+      <ul class="nav nav-pills nav-justified">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;nav nav-tabs nav-justified&quot;&gt;
+  ...
+&lt;/ul&gt;
+&lt;ul class=&quot;nav nav-pills nav-justified&quot;&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="nav-disabled-links">禁用的链接</h2>
+    <p>对任何导航（包括标签页，pills，或列表，加入<code>.disabled</code>使<strong>链接为灰色且没有鼠标悬停效果</strong>。</p>
+
+    <div class="bs-callout bs-callout-warning">
+      <h4>链接功能没有受到影响</h4>
+      <p>这个类只改变<code>&lt;a&gt;</code>的外观，而不是它的功能。用自定义的 JavaScript 禁用这里的链接。</p>
+    </div>
+
+    <div class="bs-example">
+      <ul class="nav nav-pills">
+        <li><a href="#">Clickable link</a></li>
+        <li><a href="#">Clickable link</a></li>
+        <li class="disabled"><a href="#">Disabled link</a></li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;nav nav-pills&quot;&gt;
+  ...
+  &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;Disabled link&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="nav-dropdowns">使用下拉菜单</h2>
+    <p>用一点点额外HTML和 <a href="../javascript/index.htm#dropdowns" tppabs="http://v3.bootcss.com/javascript/#dropdowns">JavaScript下拉菜单插件</a> 加入下拉菜单。</p>
+
+    <h3>带下拉菜单的导航</h3>
+    <div class="bs-example">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Help</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        Dropdown <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </li>
+  </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;nav nav-tabs&quot;&gt;
+  ...
+  &lt;li class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+      Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+    <h3>带下拉菜单的胶囊式标签页</h3>
+    <div class="bs-example">
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Help</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Dropdown <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;nav nav-pills&quot;&gt;
+  ...
+  &lt;li class=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;
+      Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+  </div>
+
+
+
+  <!-- Navbar
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="navbar">导航条</h1>
+    </div>
+
+    <h2 id="navbar-default">默认的导航条</h2>
+    <p>导航条是在您的应用或网站中作为导航标头的响应式元组件。它们在移动设备上可以折叠（并且可开可关），且在可用的视口宽度增加时变为水平展开模式。</p>
+
+    <div class="bs-callout bs-callout-info">
+      <h4>定制折叠模式与水平模式的阈值</h4>
+      <p>根据你所放在导航条上的内容的长度，也许你需要调整导航条进入折叠模式和水平模式的阈值。通过改变<code>@grid-float-breakpoint</code>变量的值或加入您自己的媒体查询CSS代码均可实现你的需求。</p>
+    </div>
+    <div class="bs-callout bs-callout-danger">
+      <h4>Requires JavaScript</h4>
+      <p>If JavaScript is disabled and the viewport is narrow enough that the navbar collapses, it will be impossible to expand the navbar and view the content within the <code>.navbar-collapse</code>.</p>
+    </div>
+
+    <div class="bs-example">
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;nav class=&quot;navbar navbar-default&quot; role=&quot;navigation&quot;&gt;
+  &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+  &lt;div class=&quot;navbar-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-1&quot;&gt;
+      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Brand&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+  &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-1&quot;&gt;
+    &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+      &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Dropdown &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;form class=&quot;navbar-form navbar-left&quot; role=&quot;search&quot;&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;
+      &lt;/div&gt;
+      &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;dropdown&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;Dropdown &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+        &lt;ul class=&quot;dropdown-menu&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+    <div class="bs-callout bs-callout-danger">
+      <h4>插件依赖</h4>
+      <p>这个响应式导航栏需要你当前版本的Bootstrap的<a href="../javascript/index.htm#collapse" tppabs="http://v3.bootcss.com/javascript/#collapse">collapse插件</a></p>
+    </div>
+
+    <div class="bs-callout bs-callout-warning">
+      <h4>增强导航条的可访问性</h4>
+      <p>要增强可访问性，一定要给每个导航条加上<code>role="navigation"</code>。</p>
+    </div>
+
+
+    <h2 id="navbar-forms">表单</h2>
+    <p>将表单放置于<code>.navbar-form</code>之内可以呈现很好的垂直对齐，并在较窄的viewport中呈现折叠状态。使用对齐选项可以确定其在导航条上出现的位置。</p>
+    <p>通过使用mixin，<code>.navbar-form</code>和 <code>.form-inline</code>共享了很多代码。</p>
+    <div class="bs-example">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;form class=&quot;navbar-form navbar-left&quot; role=&quot;search&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;
+  &lt;/div&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+</div>
+
+    <div class="bs-callout bs-callout-danger">
+      <h4>为输入框添加label标签</h4>
+      <p>如果你没有为输入框添加label标签，屏幕阅读器将会遇到问题。对于导航条内的表单，可以通过<code>.sr-only</code> class隐藏label标签。</p>
+    </div>
+
+
+    <h2 id="navbar-buttons">按钮</h2>
+    <p>对于不包含在<code>&lt;form&gt;</code>中的<code>&lt;button&gt;</code>元素，加上<code>.navbar-btn</code>这个class后可以让它在导航条里垂直居中。</p>
+    <div class="bs-example">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+          <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+        </div>
+      </nav>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;button type=&quot;button&quot; class=&quot;btn btn-default navbar-btn&quot;&gt;Sign in&lt;/button&gt;</code></pre>
+
+</div>
+
+    <div class="bs-callout bs-callout-warning">
+      <h4>Context-specific usage</h4>
+      <p>Like the standard <a href="../css/index.htm#buttons" tppabs="http://v3.bootcss.com/css#buttons">button classes</a>, <code>.navbar-btn</code> can be used on <code>&lt;a&gt;</code> and <code>&lt;input&gt;</code> elements. However, neither <code>.navbar-btn</code> nor the standard button classes should be used on <code>&lt;a&gt;</code> elements within <code>.navbar-nav</code>.</p>
+    </div>
+
+    <h2 id="navbar-text">文本</h2>
+    <p>把文本包裹在<code>.navbar-text</code>中时，为了有正确的行距和颜色，通常使用<code>&lt;p&gt;</code>标签。</p>
+    <div class="bs-example">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-4">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-4">
+          <p class="navbar-text">Signed in as Mark Otto</p>
+        </div>
+      </nav>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;p class=&quot;navbar-text&quot;&gt;Signed in as Mark Otto&lt;/p&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="navbar-links">非导航的链接</h2>
+    <p>或许你希望在标准的导航组件之外添加标准链接，那么，使用<code>.navbar-link</code> class可以让链接有正确的默认颜色和反色。</p>
+    <div class="bs-example">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+          <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+        </div>
+      </nav>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;p class=&quot;navbar-text navbar-right&quot;&gt;Signed in as &lt;a href=&quot;#&quot; class=&quot;navbar-link&quot;&gt;Mark Otto&lt;/a&gt;&lt;/p&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="navbar-component-alignment">组件对齐</h2>
+    <p>用<code>.navbar-left</code>或者<code>.navbar-right</code>工具类给导航链接、表单、按钮或文本对齐。两种类都用到在特定方向的CSS浮动样式。例如，要对齐导航链接，就要把它们放在个分开的、应用了工具类的<code>&lt;ul&gt;</code>里。</p>
+    <p>这些class是<code>.pull-left</code>和<code>.pull-right</code>的mixin版本，但是他们被限定在了媒体查询中，这样可以更容易的在各种尺寸的屏幕上处理导航条组件。</p>
+
+
+    <h2 id="navbar-fixed-top">固定在顶部</h2>
+    <p>添加<code>.navbar-fixed-top</code>可以让导航条固定在顶部。</p>
+    <div class="bs-example bs-navbar-top-example">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;nav class=&quot;navbar navbar-default navbar-fixed-top&quot; role=&quot;navigation&quot;&gt;
+  ...
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+    <div class="bs-callout bs-callout-danger">
+      <h4>需要为body标签设置内补（padding）</h4>
+      <p>这个固定的导航条会遮住页面上的其它内容，除非你给<code>&lt;body&gt;</code>的上方设置了<code>padding</code>。用你自己的值，或用下面给出的代码都可以。提示：导航条的默认高度是50px。</p>
+<div class="highlight">
+<pre><code class="language-css"><span class="tag">body</span> <span class="rules">{ <span class="rule"><span class="attribute">padding-top</span>:<span class="value"> <span class="number">70</span>px</span></span>; <span class="rule">}</span></span></code></pre>
+
+</div>
+      <p>一定要放在Bootstrap CSS的核心文件<strong>之后</strong>。</p>
+    </div>
+
+
+    <h2 id="navbar-fixed-bottom">固定在底部</h2>
+    <p>用<code>.navbar-fixed-bottom</code>代替。</p>
+    <div class="bs-example bs-navbar-bottom-example">
+      <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-7">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-7">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;nav class=&quot;navbar navbar-default navbar-fixed-bottom&quot; role=&quot;navigation&quot;&gt;
+  ...
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+    <div class="bs-callout bs-callout-danger">
+      <h4>需要为body标签设置内部（padding）</h4>
+      <p>这个固定的导航条会遮住页面上的其它内容，除非你给<code>&lt;body&gt;</code>底部设置了<code>padding</code>。用你自己的值，或用下面给出的代码都可以。提示：导航条的默认高度是50px。</p>
+<div class="highlight">
+<pre><code class="language-css"><span class="tag">body</span> <span class="rules">{ <span class="rule"><span class="attribute">padding-bottom</span>:<span class="value"> <span class="number">70</span>px</span></span>; <span class="rule">}</span></span></code></pre>
+
+</div>
+      <p>一定要在加载Bootstrap CSS的核心<strong>后</strong>使用它。</p>
+    </div>
+
+
+    <h2 id="navbar-static-top">静止在顶部</h2>
+      <p>通过添加<code>.navbar-static-top</code>即可创建一个与页面的导航条。它会随着页面向下滚动而消失。和<code>.navbar-fixed-*</code>类不同的是，你不用给<code>body</code>添加padding。</p>
+    <div class="bs-example bs-navbar-top-example">
+      <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-8">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;nav class=&quot;navbar navbar-default navbar-static-top&quot; role=&quot;navigation&quot;&gt;
+  ...
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="navbar-inverted">反色的导航条</h2>
+    <p>通过添加<code>.navbar-inverse</code>类可以改变导航条的外观。</p>
+    <div class="bs-example">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+    </div><!-- /example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;nav class=&quot;navbar navbar-inverse&quot; role=&quot;navigation&quot;&gt;
+  ...
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+  </div>
+
+
+
+  <!-- Breadcrumbs
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+     <h1 id="breadcrumbs">面包屑导航</h1>
+    </div>
+    <p class="lead">用一个带方向的层次表明当前页面的位置。</p>
+    <p>分割符自动地通过CSS的<code>:before</code>和<code>content</code>添加上了。</p>
+    <div class="bs-example">
+      <ol class="breadcrumb">
+        <li class="active">Home</li>
+      </ol>
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li class="active">Library</li>
+      </ol>
+      <ol class="breadcrumb" style="margin-bottom: 5px;">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+      </ol>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ol class=&quot;breadcrumb&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;Data&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+  <!-- Pagination
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="pagination">分页</h1>
+    </div>
+    <p class="lead">为您的网站或应用提供多页的分页组件，或是用更简单的<a href="#pagination-pager">翻页代替</a>。</p>
+
+    <h2 id="pagination-default">默认分页</h2>
+    <p>Rdio启发出了这个简单的分页，用在应用或搜索结果中超级棒。这个大块容易看见，容易缩放并有大块的点击区域。</p>
+    <div class="bs-example">
+      <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;pagination&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;raquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+    <h3>激活和禁用状态</h3>
+    <p>链接在不同情况下可以定制。给不能点击的链接用<code>.disabled</code> 并且用<code>.active</code>显示是当前页。</p>
+    <div class="bs-example">
+      <ul class="pagination">
+        <li class="disabled"><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+     </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;pagination&quot;&gt;
+  &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+    <p>你还可以将active或disabled应用于<code>&lt;span&gt;</code>标签，这样就可以让其保持需要的样式并移除点击功能。</p>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;pagination&quot;&gt;
+  &lt;li class=&quot;disabled&quot;&gt;&lt;span&gt;&amp;laquo;&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;&lt;span&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+
+    <h3>尺寸</h3>
+    <p>想要更小或更大的分页？要得到更多尺寸，加上<code>.pagination-lg</code>或<code>.pagination-sm</code>吧。</p>
+    <div class="bs-example">
+      <div>
+        <ul class="pagination pagination-lg">
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="pagination">
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="pagination pagination-sm">
+          <li><a href="#">&laquo;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">&raquo;</a></li>
+        </ul>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;pagination pagination-lg&quot;&gt;...&lt;/ul&gt;
+&lt;ul class=&quot;pagination&quot;&gt;...&lt;/ul&gt;
+&lt;ul class=&quot;pagination pagination-sm&quot;&gt;...&lt;/ul&gt;</code></pre>
+
+</div>
+
+
+    <h2 id="pagination-pager">翻页</h2>
+    <p>用轻便的标记和样式，就能做个上一页和下一页的简单翻页。用在像博客和杂志这样的简单站点上棒极了。</p>
+
+    <h3>默认案例</h3>
+    <p>在默认的翻页中，链接居中。</p>
+    <div class="bs-example">
+      <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;pager&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+    <h3>对齐链接</h3>
+    <p>您可以把链接向两端对齐作为替代。</p>
+    <div class="bs-example">
+      <ul class="pager">
+        <li class="previous"><a href="#">&larr; Older</a></li>
+        <li class="next"><a href="#">Newer &rarr;</a></li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;pager&quot;&gt;
+  &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;larr; Older&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Newer &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+
+    <h3>可选的禁用状态</h3>
+    <p>翻页链接也用分页中的<code>.disabled</code>工具类。</p>
+    <div class="bs-example">
+      <ul class="pager">
+        <li class="previous disabled"><a href="#">&larr; Older</a></li>
+        <li class="next"><a href="#">Newer &rarr;</a></li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;pager&quot;&gt;
+  &lt;li class=&quot;previous disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&amp;larr; Older&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Newer &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+  <!-- Labels
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="labels">标签</h1>
+    </div>
+    <p class="lead"></p>
+
+    <h3>案例</h3>
+    <div class="bs-example">
+      <h1>Example heading <span class="label label-default">New</span></h1>
+      <h2>Example heading <span class="label label-default">New</span></h2>
+      <h3>Example heading <span class="label label-default">New</span></h3>
+      <h4>Example heading <span class="label label-default">New</span></h4>
+      <h5>Example heading <span class="label label-default">New</span></h5>
+      <h6>Example heading <span class="label label-default">New</span></h6>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;h3&gt;Example heading &lt;span class=&quot;label label-default&quot;&gt;New&lt;/span&gt;&lt;/h3&gt;</code></pre>
+
+</div>
+
+  <h3>可用的变体</h3>
+  <p>用下面的任何一个class即可改变标签的外观。</p>
+    <div class="bs-example">
+      <span class="label label-default">Default</span>
+      <span class="label label-primary">Primary</span>
+      <span class="label label-success">Success</span>
+      <span class="label label-info">Info</span>
+      <span class="label label-warning">Warning</span>
+      <span class="label label-danger">Danger</span>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;span class=&quot;label label-default&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;label label-primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;label label-success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;label label-info&quot;&gt;Info&lt;/span&gt;
+&lt;span class=&quot;label label-warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;label label-danger&quot;&gt;Danger&lt;/span&gt;</code></pre>
+
+</div>
+
+  </div>
+
+
+
+  <!-- Badges
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="badges">徽章</h1>
+    </div>
+    <p class="lead">给链接，Bootstrap导航等等加入<code>&lt;span class="badge"&gt;</code>，可以容易地高亮新的或未读的条目。</p>
+
+    <div class="bs-example">
+      <a href="#">Inbox <span class="badge">42</span></a>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;badge&quot;&gt;42&lt;/span&gt;&lt;/a&gt;</code></pre>
+
+</div>
+
+    <h4>自动消失（self colapsing）</h4>
+    <p>当没有新的或未读的条目时，里面没有内容的徽章会消失（通过CSS的<code>:empty</code>选择器实现）。</p>
+
+    <div class="bs-callout bs-callout-danger">
+      <h4>跨浏览器兼容性</h4>
+      <p>徽章在Internet Explorer 8中不会自动消失，因为它需要对<code>:empty</code>选择器的支持。</p>
+    </div>
+
+    <h4>适应导航的激活状态</h4>
+    <p>在胶囊式导航和列表式导航中的徽章有内置的样式。</p>
+    <div class="bs-example">
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages <span class="badge">3</span></a></li>
+      </ul>
+      <br>
+      <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+        <li class="active">
+          <a href="#">
+            <span class="badge pull-right">42</span>
+            Home
+          </a>
+        </li>
+        <li><a href="#">Profile</a></li>
+        <li>
+          <a href="#">
+            <span class="badge pull-right">3</span>
+            Messages
+          </a>
+        </li>
+      </ul>
+      <br>
+      <button class="btn btn-primary" type="button">
+        Messages <span class="badge">4</span>
+      </button>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;nav nav-pills nav-stacked&quot;&gt;
+  &lt;li class=&quot;active&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+      &lt;span class=&quot;badge pull-right&quot;&gt;42&lt;/span&gt;
+      Home
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+  <!-- Jumbotron
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="jumbotron">大屏幕介绍</h1>
+    </div>
+    <p>轻量，灵活的可选组件，扩展整个视角，展示您站点上的关键内容。要让大屏幕介绍是屏幕宽度，请别把它包括在<code>.container</code>。</p>
+    <div class="bs-example">
+      <div class="jumbotron">
+        <h1>Hello, world!</h1>
+        <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;jumbotron&quot;&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+    <p>如果需要让大屏幕介绍（jumbotron）占据全部宽度并且去掉圆角，只需将其放到所有<code>.container</code>外面，并在其内部添加一个<code>.container</code>。</p>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;jumbotron&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+  <!-- Page header
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="page-header">页面标题</h1>
+    </div>
+    <p>简单的<code>h1</code>样式，可以适当地分出空间且分开页面中的章节。像其它组件一样，它可以使用<code>h1</code>的默认<code>small</code>元素（添加了一些额外的样式）。</p>
+    <div class="bs-example">
+      <div class="page-header">
+        <h1>Example page header <small>Subtext for header</small></h1>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;page-header&quot;&gt;
+  &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+  <!-- Thumbnails
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="thumbnails">缩略图</h1>
+    </div>
+    <p class="lead">用缩略图组件扩展Bootstrap的<a href="../css/index.htm#grid" tppabs="http://v3.bootcss.com/css/#grid">栅格系统</a>，可以简单地显示栅格样式的图像，视频，文本，等等。</p>
+
+    <h3 id="thumbnails-default">默认案例</h3>
+    <p>Boostrap的缩略图的默认设计仅需最小的标记，就能展示带链接的图片。</p>
+    <div class="bs-example">
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img data-src="holder.js/100%x180" tppabs="http://v3.bootcss.com/components/holder.js/100%x180" alt="Generic placeholder thumbnail">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img data-src="holder.js/100%x180" tppabs="http://v3.bootcss.com/components/holder.js/100%x180" alt="Generic placeholder thumbnail">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img data-src="holder.js/100%x180" tppabs="http://v3.bootcss.com/components/holder.js/100%x180" alt="Generic placeholder thumbnail">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img data-src="holder.js/100%x180" tppabs="http://v3.bootcss.com/components/holder.js/100%x180" alt="Generic placeholder thumbnail">
+          </a>
+        </div>
+      </div>
+    </div><!-- /.bs-example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-6 col-md-3&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;thumbnail&quot;&gt;
+      &lt;img data-src=&quot;holder.js/100%x180&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="thumbnails-custom-content">定制内容</h3>
+    <p>用一点点额外的标记，可以把任何种类的HTML内容像标题，段落或按钮加入缩略图。</p>
+    <div class="bs-example">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img data-src="holder.js/300x200" tppabs="http://v3.bootcss.com/components/holder.js/300x200" alt="Generic placeholder thumbnail">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img data-src="holder.js/300x200" tppabs="http://v3.bootcss.com/components/holder.js/300x200" alt="Generic placeholder thumbnail">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img data-src="holder.js/300x200" tppabs="http://v3.bootcss.com/components/holder.js/300x200" alt="Generic placeholder thumbnail">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.bs-example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-6 col-md-4&quot;&gt;
+    &lt;div class=&quot;thumbnail&quot;&gt;
+      &lt;img data-src=&quot;holder.js/300x200&quot; alt=&quot;...&quot;&gt;
+      &lt;div class=&quot;caption&quot;&gt;
+        &lt;h3&gt;Thumbnail label&lt;/h3&gt;
+        &lt;p&gt;...&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; role=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+
+  <!-- Alerts
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="alerts">警告框</h1>
+    </div>
+    <p class="lead">为典型的用户动作提供少数可用且灵活的反馈消息。要用关闭功能，请使用<a href="../javascript/index.htm#alerts" tppabs="http://v3.bootcss.com/javascript/#alerts">jQuery警告框插件</a>.</p>
+
+    <h2 id="alerts-examples">案例</h2>
+    <p>为了得到基本的警告信息，把任何文本和可选的关闭按钮放入<code>.alert</code>和四种有意义的类中（例如，<code>.alert-success</code>）。</p>
+
+    <div class="bs-callout bs-callout-info">
+      <h4>没有默认类</h4>
+      <p>警告框没有默认类，只有基类和修饰类。默认的灰色警告框并没有多少意义。所以您要使用一种内容类。从成功，消息，警告或危险中任选其一。</p>
+    </div>
+
+    <div class="bs-example">
+      <div class="alert alert-success">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </div>
+      <div class="alert alert-info">
+        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+      </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;alert alert-success&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger&quot;&gt;...&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h2 id="alerts-dismissable">可关闭的警告框</h2>
+    <p>可以用一个可选的<code>.alert-dismissable</code>和关闭按钮。</p>
+    <div class="bs-example">
+      <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;alert alert-warning alert-dismissable&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you&#39;re not looking too good.
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <div class="bs-callout bs-callout-warning">
+      <h4>确定在所有设备上的正确行为</h4>
+      <p>一定要给<code>data-dismiss="alert"</code>属性用上<code>&lt;button&gt;</code>。</p>
+    </div>
+
+    <h2 id="alerts-links">警告框中的链接</h2>
+    <p>用<code>.alert-link</code>工具类，可以快速提供在任何警告框中相符的颜色。</p>
+    <div class="bs-example">
+      <div class="alert alert-success">
+        <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+      </div>
+      <div class="alert alert-info">
+        <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
+      </div>
+      <div class="alert alert-warning">
+        <strong>Warning!</strong> Best check yo self, you're <a href="#" class="alert-link">not looking too good</a>.
+      </div>
+      <div class="alert alert-danger">
+        <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;alert alert-success&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;alert-link&quot;&gt;...&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+
+  <!-- Progress bars
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="progress">进度条</h1>
+    </div>
+    <p class="lead">提供工作或动作的实时反馈，只用简单且灵活的进度条。</p>
+
+    <div class="bs-callout bs-callout-danger">
+      <h4>跨浏览器兼容性</h4>
+      <p>进度条使用了CSS3的transition和animation属性来完成一些效果。这些特性在Internet Explorer 9或以下版本中、Firefox的老版本中没有被支持。Opera 12不支持animation属性。</p>
+    </div>
+
+    <h3 id="progress-basic">基本案例</h3>
+    <p>默认的进度条。</p>
+    <div class="bs-example">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          <span class="sr-only">60% Complete</span>
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="progress-alternatives">有意义的替换</h3>
+    <p>为了一致的样式，进度条使用与按钮和警告框相同的类。</p>
+    <div class="bs-example">
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+          <span class="sr-only">40% Complete (success)</span>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+          <span class="sr-only">20% Complete</span>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+          <span class="sr-only">60% Complete (warning)</span>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+          <span class="sr-only">80% Complete (danger)</span>
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 40%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;40% Complete (success)&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-info&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;20&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 20%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;20% Complete&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-warning&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete (warning)&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-danger&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;80&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 80%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;80% Complete&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="progress-striped">条纹效果</h3>
+    <p>用一个渐变可以创建条纹效果，在IE8中不可用。</p>
+    <div class="bs-example">
+      <div class="progress progress-striped" >
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+          <span class="sr-only">40% Complete (success)</span>
+        </div>
+      </div>
+      <div class="progress progress-striped">
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+          <span class="sr-only">20% Complete</span>
+        </div>
+      </div>
+      <div class="progress progress-striped">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+          <span class="sr-only">60% Complete (warning)</span>
+        </div>
+      </div>
+      <div class="progress progress-striped">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+          <span class="sr-only">80% Complete (danger)</span>
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;progress progress-striped&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;40&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 40%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;40% Complete (success)&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress progress-striped&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-info&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;20&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 20%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;20% Complete&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress progress-striped&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-warning&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;60% Complete (warning)&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress progress-striped&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-danger&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;80&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 80%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;80% Complete (danger)&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="progress-animated">运动效果</h3>
+    <p>给<code>.progress-striped</code>加上<code>.active</code>使它由右向左运动。在IE的所有版本不可用。</p>
+    <div class="bs-example">
+      <div class="progress progress-striped active">
+        <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"><span class="sr-only">45% Complete</span></div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;progress progress-striped active&quot;&gt;
+  &lt;div class=&quot;progress-bar&quot;  role=&quot;progressbar&quot; aria-valuenow=&quot;45&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 45%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;45% Complete&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="progress-stacked">堆叠效果</h3>
+    <p>把多个进度条放入同一个<code>.progress</code>，使它们堆叠。</p>
+    <div class="bs-example">
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" style="width: 35%">
+          <span class="sr-only">35% Complete (success)</span>
+        </div>
+        <div class="progress-bar progress-bar-warning" style="width: 20%">
+          <span class="sr-only">20% Complete (warning)</span>
+        </div>
+        <div class="progress-bar progress-bar-danger" style="width: 10%">
+          <span class="sr-only">10% Complete (danger)</span>
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;progress&quot;&gt;
+  &lt;div class=&quot;progress-bar progress-bar-success&quot; style=&quot;width: 35%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;35% Complete (success)&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;progress-bar progress-bar-warning&quot; style=&quot;width: 20%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;20% Complete (warning)&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;progress-bar progress-bar-danger&quot; style=&quot;width: 10%&quot;&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;10% Complete (danger)&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+
+  <!-- Media object
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="media">媒体对象</h1>
+    </div>
+    <p class="lead">这是一个抽象的样式，用以构建不同类型的组件，这些组件都具有在文本内容的左或右对齐的图片（就像blog内容或Tweets等）。</p>
+
+    <h3 id="media-default">默认媒体</h3>
+    <p>默认的媒体允许在一个内容块的左边或右边浮动一个媒体对象（图像，视频，音频）</p>
+    <div class="bs-example">
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" data-src="holder.js/64x64" tppabs="http://v3.bootcss.com/components/holder.js/64x64" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </div>
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" data-src="holder.js/64x64" tppabs="http://v3.bootcss.com/components/holder.js/64x64" alt="Generic placeholder image">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" data-src="holder.js/64x64" tppabs="http://v3.bootcss.com/components/holder.js/64x64" alt="Generic placeholder image">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">Nested media heading</h4>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.bs-example -->
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;media&quot;&gt;
+  &lt;a class=&quot;pull-left&quot; href=&quot;#&quot;&gt;
+    &lt;img class=&quot;media-object&quot; src=&quot;...&quot; alt=&quot;...&quot;&gt;
+  &lt;/a&gt;
+  &lt;div class=&quot;media-body&quot;&gt;
+    &lt;h4 class=&quot;media-heading&quot;&gt;Media heading&lt;/h4&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="media-list">媒体列表</h3>
+    <p>用一点点额外的标记，就能在列表内使用媒体（对评论或文章列表很有用）。</p>
+    <div class="bs-example">
+      <ul class="media-list">
+        <li class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object" data-src="holder.js/64x64" tppabs="http://v3.bootcss.com/components/holder.js/64x64" alt="Generic placeholder image">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">Media heading</h4>
+            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+            <!-- Nested media object -->
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" data-src="holder.js/64x64" tppabs="http://v3.bootcss.com/components/holder.js/64x64" alt="Generic placeholder image">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Nested media heading</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                <!-- Nested media object -->
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" data-src="holder.js/64x64" tppabs="http://v3.bootcss.com/components/holder.js/64x64" alt="Generic placeholder image">
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">Nested media heading</h4>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Nested media object -->
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" data-src="holder.js/64x64" tppabs="http://v3.bootcss.com/components/holder.js/64x64" alt="Generic placeholder image">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Nested media heading</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="media">
+          <a class="pull-right" href="#">
+            <img class="media-object" data-src="holder.js/64x64" tppabs="http://v3.bootcss.com/components/holder.js/64x64" alt="Generic placeholder image">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">Media heading</h4>
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+          </div>
+        </li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;media-list&quot;&gt;
+  &lt;li class=&quot;media&quot;&gt;
+    &lt;a class=&quot;pull-left&quot; href=&quot;#&quot;&gt;
+      &lt;img class=&quot;media-object&quot; src=&quot;...&quot; alt=&quot;...&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;media-body&quot;&gt;
+      &lt;h4 class=&quot;media-heading&quot;&gt;Media heading&lt;/h4&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+  <!-- List group
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="list-group">列表组</h1>
+    </div>
+    <p class="lead">列表组是灵活又强大的组件，不仅仅用于显示简单的成列表的元素，还用于复杂的定制的内容。</p>
+
+    <h3 id="list-group-basic">基本案例</h3>
+    <p>最简单的列表只是无顺序列表，列表条目和正确的类。Build upon it with the options that follow, or your own CSS as needed.</p>
+    <div class="bs-example">
+      <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;Cras justo odio&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;Morbi leo risus&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;Porta ac consectetur ac&lt;/li&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;Vestibulum at eros&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+    <h3 id="list-group-badges">徽章</h3>
+    <p>给列表组加入徽章，它会自动地放在右面。</p>
+    <div class="bs-example">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span class="badge">14</span>
+          Cras justo odio
+        </li>
+        <li class="list-group-item">
+          <span class="badge">2</span>
+          Dapibus ac facilisis in
+        </li>
+        <li class="list-group-item">
+          <span class="badge">1</span>
+          Morbi leo risus
+        </li>
+      </ul>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;ul class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item&quot;&gt;
+    &lt;span class=&quot;badge&quot;&gt;14&lt;/span&gt;
+    Cras justo odio
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+
+    <h3 id="list-group-linked">链接条目</h3>
+    <p>用<code>&lt;a&gt;</code>标签而不是<code>&lt;li&gt;</code>标签（也就是说父元素是<code>&lt;div&gt;</code>而不是<code>&lt;ul&gt;</code>）。没必要给每个元素都加一个父元素。</p>
+    <div class="bs-example">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">
+          Cras justo odio
+        </a>
+        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item">Morbi leo risus</a>
+        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item">Vestibulum at eros</a>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;list-group&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item active&quot;&gt;
+    Cras justo odio
+  &lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Dapibus ac facilisis in&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Morbi leo risus&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Porta ac consectetur ac&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Vestibulum at eros&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="list-group-custom-content">定制内容</h3>
+    <p>在里面可以加几乎任何HTML，甚至是像下面的带链接的列表组。</p>
+    <div class="bs-example">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">
+          <h4 class="list-group-item-heading">List group item heading</h4>
+          <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        </a>
+        <a href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">List group item heading</h4>
+          <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        </a>
+        <a href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">List group item heading</h4>
+          <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        </a>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;list-group&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item active&quot;&gt;
+    &lt;h4 class=&quot;list-group-item-heading&quot;&gt;List group item heading&lt;/h4&gt;
+    &lt;p class=&quot;list-group-item-text&quot;&gt;...&lt;/p&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+  </div>
+
+
+
+
+  <!-- Panels
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="panels">面版</h1>
+    </div>
+    <p class="lead">虽然不总是必须，但是某些时候你可能需要将某些内容放到一个盒子里。对于这种情况，可以试试面板组件。</p>
+
+    <h3 id="panels-basic">基本案例</h3>
+    <p>默认的<code>.panel</code>所做的只是提供基本的边界和内部，来包含内容。</p>
+    <div class="bs-example">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Basic panel example
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    Basic panel example
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="panels-heading">带标题的面版</h3>
+    <p>用<code>.panel-heading</code>可以简单地加入一个标题容器。您也可以用<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>和<code>.panel-title</code>类加入预定义样式的标题。</p>
+    <div class="bs-example">
+      <div class="panel panel-default">
+        <div class="panel-heading">Panel heading without title</div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;Panel heading without title&lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    Panel content
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;
+    &lt;h3 class=&quot;panel-title&quot;&gt;Panel title&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    Panel content
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="panels-footer">带脚注的面版</h3>
+    <p>把按钮或次要的文本放入<code>.panel-footer</code>。注意面版的脚注<strong>不会</strong>从带意义的替换中继承颜色，因为它不是在前面的内容。</p>
+    <div class="bs-example">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          Panel content
+        </div>
+        <div class="panel-footer">Panel footer</div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    Panel content
+  &lt;/div&gt;
+  &lt;div class=&quot;panel-footer&quot;&gt;Panel footer&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+<h3 id="panels-alternatives">有意义的替换</h3>
+    <p>像其它组件一样，可以简单地通过加入有意义的状态类，给特定的内容使用更有意义的面版。</p>
+    <div class="bs-example">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;panel panel-primary&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;panel panel-success&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;panel panel-info&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;panel panel-warning&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;panel panel-danger&quot;&gt;...&lt;/div&gt;</code></pre>
+
+</div>
+
+    <h3 id="panels-tables">带表格的面版</h3>
+    <p>为了无缝的设计，在面版中加入<code>.table</code>。如果有<code>.panel-body</code>，就在表格的上方加上一个用于分割的边界。</p>
+    <div class="bs-example">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Panel heading</div>
+        <div class="panel-body">
+          <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;panel panel-default&quot;&gt;
+  &lt;!-- Default panel contents --&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;Panel heading&lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Table --&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+    <p>如果没有<code>.panel-body</code>，面版标题会和表格连接起来，没有空隙。</p>
+    <div class="bs-example">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Panel heading</div>
+
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;panel panel-default&quot;&gt;
+  &lt;!-- Default panel contents --&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;Panel heading&lt;/div&gt;
+
+  &lt;!-- Table --&gt;
+  &lt;table class=&quot;table&quot;&gt;
+    ...
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+
+
+    <h3 id="panels-list-group">带列表组的面版</h3>
+    <p>可以简单地在任何面版中使用最大宽度的<a href="#list-group">列表组</a>。</p>
+    <div class="bs-example">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Panel heading</div>
+        <div class="panel-body">
+          <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+
+        <!-- List group -->
+        <ul class="list-group">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Morbi leo risus</li>
+          <li class="list-group-item">Porta ac consectetur ac</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;panel panel-default&quot;&gt;
+  &lt;!-- Default panel contents --&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;Panel heading&lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;!-- List group --&gt;
+  &lt;ul class=&quot;list-group&quot;&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;Cras justo odio&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;Morbi leo risus&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;Porta ac consectetur ac&lt;/li&gt;
+    &lt;li class=&quot;list-group-item&quot;&gt;Vestibulum at eros&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+  </div>
+
+
+
+
+
+  <!-- Wells
+  ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <h1 id="wells">Well</h1>
+    </div>
+
+    <h3>默认效果</h3>
+    <p>把Well用在元素上，能有嵌入(inset)的的简单效果。</p>
+    <div class="bs-example">
+      <div class="well">
+        Look, I'm in a well!
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;well&quot;&gt;...&lt;/div&gt;</code></pre>
+
+</div>
+    <h3>可选类</h3>
+    <p>用这两种可选修饰类，可以控制内补（padding）和圆角。</p>
+    <div class="bs-example">
+      <div class="well well-lg">
+        Look, I'm in a large well!
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;well well-lg&quot;&gt;...&lt;/div&gt;</code></pre>
+
+</div>
+
+    <div class="bs-example">
+      <div class="well well-sm">
+        Look, I'm in a small well!
+      </div>
+    </div>
+<div class="highlight">
+<pre><code class="language-html">&lt;div class=&quot;well well-sm&quot;&gt;...&lt;/div&gt;</code></pre>
+
+</div>
+  </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        
+
+        <p>Designed and built with all the love in the world by <a href="javascript:if(confirm('http://twitter.com/mdo  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://twitter.com/mdo'" tppabs="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="javascript:if(confirm('http://twitter.com/fat  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://twitter.com/fat'" tppabs="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under <a href="javascript:if(confirm('http://www.apache.org/licenses/LICENSE-2.0  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.apache.org/licenses/LICENSE-2.0'" tppabs="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="javascript:if(confirm('http://creativecommons.org/licenses/by/3.0/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://creativecommons.org/licenses/by/3.0/'" tppabs="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Bootstrap中文文档版权归<a href="javascript:if(confirm('http://www.bootcss.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.bootcss.com/'" tppabs="http://www.bootcss.com/">Bootstrap中文网</a>及<a href="mailto:wangsai@bootcss.com">译者</a>所有。<p>
+        <ul class="footer-links">
+          <li>当前版本： v3.0.3</li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('http://v2.bootcss.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://v2.bootcss.com/'" tppabs="http://v2.bootcss.com/">Bootstrap 2.3.2 中文文档</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('http://www.bootcss.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.bootcss.com/'" tppabs="http://www.bootcss.com/">Bootstrp中文网</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('http://blog.getbootstrap.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://blog.getbootstrap.com/'" tppabs="http://blog.getbootstrap.com/">官方博客</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('https://github.com/twbs/bootstrap/issues?state=open  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/twbs/bootstrap/issues?state=open'" tppabs="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('https://github.com/twbs/bootstrap/releases  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/twbs/bootstrap/releases'" tppabs="https://github.com/twbs/bootstrap/releases">Releases</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../cdn.bootcss.com/jquery/1.10.2/jquery.min.js" tppabs="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- Bootstrap core JS file
+  注意：此文件跟随官网最新版本更新，随时会有改变。建议使用下面v3.0.3版本的CDN链接！
+ -->
+<script src="../dist/js/bootstrap.js" tppabs="http://v3.bootcss.com/dist/js/bootstrap.js"></script>
+
+<!-- Hi，如果你要在自己的网站上引入bootstrap JS文件的话，请使用当前最新版本v3.0.3的CDN链接，页面加载速度会更快！
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+-->
+
+<script src="../../cdn.bootcss.com/holder/2.0/holder.min.js" tppabs="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+<script src="../../cdn.bootcss.com/highlight.js/7.3/highlight.min.js" tppabs="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+<script src="../docs-assets/js/application.js" tppabs="http://v3.bootcss.com/docs-assets/js/application.js"></script>
+
+
+
+<!-- Analytics
+================================================== -->
+    <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3d8e7fc0de8a2a75f2ca3bfe128e6391' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+
+  </body>
+</html>

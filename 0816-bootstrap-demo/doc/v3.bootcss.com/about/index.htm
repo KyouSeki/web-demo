@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bootstrap - ç®€æ´ã€ç›´è§‚ã€å¼ºæ‚ã€ç§»åŠ¨è®¾å¤‡ä¼˜å…ˆçš„å‰ç«¯å¼€å‘æ¡†æ¶ï¼Œè®©webå¼€å‘æ›´è¿…é€Ÿã€ç®€å•ã€‚">
+<meta name="author" content="Bootstrapä¸­æ–‡ç½‘">
+
+<title>
+  
+    å…³äºBootstrap &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS 
+  æ³¨æ„ï¼šæ­¤æ–‡ä»¶è·Ÿéšå®˜ç½‘æœ€æ–°ç‰ˆæœ¬æ›´æ–°ï¼Œéšæ—¶ä¼šæœ‰æ”¹å˜ã€‚å»ºè®®ä½¿ç”¨ä¸‹é¢v3.0.3ç‰ˆæœ¬çš„CDNé“¾æ¥ï¼
+ -->
+<link href="../dist/css/bootstrap.min.css" tppabs="http://v3.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Hiï¼Œå¦‚æœä½ è¦åœ¨è‡ªå·±çš„ç½‘ç«™ä¸Šå¼•å…¥bootstrapæ ·å¼æ–‡ä»¶çš„è¯ï¼Œè¯·ä½¿ç”¨å½“å‰æœ€æ–°ç‰ˆæœ¬v3.0.3çš„CDNé“¾æ¥ï¼Œé¡µé¢åŠ è½½é€Ÿåº¦ä¼šæ›´å¿«ï¼
+<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+-->
+
+<!-- Documentation extras -->
+<link href="../docs-assets/css/docs.css" tppabs="http://v3.bootcss.com/docs-assets/css/docs.css" rel="stylesheet">
+<link href="../../cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" tppabs="http://cdn.bootcss.com/highlight.js/7.3/styles/github.min.css" rel="stylesheet">
+<style>
+body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+pre code { background: transparent; }
+@media (min-width: 768px) {
+    .bs-docs-home .bs-social, 
+    .bs-docs-home .bs-masthead-links {
+      margin-left: 0;
+    }
+}
+
+.bs-docs-section p {
+	line-height: 2;
+}
+
+.bs-docs-section p.lead {
+	line-height: 1.4;
+}
+
+
+</style>
+
+<!--[if lt IE 9]><script src="../docs-assets/js/ie8-responsive-file-warning.js" tppabs="http://v3.bootcss.com/docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="../../cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js" tppabs="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+  <script src="../../cdn.bootcss.com/respond.js/1.3.0/respond.min.js" tppabs="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../docs-assets/ico/apple-touch-icon-144-precomposed.png">
+                               <link rel="shortcut icon" href="../docs-assets/ico/favicon.png">
+
+
+
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../index.htm" tppabs="http://v3.bootcss.com/" class="navbar-brand">Bootstrap</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="../getting-started/index.htm" tppabs="http://v3.bootcss.com/getting-started">èµ·æ­¥</a>
+        </li>
+        <li>
+          <a href="../css/index.htm" tppabs="http://v3.bootcss.com/css">CSS</a>
+        </li>
+        <li>
+          <a href="../components/index.htm" tppabs="http://v3.bootcss.com/components">ç»„ä»¶</a>
+        </li>
+        <li>
+          <a href="../javascript/index.htm" tppabs="http://v3.bootcss.com/javascript">JavaScriptæ’ä»¶</a>
+        </li>
+        <li>
+          <a href="../customize/index.htm" tppabs="http://v3.bootcss.com/customize">å®šåˆ¶</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active">
+          <a href="index.htm" tppabs="http://v3.bootcss.com/about">å…³äº</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>å…³äºBootstrap</h1>
+        <p>ä»‹ç»Bootstrapå†å²ã€æ ¸å¿ƒå¼€å‘å°ç»„æˆå‘˜å’Œä¸æ–­å¢é•¿çš„ç¤¾åŒºèµ„æºã€‚</p>
+        
+      </div>
+    </div>
+
+    <!-- Callout for the old docs link -->
+    
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+                                  
+                <li>
+  <a href="#history">å†å²</a>
+</li>
+<li>
+  <a href="#team">æ ¸å¿ƒå¼€å‘å°ç»„</a>
+</li>
+<li>
+  <a href="#community">ç¤¾åŒº</a>
+</li>
+<li>
+  <a href="#translations">æ–‡æ¡£ç¿»è¯‘</a>
+</li>
+
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+          
+
+
+<!-- History
+================================================== -->
+<div class="bs-docs-section">
+  <div class="page-header">
+    <h1 id="history">å†å²</h1>
+  </div>
+  <p class="lead">Bootstrapæœ€åˆæ˜¯ç”±å°±èŒäºTwitterçš„ä¸€ä¸ªè®¾è®¡å¸ˆå’Œä¸€ä¸ªå·¥ç¨‹å¸ˆåˆ›é€ çš„ï¼Œç°åœ¨ï¼ŒBootstrapå·²ç»æˆä¸ºäº†ä¸–ç•Œä¸Šæœ€æµè¡Œçš„å‰ç«¯å¼€å‘æ¡†æ¶å’Œå¼€æºé¡¹ç›®ã€‚</p>
+  <p>Bootstrapæœ€åˆæ˜¯ç”±<a href="javascript:if(confirm('https://twitter.com/mdo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/mdo'" tppabs="https://twitter.com/mdo">@mdo</a> and <a href="javascript:if(confirm('https://twitter.com/fat  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/fat'" tppabs="https://twitter.com/fat">@fat</a>äº2010ä¸­æ—¬åˆ›é€ çš„ã€‚åœ¨å¼€æºä¹‹å‰è¢«ç§°ä¸º<em>Twitter Blueprint</em>ã€‚ç»è¿‡å‡ ä¸ªæœˆçš„å¼€å‘ï¼ŒTwitterä¸¾åŠäº†<a href="javascript:if(confirm('https://blog.twitter.com/2010/hack-week  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://blog.twitter.com/2010/hack-week'" tppabs="https://blog.twitter.com/2010/hack-week">first Hack Week</a>ï¼Œä¹‹åï¼Œè¿™ä¸ªé¡¹ç›®è¢«å…¬å¸ƒå‡ºæ¥ï¼Œä¸åŒæ°´å¹³çš„å¼€å‘è€…å‚ä¸è¿›æ¥ï¼Œå½“æ—¶è¿˜æ²¡æœ‰ä»»ä½•å¤–éƒ¨çš„æŒ‡å¯¼ã€‚åœ¨å¼€æºä¹‹å‰çš„è¿‘ä¸€å¹´å¤šçš„æ—¶é—´é‡Œï¼Œè¿™ä¸ªé¡¹ç›®ä½œä¸ºå…¬å¸å†…éƒ¨å·¥å…·å¼€å‘çš„æ ·å¼æŒ‡å—ï¼Œå½“ç„¶ï¼Œç°åœ¨å®ƒä»ç„¶æ‰®æ¼”è€…åŒæ ·çš„è§’è‰²ã€‚</p>
+  <p>Originally <a href="javascript:if(confirm('https://dev.twitter.com/blog/bootstrap-twitter  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://dev.twitter.com/blog/bootstrap-twitter'" tppabs="https://dev.twitter.com/blog/bootstrap-twitter">released</a> on <a href="javascript:if(confirm('https://twitter.com/mdo/statuses/104620039650557952  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/mdo/statuses/104620039650557952'" tppabs="https://twitter.com/mdo/statuses/104620039650557952"><time datetime="2011-08-19 11:25">Friday, August 19, 2011</time></a>, we've since had over <a href="javascript:if(confirm('https://github.com/twbs/bootstrap/releases  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/releases'" tppabs="https://github.com/twbs/bootstrap/releases">twenty releases</a>, including two major rewrites with v2 and v3. With Bootstrap 2, we added responsive functionality to the entire framework as an optional stylesheet. Building on that with Bootstrap 3, we rewrote the library once more to make it responsive by default with a mobile first approach.</p>
+</div>
+
+
+<!-- Team
+================================================== -->
+<div class="bs-docs-section">
+  <div class="page-header">
+    <h1 id="team">æ ¸å¿ƒå¼€å‘å°ç»„</h1>
+  </div>
+  <p class="lead">Bootstrapç”±åˆ›å§‹æˆå‘˜å’Œä¸€ç»„æ ¸å¿ƒè´¡çŒ®è€…ç»´æŠ¤ï¼Œä»–ä»¬ä¸ºç¤¾åŒºæä¾›äº†å·¨å¤§çš„å¸®åŠ©å’Œæ”¯æŒã€‚</p>
+  <div class="list-group bs-team">
+    <div class="list-group-item">
+      <iframe class="github-btn" src="../../ghbtns.com/github-btn.html-user=mdo&type=follow" tppabs="http://ghbtns.com/github-btn.html?user=mdo&type=follow"></iframe>
+      <a class="team-member" href="javascript:if(confirm('https://github.com/mdo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/mdo'" tppabs="https://github.com/mdo">
+        <img src="../../www.gravatar.com/avatar/bc4ab438f7a4ce1c406aadc688427f2c.jpg" tppabs="http://www.gravatar.com/avatar/bc4ab438f7a4ce1c406aadc688427f2c" alt="@mdo">
+        <strong>Mark Otto</strong> <small>@mdo</small>
+      </a>
+    </div>
+    <div class="list-group-item">
+      <iframe class="github-btn" src="../../ghbtns.com/github-btn.html-user=fat&type=follow" tppabs="http://ghbtns.com/github-btn.html?user=fat&type=follow"></iframe>
+      <a class="team-member" href="javascript:if(confirm('https://github.com/fat  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/fat'" tppabs="https://github.com/fat">
+        <img src="../../www.gravatar.com/avatar/a98244cbdacaf1c0b55499466002f7a8.jpg" tppabs="http://www.gravatar.com/avatar/a98244cbdacaf1c0b55499466002f7a8" alt="@fat">
+        <strong>Jacob Thornton</strong> <small>@fat</small>
+      </a>
+    </div>
+    <div class="list-group-item">
+      <iframe class="github-btn" src="../../ghbtns.com/github-btn.html-user=cvrebert&type=follow" tppabs="http://ghbtns.com/github-btn.html?user=cvrebert&type=follow"></iframe>
+      <a class="team-member" href="javascript:if(confirm('https://github.com/cvrebert  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/cvrebert'" tppabs="https://github.com/cvrebert">
+        <img src="../../www.gravatar.com/avatar/edec428c425453955f770095a7d26c50.png" tppabs="http://www.gravatar.com/avatar/edec428c425453955f770095a7d26c50" alt="@cvrebert">
+        <strong>Chris Rebert</strong> <small>@cvrebert</small>
+      </a>
+    </div>
+    <div class="list-group-item">
+      <iframe class="github-btn" src="../../ghbtns.com/github-btn.html-user=juthilo&type=follow" tppabs="http://ghbtns.com/github-btn.html?user=juthilo&type=follow"></iframe>
+      <a class="team-member" href="javascript:if(confirm('https://github.com/juthilo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/juthilo'" tppabs="https://github.com/juthilo">
+        <img src="../../www.gravatar.com/avatar/0f7dd3ce58a416be5685ea6194f82b11.jpg" tppabs="http://www.gravatar.com/avatar/0f7dd3ce58a416be5685ea6194f82b11" alt="@juthilo">
+        <strong>Julian Thilo</strong> <small>@juthilo</small>
+      </a>
+    </div>
+  </div>
+  <p>Get involved with Bootstrap development by <a href="javascript:if(confirm('https://github.com/twbs/bootstrap/issues/new  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/issues/new'" tppabs="https://github.com/twbs/bootstrap/issues/new">opening an issue</a> or submitting a pull request. Read our <a href="javascript:if(confirm('https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md'" tppabs="https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md">contributing guidelines</a> for information on how we develop.</p>
+</div>
+
+
+<!-- Community
+================================================== -->
+<div class="bs-docs-section">
+  <div class="page-header">
+    <h1 id="community">ç¤¾åŒº</h1>
+  </div>
+  <p class="lead">Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.</p>
+  <ul>
+    <li>Read and subscribe to <a href="javascript:if(confirm('http://blog.getbootstrap.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://blog.getbootstrap.com/'" tppabs="http://blog.getbootstrap.com/">The Official Bootstrap Blog</a>.</li>
+    <li>Have a question that's not a feature request or bug report? <a href="javascript:if(confirm('http://groups.google.com/group/twitter-bootstrap  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://groups.google.com/group/twitter-bootstrap'" tppabs="http://groups.google.com/group/twitter-bootstrap">Ask on the mailing list.</a></li>
+    <li>Chat with fellow Bootstrappers using IRC in the <code>irc.freenode.net</code> server, in the <a href="irc://irc.freenode.net/#twitter-bootstrap">##twitter-bootstrap channel</a>.</li>
+    <li>Find inspiring examples of people building with Bootstrap at the <a href="javascript:if(confirm('http://expo.getbootstrap.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://expo.getbootstrap.com/'" tppabs="http://expo.getbootstrap.com/">Bootstrap Expo</a>.</li>
+  </ul>
+  <p>You can also follow <a href="javascript:if(confirm('https://twitter.com/twbootstrap  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://twitter.com/twbootstrap'" tppabs="https://twitter.com/twbootstrap">@twbootstrap on Twitter</a> for the latest gossip and awesome music videos.</p>
+</div>
+
+
+<!-- Translations
+================================================== -->
+<div class="bs-docs-section">
+  <div class="page-header">
+    <h1 id="translations">æ–‡æ¡£ç¿»è¯‘</h1>
+  </div>
+  <p class="lead">Bootstrapç¤¾åŒºæˆå‘˜å·²ç»å°†Bootstrapæ–‡æ¡£ç¿»è¯‘æˆä¸åŒè¯­è¨€ï¼š</p>
+  <ul>
+    <li><a href="../index.htm" tppabs="http://v3.bootcss.com/">Bootstrap ä¸­æ–‡æ–‡æ¡£ (Chinese)</a></li>
+    <li><a href="javascript:if(confirm('http://www.oneskyapp.com/docs/bootstrap/ru  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.oneskyapp.com/docs/bootstrap/ru'" tppabs="http://www.oneskyapp.com/docs/bootstrap/ru">Bootstrap Ğ¿Ğ¾-Ñ€ÑƒÑÑĞºĞ¸ (Russian)</a></li>
+    <li><a href="javascript:if(confirm('http://www.oneskyapp.com/docs/bootstrap/es  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.oneskyapp.com/docs/bootstrap/es'" tppabs="http://www.oneskyapp.com/docs/bootstrap/es">Bootstrap en EspaÃ±ol (Spanish)</a></li>
+    <li><a href="javascript:if(confirm('http://twbs.site-konstruktor.com.ua/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://twbs.site-konstruktor.com.ua/'" tppabs="http://twbs.site-konstruktor.com.ua/">Bootstrap ua Ğ£ĞºÑ€Ğ°Ñ—Ğ½ÑÑŒĞºĞ¾Ñ (Ukrainian)</a></li>
+  </ul>
+  <p>å¦‚æœä½ å·²ç»å°†Bootstrapæ–‡æ¡£ç¿»è¯‘ä¸ºå…¶ä»–è¯­è¨€ï¼Œè¯·<a href="javascript:if(confirm('https://github.com/twbs/bootstrap/issues/new  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/issues/new'" tppabs="https://github.com/twbs/bootstrap/issues/new">æäº¤ä¸€ä¸ªissue</a>å‘Šè¯‰æˆ‘ä»¬ã€‚</p>
+</div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        
+
+        <p>Designed and built with all the love in the world by <a href="javascript:if(confirm('http://twitter.com/mdo  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://twitter.com/mdo'" tppabs="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="javascript:if(confirm('http://twitter.com/fat  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://twitter.com/fat'" tppabs="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under <a href="javascript:if(confirm('http://www.apache.org/licenses/LICENSE-2.0  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.apache.org/licenses/LICENSE-2.0'" tppabs="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="javascript:if(confirm('http://creativecommons.org/licenses/by/3.0/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://creativecommons.org/licenses/by/3.0/'" tppabs="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Bootstrapä¸­æ–‡æ–‡æ¡£ç‰ˆæƒå½’<a href="javascript:if(confirm('http://www.bootcss.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.bootcss.com/'" tppabs="http://www.bootcss.com/">Bootstrapä¸­æ–‡ç½‘</a>åŠ<a href="mailto:wangsai@bootcss.com">è¯‘è€…</a>æ‰€æœ‰ã€‚<p>
+        <ul class="footer-links">
+          <li>å½“å‰ç‰ˆæœ¬ï¼š v3.0.3</li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('http://v2.bootcss.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://v2.bootcss.com/'" tppabs="http://v2.bootcss.com/">Bootstrap 2.3.2 ä¸­æ–‡æ–‡æ¡£</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('http://www.bootcss.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.bootcss.com/'" tppabs="http://www.bootcss.com/">Bootstrpä¸­æ–‡ç½‘</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('http://blog.getbootstrap.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://blog.getbootstrap.com/'" tppabs="http://blog.getbootstrap.com/">å®˜æ–¹åšå®¢</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('https://github.com/twbs/bootstrap/issues?state=open  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/issues?state=open'" tppabs="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="javascript:if(confirm('https://github.com/twbs/bootstrap/releases  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/twbs/bootstrap/releases'" tppabs="https://github.com/twbs/bootstrap/releases">Releases</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../cdn.bootcss.com/jquery/1.10.2/jquery.min.js" tppabs="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- Bootstrap core JS file
+  æ³¨æ„ï¼šæ­¤æ–‡ä»¶è·Ÿéšå®˜ç½‘æœ€æ–°ç‰ˆæœ¬æ›´æ–°ï¼Œéšæ—¶ä¼šæœ‰æ”¹å˜ã€‚å»ºè®®ä½¿ç”¨ä¸‹é¢v3.0.3ç‰ˆæœ¬çš„CDNé“¾æ¥ï¼
+ -->
+<script src="../dist/js/bootstrap.js" tppabs="http://v3.bootcss.com/dist/js/bootstrap.js"></script>
+
+<!-- Hiï¼Œå¦‚æœä½ è¦åœ¨è‡ªå·±çš„ç½‘ç«™ä¸Šå¼•å…¥bootstrap JSæ–‡ä»¶çš„è¯ï¼Œè¯·ä½¿ç”¨å½“å‰æœ€æ–°ç‰ˆæœ¬v3.0.3çš„CDNé“¾æ¥ï¼Œé¡µé¢åŠ è½½é€Ÿåº¦ä¼šæ›´å¿«ï¼
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+-->
+
+<script src="../../cdn.bootcss.com/holder/2.0/holder.min.js" tppabs="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+<script src="../../cdn.bootcss.com/highlight.js/7.3/highlight.min.js" tppabs="http://cdn.bootcss.com/highlight.js/7.3/highlight.min.js"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+<script src="../docs-assets/js/application.js" tppabs="http://v3.bootcss.com/docs-assets/js/application.js"></script>
+
+
+
+<!-- Analytics
+================================================== -->
+    <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3d8e7fc0de8a2a75f2ca3bfe128e6391' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+
+  </body>
+</html>

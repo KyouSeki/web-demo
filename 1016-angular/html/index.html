@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<title>angular-index</title>
+		<style>
+			.tab-bd li{
+				display: none;
+			}
+			.tab-bd .show{
+				display: block;
+				color: green;
+				font-size: 30px;
+			}
+			.hide{
+				display:none;
+			}
+			.color-red{
+				color: yellow;
+			}
+			.news-box{
+				display: flex;
+				flex-flow: row nowrap;
+				margin-top: 20px;
+				width: 600px;
+			}
+			.news-box span,
+			.news-box strong{
+				flex: auto;
+			}
+		</style>
+		<script src="../js/angular.js"></script>
+	</head>
+<!--	ng-controller 定义了一个作用域,一般包括一个完整的模块功能-->
+	<body ng-app="myApp" ng-controller="myController">
+		<h1 ng-style="myStyle">{{hello}}</h1>
+<!--		ng-class可以定义一个变量isRed,这个变量为true时添加calss,否则不添加-->
+		<h3 ng-class="{'color-red':isRed}">{{edg}}</h3>
+		<h3 ng-show="isShow">{{tsm}}</h3>
+		<h3 ng-include="'node.html'">{{fw+g2}}</h3>
+		<div ng-bind="fw+g2"></div>
+		
+		<button type="button" ng-click="changeStyle()">切换</button>
+		<button type="button" ng-click="escStyle(2)">取消</button>
+		<button type="button" ng-class="{'color-red':tabIndex==0}" ng-click="changeTab(0)">tab1</button>
+		<button type="button" ng-class="{'color-red':tabIndex==1}" ng-click="changeTab(1)">tab2</button>
+		<button type="button" ng-class="{'color-red':tabIndex==2}" ng-click="changeTab(2)">tab2</button>
+		<ul class="tab-bd">
+			<li ng-class="{'show':tabIndex==0}">1</li>
+			<li ng-class="{'show':tabIndex==1}">2</li>
+			<li ng-class="{'show':tabIndex==2}">3</li>
+		</ul>
+		
+<!--		ng-init 定义应用的初始值
+			ng-repeat 指令用于循环输出指定次数的html元素.集合必须是数组或对象.
+				x in array
+				(key,value) in Obj
+			track by $index,防止数据中有重复的会报错
+-->
+		
+		<div ng-init="num=100000;name='Tom'">
+			初始化的值{{num+name}}
+		</div>
+		<ul>
+			<li ng-repeat="item in items track by $index">{{item}}</li>
+			<li ng-repeat="(k,v) in person">
+				<strong>{{k}}</strong>
+				<i>{{v}}</i>
+			</li>
+			<li class="news-box" ng-repeat="new in news track by $index">
+				<strong>{{new.title}}</strong><span>{{new.text}}</span><span>{{new.data}}</span>
+			</li>
+		</ul>
+		<script>
+//			angular.module则是新建立一个模块,对应的是一个ng-controller
+			var app = angular.module("myApp",[]);
+			app.controller("myController",function($scope){
+				$scope.hello = "四幻神";
+				$scope.edg = "E神龙";
+				$scope.tsm = "T空龙";
+				$scope.fw = "黑暗大F师";
+				$scope.g2 = "G神兵";	
+				$scope.isShow = true;
+				$scope.tabIndex = 0;
+				$scope.changeTab = function(num){
+					$scope.tabIndex = num;
+				}
+				$scope.changeStyle = function(){
+					$scope.myStyle = {
+						"color":"red",
+						"font-size":"36px"
+					};
+					$scope.isRed = true;
+					$scope.isShow = !$scope.isShow;	
+				}
+				$scope.escStyle = function(num){
+					$scope.isRed = false;
+					$scope.isShow = true;
+					console.log(num);
+				}
+				$scope.items = ["dd","12",12,1,1,1,2];
+				$scope.person = {
+					"name":"Tom",
+					"age":12
+				};
+				$scope.news = [{
+					"title":"四幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/15"
+				},{
+					"title":"3幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/13"
+				},{
+					"title":"2幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/14"
+				}]
+			})
+			//ng-style 指定元素的style属性
+			//ng-class 指令用于给HTML元素动态绑定一个或多个class类
+			//ng-class-even 类似ng-class,但是只在偶数行起作用
+			//ng-class-odd 类似ng-class,但是只在基数行起作用
+			//ng-show 显示或隐藏html元素
+			//ng-hide 隐藏或显示html元素
+			//ng-if 如果条件为false移除HTML元素
+			//ng-include 往标签中插入html文件
+			//ng-bind 指令告诉angularJS使用给定的变量或表达式的值来替换HTML元素内容
+			//如果给定的变量或表达式修改了,指定替换的HTML元素也会修改
+	/*		ng-bind与{{}}取值的区别:
+			{{}}是等页面加载完后,再取值,
+			ng-bind他是在页面加载的时候,不会显示{{name}}这种变量出来*/
+		</script>
+	</body>
+</html>

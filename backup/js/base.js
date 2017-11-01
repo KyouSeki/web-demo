@@ -1,0 +1,18 @@
+$(document).ready(function(){
+    $(".bind").click(function(){
+        $(".shade").show();
+        $(".prompt-body").show();
+        $(".prompt-body.sun").hide();
+    });
+    $(".jump").click(function(){
+        $(".prompt-body").hide();
+        $(".prompt-body.sun").show();
+    });
+    $(".reset").click(function(){
+        $(".shade").hide();
+    });
+    $(".cash-table-tit").click(function(){
+        $(this).next("ul").toggle();
+        $(this).parent().siblings().children("ul").hide();
+    });
+});

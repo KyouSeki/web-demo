@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body{
+                width: 500px;
+            }
+            header{
+                height: 100px;
+                border: 1px solid #ddd;
+            }
+            nav{
+                height: 100px;
+                border: 1px solid #ddd;
+            }
+            .body{
+                float: left;
+                width: 300px;
+                height: 400px;
+            }
+            .body section{
+                height: 200px;
+                border: 1px solid #ddd;
+            }
+            article{
+                height: 200px;
+                border: 1px solid #ddd;
+            }
+            aside{
+                float: right;
+                height: 400px;
+                width: 198px;
+                border: 1px solid #ddd;
+            }
+            footer{
+                height: 100px;
+                border: 1px solid #ddd;
+            }
+            .clear{ zoom:1;}
+            .clear:before,
+            .clear:after{
+                clear: both;
+                content: "";
+                margin: 0;
+                padding: 0;
+                display: block;
+                visibility: hidden;
+            }
+        </style>
+    </head>
+    <body class="clear">
+        <header>头</header>
+        <nav>导航栏</nav>
+        <section class="body-box clear">
+            <section class="body">
+                <section>块</section>
+                <article>文字区</article>
+            </section>
+            <aside>边栏</aside>
+        </section>
+        <footer>脚</footer>
+    </body>
+</html>

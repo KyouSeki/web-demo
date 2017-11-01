@@ -1,0 +1,90 @@
+/*
+定位 position
+        :static  默认值,没有定位
+        :fixed  定位到屏幕,可以随滚动条动
+        :relative   相对定位,不脱离文档流,但是层次会变高,可以盖住其他元素.
+        :absolute   绝对定位,脱离文档流,根据第一个不是默认static定位的父级定位.
+*/
+body{
+/*    height: 2000px;*/
+    margin: 30px;
+}
+.item{
+/*    position: relative;*/
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    margin: 30px;
+/*
+    position: fixed;
+    top: 50px;
+    right: 20px;
+*/
+}
+.content{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: darkseagreen;
+}
+.item-hd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+.item-bd{
+    position: relative;
+    top: 40px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: mediumorchid;
+}
+/*z-index:定浮动元素的层级,数字越大越高,父元素高的情况子元素一定比较高.-1/0/1*/
+
+.father{
+    position: relative;
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    background-color: beige;
+}
+.son1{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}
+.son2{
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 100px;
+    height: 100px;
+    background-color:cadetblue;
+/*    z-index: 1;*/
+}
+.son3{
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 100px;
+    height: 100px;
+    background-color:darkorange;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*
+cursor:定义光标的形状
+    pointer;小手
+    default;默认光标,通常是小箭头
+    auto;,默认值,浏览器设置的光标
+*/

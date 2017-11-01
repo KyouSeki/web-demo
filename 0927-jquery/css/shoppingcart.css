@@ -1,0 +1,126 @@
+.clearfix{ zoom:1;}
+.clearfix:before,
+.clearfix:after{
+    clear: both;
+    content: "";
+    margin: 0;
+    padding: 0;
+    display: block;
+    visibility: hidden;
+}
+.content{
+	width: 1200px;
+	margin: 0 auto;
+}
+.b-name{
+	margin-bottom: 20px;
+}
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border: 1px solid #ddd;
+	width: 1200px;
+}
+ul li{
+	padding: 20px;
+	height: 90px;
+	border-bottom: 1px solid #ddd;
+}
+input[type="checkbox"]{
+	display: block;
+	float: left;
+	vertical-align: top;
+}
+img{
+	display: block;
+	float: left;
+	width: 90px;
+	height: 90px;
+	margin: 0 10px;
+}
+.title{
+	float: left;
+	margin-right: 50px;
+	margin-top: 0;
+	font-weight: normal;
+	width: 200px;
+	font-size: 12px;
+}
+.size{
+	float: left;	
+	margin-right: 50px;
+	width: 180px;
+	height: 90px;
+}
+.size p{
+	margin: 0;
+	font-size: 12px;
+	line-height: 18px;	
+	color: #9c9c9c;
+}
+.list li strong{
+	display: block;
+	float: left;
+	margin-right: 50px;
+	width: 70px;
+}
+.num-box{
+	float: left;
+	width: 100px;
+	margin-right: 50px;
+}
+.num-box input{
+	width: 40px;
+	height: 24px;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.num-box a{
+	display: inline-block;
+	font-style: normal;
+	vertical-align: middle;
+	background-color: #f0f0f0;
+	width:18px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	cursor: pointer;
+}
+strong.moneys{
+	color: #ff1700;
+}
+.delete{
+	float: left;
+	margin: 0;
+}
+.bottom{
+	position: fixed;
+	bottom: 0;
+	background-color: #e5e5e5;
+	height: 50px;
+}
+.submit-box{
+	float: right;
+}
+.submit-box div{
+	float:left;
+	font-size: 14px;
+	line-height: 50px;
+	margin-right: 20px;
+}
+.submit-box div strong{
+	margin: 0 5px;
+	font-size: 16px;
+	color: #ff4400;
+}
+.submit-box button{
+	float: right;
+	border: 0;
+	background-color: #ff4400;
+	height: 50px;
+	line-height: 50px;
+	width: 120px;
+	font-size: 20px;
+	color: #fff;
+}

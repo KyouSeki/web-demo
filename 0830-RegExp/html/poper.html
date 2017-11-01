@@ -1,0 +1,62 @@
+<!doctype html>
+<body>
+	<head>
+		<title>弹出层的相关属性</title>
+		<style>
+			body{
+				margin: 0;
+			}
+			.dialogPraent{
+				position: relative;
+				margin: 30px;
+				padding: 10px;
+				width: 250px;
+				height: 250px;
+				border: 5px solid red;
+			}
+			.dialog{
+				overflow-x:scroll;
+				white-space: nowrap;
+				padding: 30px;
+				margin: 20px;
+				width: 100px;
+				height: 100px;
+				border: 10px solid #ddd;
+				background-color: chartreuse;
+			}
+			.big{
+				position: absolute;
+				display: none;
+				background-color: rgba(1,1,1,.4);
+				z-index: 99;
+			}
+			.letter{
+				position: absolute;
+				padding: 10px;
+				width: 180px;
+				height: 220px;
+				border: 1px solid blue;
+				background-color: #fff;
+				z-index: 999;
+			}
+			.letter a{
+				float: right;
+				color: red;
+				font-style: normal;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big" id="big">
+			<div class="letter" id="letter">
+				<a href="javascript:;" id="patsu">X</a>
+			</div>
+		</div>
+		<button type="button" id="btn">查看</button>
+		<div class="dialogPraent">
+			<div class="dialog" id="dialog">我我我我</div>
+		</div>	
+		<script type="text/javascript" src="../js/pop.js"></script>
+	</body>
+</body>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<title>highcharts</title>
+	</head>
+	<body>
+		用户名:<input type="text" id="username"/>
+		年龄:<input type="text" id="age">
+		<button type="btn" class="button" id="btn">提交</button>
+		<button id="read_btn" type="button">读取</button>
+		<button id="delete_btn" type="button">删除</button>
+		<button id="clear_btn" type="button">清除</button>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script>
+//			document.cookie="username='seki'";
+//			var cooValue = document.cookie;
+//			console.log(cooValue);
+//			document.getElementById("btn").onclick=function(){
+//				var userVal = document.getElementById("username").value;
+//				document.cookie="username='"+userVal+"'";
+//				var cooValue = document.cookie;
+//				console.log(cooValue);
+//			};
+			/*//提交cookie
+			$("#btn").click(function(){
+				var userNameVal = $("#username").val();
+				$.cookie("userName",userNameVal,{expires:7});
+			})
+			
+			//读取cookie
+			$("#read_btn").click(function(){
+				var cookieVal = $.cookie("userName");
+				console.log(cookieVal);
+			})
+			
+			//删除cookie
+			$("#delete_btn").click(function(){
+				$.cookie("userName",null,{expires:-1})
+			})*/
+			
+			//localstorage比cookie更安全,没有时间限制,兼容性不太好
+			//设置localstorage
+			$("#btn").click(function(){
+				var userAgeVal = $("#age").val();
+				localStorage.setItem("userAge",userAgeVal);
+				localStorage.setItem("ageee",userAgeVal);
+			})
+			//读取localstorage
+			$("#read_btn").click(function(){
+				var lcVal = localStorage.getItem("userAge");
+				console.log(lcVal);
+			})
+			//删除localstorage,只会删除指定的字段
+			$("#delete_btn").click(function(){
+				localStorage.removeItem("userAge");
+				
+			})
+			//清除localstorage,全部清空
+			$("#clear_btn").click(function(){
+				localStorage.clear();
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			.active{
+				color: red;
+			}
+			.bbb{
+				border:1px solid #ddd;
+			}
+			.tab-hd{
+				display: flex;
+				flex-flow:row nowrap;
+				list-style: none;
+				width: 300px;
+			}
+			.tab-hd li{
+				flex: 1;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="message" class="app">
+			{{hello}}
+		<p v-bind:title="hello">鼠标悬停</p>
+			
+<!--	v-html:属性值为一个参数,用来替换标签的内容-->
+		<div v-html="vueHtml">strong:{{vueHtml}}</div>
+			<a :href="url">{{name}}</a>
+  			<button @click="aaa" v-bind:style="styleObj">逆转消息</button>	
+			<p v-bind:class=myClass>红色</p>
+<!--			else需要紧接着if使用-->
+			<h1 v-if="yes">Yes</h1>
+			<h1 v-else>No</h1>
+			<ul>
+<!--				color,index可以得到数组下标-->
+				<li v-for="(color,index) in colors" v-bind:class="{active:index==0}">
+					{{color}}
+				</li>
+			</ul>
+			<div class="tab">
+				<ul class="tab-hd">
+					<li v-for="(item,index) in items"  v-bind:class="{active:index==fatIndex}"><a @click="myTab(index)">{{item.name}}</a></li>
+				</ul>
+				<div class="tab-bd">
+					<div v-for="(item,index) in items" v-html="item.content" v-show="index==fatIndex"></div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../js/vue.js"></script>
+		<script>
+			var app= new Vue({
+				el:".app",
+				data:{
+					hello:"hello world!",
+					vueHtml:"<strong>插入的strong标签</strong>",
+					name:"百度",
+					url:"http://www.baidu.com",
+					isActive:true,
+					myClass:{active:false,bbb:true},
+					styleObj:{color:'red'},
+					yes:true,
+					colors:["red","green","yellow",1,2,1],
+					items:[{name:"tom",content:"12",isTrue:"true"},
+						  {name:"sss",content:"13",isTrue:true},
+						  {name:"ban",content:"15",isTrue:false}],
+					fatIndex:0
+				},
+				methods:{
+					aaa:function(){
+						//这里的this就是创建的data内的数据
+						this.name="淘宝";
+						this.url="http://www.taobao.com";
+						console.log(this);
+					},
+					myTab:function(myIndex){
+						this.fatIndex=myIndex;
+						console.log(this.fatIndex);
+					},
+					getData:function(){
+						this.$http.get("data.json")
+						.then((response)=>{
+							//响应成功的处理
+						}),catch(function(){
+							//错误处理
+						})
+					}
+				}
+			})
+			//$http
+			//vue.$http.get
+			//vue.resource.js
+		</script>
+	</body>
+</html>

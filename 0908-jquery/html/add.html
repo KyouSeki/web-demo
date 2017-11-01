@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+	<head>
+		<link href="../css/page.css" rel="stylesheet"/>
+		<link href="../css/jquery.datetimepicker.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<div class="content clear">
+				<div class="logo-box clear">
+					<img src="../images/user-pit.jpg">
+					<p>商户平台</p>
+				</div>
+				<div class="user-menu clear">
+					<div class="user-menu-left clear">
+						<p>您好,KyouSeki</p>
+						<i></i>
+						<i></i>
+					</div>
+					<div class="user-menu-right">
+						<a>浏览站点</a>
+						<a>退出</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="content main clear">
+			<aside class="aside">
+				<ul class=aside-menu>
+					<li>首页</li>
+					<a href="page1.html"><li>内容管理</li></a>
+					<a href="user.html"><li>系统角色管理</li></a>
+				</ul>
+			</aside>
+			<div class="main-body clear">
+				<div class="body-tit">
+					<h3>添加文章</h3>
+					<a href="user.html"><button class="btn green-btn">返回列表</button></a>
+				</div>
+				<div class="body-box">
+					<form class="form-box" id="form_add">
+						<ul class="form-list">
+							<li>
+								<label>标题:</label>
+								<input type="text" class="form-mk form-mk1" id="title" name="title" data-required="true"/>
+								<em class="star">*</em>
+							</li>
+							<li>
+								<label>所属栏目:</label>
+								<select class="form-mk form-mk1" id="lanmu">
+									<option value="tucao">吐槽</option>
+									<option value="music">音乐</option>
+									<option value="anime">动画</option>
+									<option value="neru">睡觉</option>
+									<option value="asobi">娱乐</option>
+								</select>
+								<span>/</span>
+								<select class="form-mk form-mk1">
+									<option value="aa">aa</option>
+									<option value="bb">bb</option>
+									<option value="cc">cc</option>
+									<option value="dd">dd</option>
+									<option value="ee">ee</option>
+								</select>
+								<em class="star">*</em>
+							</li>
+							<li>
+								<label>文章状态:</label>
+								<input type="radio" class="form-radio" name="text" id="status1" value="1"/><span>启用</span>
+								<input type="radio" class="form-radio" name="text" id="status0" value="0"/><span>禁用</span>
+							</li>
+							<li>
+								<label>爱好:</label>
+								<input type="checkbox" class="form-radio" name="hobby" value="game"/>游戏
+								<input type="checkbox" class="form-radio" name="hobby" value="taberu"/>吃饭
+								<input type="checkbox" class="form-radio" name="hobby" value="neru"/>睡觉
+							</li>
+							<li>
+								<label>作者:</label>
+								<input type="text" class="form-mk form-mk1" id="author" name="author"/>
+							</li>
+							<li>
+								<label>关键字:</label>
+								<input type="text" class="form-mk form-mk1" id="key"/>
+							</li>
+							<li>
+								<label>发布时间:</label>
+								<input type="text" class="form-mk form-mk1" id="date"/>
+							</li>
+							<li>
+								<label>是否推荐:</label>
+								<input type="radio" class="form-radio" name="susume" id="seo1" value="1"/><span>是</span>
+								<input type="radio" class="form-radio" name="susume" id="seo0" value="0"/><span>否</span>
+							</li>
+							<li>
+								<label>seo描述:</label>
+								<input type="text" class="form-mk form-mk2" id="money"/>
+							</li>
+							<li>
+								<label>时间插件测试:</label>
+								<input type="text" id="datetimepicker"/>
+							</li>
+							<li>
+								<label>内容:</label>
+								<textarea class="form-tarea" id="content"></textarea>
+							</li>
+						</ul>
+					
+					<div class="btn-box clear">
+						<div class="add-btn-box">
+							<button type="button" class="btn seva-btn" id="save">保存</button>
+							<button type="button" class="btn esc-btn">取消</button>
+						</div>
+					</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<ul class="foot-list">
+				<li>关于哔哔</li>
+				<li>服务协议</li>
+				<li>运营规范</li>
+				<li>客服中心</li>
+				<li>在线客服</li>
+				<li>联系邮箱</li>
+				<li>copying20140infsoinfsdiodasndao</li>
+				<li>All hufsibfsof sbfs bo</li>
+			</ul>
+		</footer>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/jquery.validate.js"></script>
+		<script src="../js/additional-methods.js"></script>	
+		<script src="../js/messages_zh.js"></script>
+		<script src="../js/jquery.datetimepicker.full.js"></script>
+		<script src="../js/content.js"></script>
+		<script src="../js/comon.js"></script>		
+		<script src="../js/add.js"></script>
+		<script>
+			
+		</script>
+	</body>
+</html>

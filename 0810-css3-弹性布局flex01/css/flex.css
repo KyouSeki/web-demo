@@ -1,0 +1,196 @@
+/*
+设置浏览器解释模式,兼容性一般,低版本浏览器容易出现布局混乱的问题
+box-sizing:
+border-box--怪异模式,padding和border往盒子模型内部缩,定下宽高以后就不会再超出了.
+content-box--标准模式,padding和border往盒子模型外扩张,会导致盒子占面积变大.
+*/
+
+/*因为浏览器的默认字体是16px,所以body的字体写62.5%也就是10px,或者125%-20px,方便下面计算em*/
+html{
+	-ms-text-size-adjust:none; -webkit-text-size-adjust:none;
+}
+html{
+	font-size: 125%;
+}
+.box{
+	width: 10rem;
+	height: 5rem;
+	padding: 5rem;
+	margin: 10rem;
+	border: 1px solid green;
+	background-color: pink;
+	box-sizing: content-box;
+}
+.box-inner{
+	width:15rem;
+	height: 20rem;
+	padding: .75rem;
+	margin:1.75rem;
+	font-size: .7rem;
+	line-height: 1.2rem;
+	border:1px solid red;
+}
+/*
+
+单位:px  %
+  em:相对单位,取决于字体大小,没有设置就往上一级一级找父级,都没有设置的话就按浏览器默认字体大小.
+1:元素自身如果没有设置字体大小,则
+	需要的像素值/父元素的font-size=em值
+2:如果元素自身要设置字体大小,则字体大小的计算仍然按此公式计算
+	需要的像素值/父元素的font-size=字体em值
+3:此时如果要设置其他border,padding,margin等其他属性的时候则需要按下面的公式计算
+	需要的像素值/元素自身的font-size=em值
+  rem:相对单位,取决于根元素的字体大小!!!真是方便啊!
+*/
+
+.box2{
+	width: 300px;
+	height: 400px;
+	background-color: green;
+}
+.box2-inner{
+	margin: 0 auto;
+	width: 100px;
+	height: 150px;
+	background-color: aqua;
+}
+
+/*
+通过display给元素设置一个flex或者inline-flex,这个元素就会成为一个伸缩元素,把inline-flex浮动的话就会等于一个flex,
+伸缩容器包裹的所有子集叫伸缩项目,也是可以伸缩的.
+
+1)伸缩流方向,根据主轴方向定
+2)主轴对齐,侧轴对齐
+
+主轴:元素流方向
+侧轴:与主轴垂直
+display:flex/inline-flex
+
+伸缩容器的属性包括下面几个:
+	1.flex-direction:决定主轴的方向(即项目排列的方向)
+			row(默认值)主轴为水平方向,从左端开始.
+			row-reverse主轴为水平方向,从右端开始排列.
+			column主轴为垂直方向,从上沿开始.
+			column-reverse主轴为垂直方向,从下沿开始.
+
+	2.flex-wrap:如果一条轴线排不下时如何换行.
+			nowrap(默认值)不折行
+			wrap折行显示
+			wrap-reverse往上折行(第一行在下方)
+
+	3.flex-flow:复合属性,是flex-direction和flex-wrap的复合属性
+			默认值为 row  nowrap
+
+	4.justify-content:定义了项目在主轴上的对齐方式.
+			flex-start(默认值)起点处对齐,从左开始就左对齐,从右开始就右对齐
+			flex-end:结尾处对齐,从左开始就右对齐,从右开始就左对齐.
+			center:居中
+			space-between:项目的左右两个顶到两边,然后中间的等距离平均分布
+			space-around:每个项目两侧的间隔相等,与边框也有距离,所以项目之间的间隔比项目与边框的间隔大一倍.
+
+	5.align-items:属性定义项目在侧轴上如何对齐.
+			flex-start(默认值)从侧轴的起点开始对齐
+			flex-end从侧轴的终点开始对齐
+			center:以交叉轴居中
+			stretch:项目元素如果没有设置高度或者设置为auto,则占满整个容器的高度
+			baseline:项目第一行文字的基线对齐
+
+	6.align-content:属性定义了多根轴线时的对齐方式,必须先设置折行,如果项目只有一根轴线,该属性不起作用.
+			stretch(默认值)拉伸每一行的高度以填满整个容器,轴线占满整个交叉轴,里面元素高度不变
+			flex-start从行开始处对齐.
+			flex-end从行的结尾处对齐.
+			center居中对齐
+			space-between:项目行的最开始和最后的行两端分布,中间的行等距离.
+			spcae-around:项目每一行都等边分布,包括最开始和最后的两行和容器边沿的距离.
+
+
+伸缩项目的属性包括下面几个:
+	1.order:定义项目的排列顺序,数值越小排列越靠前,默认值是0,可以写负值.
+
+	2.flex-grow 定义项目的放大比例{数值}的倍数,默认值是0;会覆盖设置的宽度.当父级没有宽度的时候,里面的元素可以根据屏幕大小按设置的比例缩放.
+				(假设宽度100px的两个块,一个设置为1,一个为2,则当第一个放大到150px(放大了50%)时,第二个块为200px(放大了100%),放大的值为1:2)
+
+	3.flex-shrink 定义项目的缩小比例{百分比}的倍数,默认为1,如果空间不足,项目将会缩小
+				(假设宽度200px的两个块,一个设置为1,一个为2,则当第一个缩小到115px(缩小了42.5%)时,第二个块为30px(缩小了85%),缩小比为1:2)
+				(假设宽度100px和200px的两个块,都设置为1,则当第一个缩小到50px(缩小了50%)时,第二个块为100px(缩小了50%),缩小比为1:1)
+				(假设宽度100px和200px的两个块,第一个设置为1,第二个设置为2,
+				则当第一个缩小到50px(缩小了50%)时,第二个块为0px{缩小了100%所以没了},缩小比为1:2)
+
+	4.flex-basis 定义了在分配多余空间之前,项目占据的主轴空间间.(main size)跟直接设置宽差不多弹性布局里宽度一般用它来加.
+
+	5.flex 复合属性,是flex-grow,flex-shrink,flex-basis的缩写,默认值为0 1 auto;
+		该属性有三个快捷值,auto(1 1 auto) none(0 0 auto)
+		常用的 flex:1(1 1 0),伸缩项目有相同的长度
+
+	6.align-self 允许给单个项目设置和其他项目不一样的对齐方式.可以覆盖父级的align-items自己设一个不一样的值.
+		auto(默认值)
+		其他属性和align-items一样.
+
+*/
+
+.box3{
+	display: flex;
+/*	width: 800px;*/
+	height: 800px;
+	flex-flow: row nowrap;
+	justify-content:flex-start;
+	align-items: stretch;
+	align-content:flex-start;
+	background-color: antiquewhite;
+}
+.box3 .item{
+/*	width: 200px;*/
+/*	height: 100px;*/
+	flex-grow:1;
+	flex-shrink:1;
+}
+.box3 .item:nth-child(1){
+	background-color: chartreuse;
+	width: 100px;
+/*	align-self: flex-end;*/
+}
+.box3 .item:nth-child(2){
+	background-color: pink;
+	width: 200px;
+	flex-shrink:2;
+/*	flex-grow:2;*/
+}
+.box3 .item:nth-child(3){
+	background-color: yellow;
+	width: 300px;
+/*	flex-shrink:2;*/
+}
+.box3 .item:nth-child(4){
+	background-color: bisque;
+	width: 400px;
+}
+
+.box-s{
+	display: flex;
+	flex-flow: column nowrap;
+}
+.box-s .header{
+	flex-basis: 5rem;
+	background-color: cornflowerblue;
+}
+.box-s .body{
+	display: flex;
+	flex-basis: 25rem;
+	align-items: stretch;
+}
+.box-s .body .left{
+	flex:3 1 0;
+	background-color: aqua;
+}
+.box-s .body .center{
+	flex:4 1 0;
+	background-color: #fff;
+}
+.box-s .body .right{
+	flex:2 1 0;
+	background-color: red;
+}
+.box-s .footer{
+	flex-basis: 5rem;
+	background-color: black;
+}

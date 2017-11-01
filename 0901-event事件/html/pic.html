@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			
+			body{
+				margin: 0;
+			}
+			.banner{
+				height: 700px;
+				background:#1d0f5e url("../images/pic1.jpg") repeat;
+			}
+			.num{
+				position: relative;
+				margin-top: -60px;
+				margin-bottom: 200px;
+				height: 60px;
+				text-align: right;
+				background-color: rgba(1,1,1,.4);
+				z-index: 998;
+			}
+			.num a{
+				display: inline-block;
+				margin-right: 30px;
+				margin-top: 5px;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				font-size: 30px;
+				text-align: center;
+				color: #fff;
+				
+			}
+			.num .atari{
+				background-color: rgba(255,255,255,.8);
+				color: black;
+			}
+			.banner{
+				position: relative;
+				margin-top: 300px;
+				height: 800px;
+				overflow: auto;
+			}
+			.banner li{
+				list-style: none;
+			}
+			.banner ul li{
+				float: left;
+			}
+/*
+			.imgs{
+				position: relative;
+				right: 0;
+				white-space: nowrap;
+				transition: all .3s linear;
+			}
+			.img{
+				display: inline-block;
+				height: 800px;
+			}
+*/
+			.arr{
+				position: absolute;
+				top: 400px;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				background-color: rgba(255,255,255,.6);
+				color: #fff;
+				font-size: 30px;
+				text-align: center;
+				z-index: 999;
+			}
+			.arr.right{
+				right: 10px;
+			}
+			.arr.left{
+				left: 10px;
+			}
+			<link rel="stylesheet" href="../css/unslider.css"/>
+			<link rel="stylesheet" href="../css/unslider-dots.css"/>
+		</style>
+	</head>
+	<body>
+		<div>
+			<!--<div class="banner" id="banner">		
+			</div>
+			<div class="num" id="num">
+				<a class="aa atari">1</a><a class="aa">2</a><a class="aa">3</a><a class="aa">4</a><a class="aa">5</a>
+			</div>-->
+			
+			<div class="banner" id="banner_box">
+<!--				<div class="left arr" id="prev">&larr;</div>-->
+				<ul class="imgs" id="imgs" style="right:0">
+					<li><img class="img" src="../images/pic1.jpg" style="width:0"></li>
+					<li><img class="img" src="../images/pic2.jpg" style="width:0"></li>
+					<li><img class="img" src="../images/pic3.jpg" style="width:0"></li>
+					<li><img class="img" src="../images/pic4.jpg" style="width:0"></li>
+					<li><img class="img" src="../images/pic5.jpg" style="width:0"></li>
+				</ul>
+<!--				<div class="right arr" id="next">&rarr;</div>-->
+			</div>
+			<div class="banner-info num">
+				<a class="img-border atari">1</a><a class="img-border">2</a><a class="img-border">3</a><a class="img-border">4</a><a class="img-border">5</a>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript" src="../js/unslider.js"></script>
+		<script type="text/javascript" src="../js/pic.js"></script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+}
+h1{
+    color: red;
+}
+h2{
+    color: green;
+}
+body p[class]{
+    font-size: 16px;
+}
+p{
+    font-size: 14px;
+    color: blue;
+    background-color: orange;
+}
+p.ye{
+    background-color: yellow;
+}
+p.pink{
+    background-color: pink;
+}

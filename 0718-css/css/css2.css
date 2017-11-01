@@ -1,0 +1,82 @@
+/*元素选择器*/
+div{
+    color:red;
+}
+p{
+    color: orange;
+}
+/*id选择器*/
+#second_p{
+    color:yellow;
+}
+#second_k{
+    color:cyan;
+}
+#second_o{
+    color:deepskyblue;
+}
+#second_l{
+    color:darkorchid;
+}
+#second_i{
+    color:lawngreen;
+}
+/* 类选择器 class */
+.list{
+    color: fuchsia;
+    width: 500px;
+    height: 50px;
+    background-color:beige;
+}
+.list.first{
+    background-color: antiquewhite;
+}
+.list.four{
+    font-size: 30px;
+}
+/*子类选择器*/
+ol li{
+    color: chocolate;
+}
+/*群组选择器*/
+.second,.three{
+    background-color: darkcyan;
+}
+/*通配符选择器*/
+*{
+    font-size: 24px;
+}
+/*属性选择器*/
+h3[id="title"]{
+    color:red;
+}
+input[id]{
+    height: 50px;
+}
+input[id="text"]{
+    width: 100px;
+}
+input[id="pwd"]{
+    width: 200px;
+}
+/*伪类选择器. :link链接未访问过时的样式  :visited 访问过时的样式  :hover鼠标放上去时的样式  :active鼠标点击时的样式 */
+a:link{
+    color: lavenderblush;
+}
+a:visited{
+    color: red;
+}
+a:hover{
+    color: yellowgreen;
+}
+a:active{
+    color:orchid;
+}
+
+/*first-child  last-child*/
+ol li:first-child{
+    background-color: aqua;
+}
+ol li:last-child{
+    background-color: cadetblue;
+}

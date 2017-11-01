@@ -1,0 +1,134 @@
+
+.box-01{
+    width: 50%;
+    height: 300px;
+    border:1px solid #ddd;
+}
+.box-01 p{
+    height: 50%;
+    background-color: pink;
+}
+/*
+border:边框样式的复合属性,style是必须要写的,其他两个属性没有style也会没有效果
+        border-width:
+        border-style:边框样式   solid:直线　　dashed:虚线    dotted:点线   double:双线
+        border-color:
+border-bottom
+
+opacity:透明度,用这个方法设置透明度之后,子集也会透明
+*/
+.box-02{
+    width: 300px;
+    max-height: 400px;
+    min-height: 200px;
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*
+圆角border-radius: x轴半径/y轴半径,  5px左上和右下 10px右上和左下   5px左上 6px右上 7px右下 8px左下  三个值的时候表示左上/右上左下/右下
+*/
+.box-03{
+    width: 300px;
+    height: 300px;
+    background-color: aliceblue;
+    border-radius: 100px 50px 10px;
+}
+
+/*
+margin:外边距,四个边可以单独加.分别是margin-top/right/bottom/leftl,写三个值的时候表示,上/左右/下.
+*/
+.box-04{
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    margin: 30px 10px 50px;
+}
+.box-05{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color:darksalmon;
+}
+
+/*
+display:none       隐藏元素
+        block     块元素
+        inline   行内元素
+        inline-block    行内块元素    
+*/
+
+.area-01{
+    display: inline;
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+}
+.link{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+}
+.area-04{
+    background-color: burlywood;
+}
+.clearfix{ zoom:1;}
+.clearfix:before,
+.clearfix:after{
+    clear: both;
+    content: "";
+    display: block;
+    width:0;
+    height: 0;
+    visibility: hidden;
+}
+
+/*
+visibility:设置可见性
+        hidden;不可见,会留空
+        visible;默认值
+        collapse;表格中可以隐藏行或者列并且留空
+
+*/
+.area-02{
+    float:left;
+/*    display: inline-block;*/
+    width: 200px;
+    height: 200px;
+    background-color:aqua;
+    visibility: visible;
+}
+/*
+float浮动:left/right
+clear:left/both/right;清除其他元素左/右浮动带来的页面错乱.
+常用清除浮动的方法;
+1:设置父级的高度.
+2:在父级上加overflow:hidden,父级会撑开.但是这种方法会导致超出父级的元素也会截掉
+3:写一个clear: both;需要清浮动时候在本元素里调用,但是父级不会撑开
+4:clear+伪元素,然后需要清理浮动时,在他们的父级里调用,可以撑开父级,常用!
+5:给父级也加一个浮动,但是不推荐
+*/
+.area-03{
+    float:left;
+/*    display: inline-block;*/
+    width: 200px;
+    height: 200px;
+    background-color:crimson;
+}
+.area-05{
+    float:left;
+    width: 200px;
+    height: 200px;
+    background-color:coral;
+}
+.area-06{
+    background-color: fuchsia;
+    height: 100px;
+}
+.clear{
+    clear: both;
+}
+
+
+

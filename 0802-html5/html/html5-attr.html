@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+<!--        form新增的属性   -->
+<!--        autocomplete:记录文字框内的输入记录并提示,用on和off设置是否启用 -->
+<!--        novalidate:不对文字框内容进行验证    -->
+             
+<!--        input新增的属性  autocomplete-->
+<!--        autofocus:页面刷新时光标焦点所在位置     -->
+<!--        form:可以让form表单外的数据也跟随表单一起提交,根据form的id来决定-->
+<!--        formaction,formenctype,formmethod,formnovalidate加上form前缀重写form属性到input(submit)可以定义某个input应用此form属性-->
+<!--        list:可以写datalist的id,获取lsit的内容-->
+<!--        muliple:可以让元素选择多个值,适用于email和file-->
+<!--        pattern:可以给input提供正则表达式-->
+<!--        placeholder:设置文字框内的提示语言-->
+<!--        required:设置必填项-->
+        <form id="data_form" action="http://192.168.1.1:8080/loan/apple" autocomplete="on">
+            姓名:<input type="text" name="username" required/><br/>
+            学号:<input type="text" name="usernum" autocomplete="off"/><br/>
+            邮箱:<input type="email" name="useremail" autofocus/><br/>
+            <input type="image" src="../../0724-pege/images/img-1.png" width="100px" height="100px"/>
+            <input type="submit" value="提交" formaction="http://www.baidu.com" formenctype="multipart/form-data"/>
+            音量:<input type="range" min="1" max="100" step="1"/>
+            文件上传:<input type="file" muliple/>
+        </form>
+        
+        备注:<input type="text" form="data_form" list="listid"/>
+        <datalist id="listid">
+            <option value="how"></option>
+            <option value="are"></option>
+            <option value="you"></option>
+        </datalist>
+    </body>
+</html>

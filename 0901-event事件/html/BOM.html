@@ -1,0 +1,33 @@
+<!doctype html>
+<body>
+	<head>
+		<title>BOM</title>
+		<style>
+			.progress{
+				
+				width: 100px;
+				height: 5px;
+				border: 1px solid #ddd;
+				border-radius: 2px;
+			}
+			#span{
+				display: inline-block;
+				width: 0px;
+				height: 5px;
+				vertical-align: top;
+				background-color: aquamarine;
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button" id="btn">点击</button>
+		<button type="button" id="btn2">开始</button>
+		<button type="button" id="btn3">结束</button>
+		<hr/>
+		<strong>写不完也要下课</strong>
+		<div class="progress">
+			<span id="span" style="width:0px"></span>
+		</div><span id="span_num">0</span><span>%</span>
+		<script type="text/javascript" src="../js/BOM.js"></script>
+	</body>
+</body>

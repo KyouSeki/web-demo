@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>Bootstrap 101 Template</title>
+
+		<!-- Bootstrap -->
+		<link href="../css/bootstrap.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			.col-lg-2,
+			.col-lg-8,
+			.col-lg-10,
+			.col-lg-12{
+				height: 100px;
+				background-color: orange;
+			}
+			.head .col-lg-12{
+				background-color: aqua;
+			}
+			.main .col-lg-2{
+				background-color: firebrick;
+			}
+			.main .col-lg-8{
+				background-color: cornflowerblue;
+			}
+			
+		</style>
+	</head>
+	<body>
+    	<div class="container">
+<!--			bootstrap提供了很多现有的class,可以直接使用-->
+<!--			栅格布局,每一行分12列,row里必须嵌套col.  -->
+			<div>
+				<div class="row head">
+					<div class="col-lg-12"></div>
+				</div>
+				<div class="row main">
+					<div class="col-sm-2 col-md-4 col-lg-2"></div>
+					<div class="col-sm-5 col-md-1 col-lg-8"></div>
+					<div class="col-sm-5 col-md-4 col-lg-2"></div>
+				</div>
+				<div class="row foot">
+					<div class="col-lg-12"></div>
+					<p class="text-right">嘟嘟<mark>嘟嘟嘟嘟</mark>多多多多多多多多多多多多多阿斯蒂芬</p>
+					<p class="lead">嘟嘟嘟嘟嘟嘟多多多多多多多多多多多多多阿斯蒂芬</p>
+				</div>				
+		    </div>
+			
+			<lable>交易金额:</lable>
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="交易金额"/>
+				<span class="input-group-addon">元</span>
+			</div>
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="搜索"/>
+				<span class="input-group-btn">
+					<button class="btn btn-default">go</button>	
+				</span>
+			</div>
+		</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

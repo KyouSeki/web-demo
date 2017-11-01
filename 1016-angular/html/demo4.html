@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<style></style>
+		<script src="../js/angular.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myController">
+		<div class="">
+			{{news | filter:{title:'3'} }}		
+		</div>
+		<div class="">
+			{{myDate | date:'yyyy-MM-dd hh:mm:ss EEEE'}}
+		</div>
+		<script>
+			var app = angular.module("myApp",[]);
+			app.controller("myController",function($scope){
+			  //过滤器可以使用一个管道字符(|)添加到表达式和指令中.
+				//1.currency 货币处理
+				$scope.price = 100;
+				
+				//2.number格式化数字 number过滤器可以为一个数字加上千位分隔符,同事接收一个参数,可以指定float类型保留几位小数
+				//3.date(日期格式) y M d h m s E分别带表 年(yy/yyyy) 月 日 时 分 秒 周(EEE/EEEE)
+				$scope.myDate = new Date();
+				
+				//4.json 可以把一个js对象格式化为json字符串,没有参数
+				//5.lowercase(小写)
+				//6.uppercase(大写)
+				/*7.limitTo(限制数组长度或字符串长度)
+					limitTo过滤器用来截取数组或字符串,接收一个参数用来指定截取的长度,如果参数是负值,则从数组尾部开始截取
+				*/
+				//8.filter  根据关键字筛选出数组或对象中符合的条目
+				//9.roderBy 根据关键字排序
+				
+				$scope.news = [{
+					"title":"四幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/15"
+				},{
+					"title":"3幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/13"
+				},{
+					"title":"2幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/14"
+				},{
+					"title":"1幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/13"
+				},{
+					"title":"0幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/12"
+				}]
+			})				
+		</script>
+	</body>
+</html>

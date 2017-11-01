@@ -1,0 +1,39 @@
+.item{
+    width: 800px;
+    height: 80px;
+    background-color: aliceblue;
+    border-bottom: 2px solid red;
+}
+.item-hd{
+    position: relative;
+    left: 350px;
+    top: 25px;
+    text-align: center;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: red;
+    border-bottom: 2px solid #fff;
+}
+.item-bd{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 32px;
+    padding: 0;
+    margin: 0 auto; 
+    list-style: none;
+}
+.item-hd:hover .item-bd{
+    display: block;
+}
+.item-bd li{
+    text-align: center;
+    color: #fff;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    background-color: red;
+    border-bottom: 2px solid #fff;
+}

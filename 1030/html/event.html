@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+<!--		事件代理/事件委托,是通过冒泡来处理的,给父级加上事件以后可以作用于每一个子集-->
+		<ul id="my_list">
+			<li class="my-li">一</li>
+			<li class="my-li">二</li>
+			<li class="my-li">三</li>
+		</ul>
+		<div class="" id="btn_box">
+			<button type="button" id="one">哈哈</button>
+			<button type="button" id="two">呵呵</button>
+			<button type="button">咳咳</button>
+			<button type="button">咯咯</button>
+		</div>
+		<script>
+			var list = document.getElementById("my_list");
+			var myli = document.getElementsByClassName("my-li");
+			var newLi = document.createElement("li");
+			var newText = document.createTextNode("四");
+			newLi.appendChild(newText);
+			list.appendChild(newLi);
+			
+			//正常遍历以后加点击事件
+			for(var i=0;i<myli.length;i++){
+				myli[i].onclick = function(){
+					console.log(this.innerHTML);
+				}
+			}	
+			//利用事件代理给父级加上点击事件,然后通过event.target获取正在执行事件的元素
+		/*	var list = document.getElementById("my_list");
+			//参数里可以写e或者event表示事件对象,.target可以获得事件正在执行的元素
+			list.onclick = function(event){
+				if(event.target.nodeName.toLowerCase()=="li"){
+					console.log(event.target.innerHTML);
+				}
+			}*/
+//			jq里的写法: $("父元素").on("事件","元素",function(参数e){})
+			var btnBox = document.getElementById("btn_box");
+			btnBox.onclick = function(e){
+				var event = e || window.event;
+				var targetNode = event.target || event.srcElement;
+				if(targetNode.id=="one"){
+					console.log(1);
+				}else if(targetNode.id=="two"){
+					console.log(2);
+				}
+			}
+			/*在js中,添加到页面上的事件处理程序数量将直接关系到页面的整体运行性能,因为需要不断的与dom节点进行交互,访问dom的次数越多,引起浏览器重绘与重排的
+			次数也就越多,就会延长整个页面的交互就绪事件,这就是为什么性能优化的主要思想之一就是减少dom操作,如果要用事件委托,就会将所有的操作放到js程序里面,
+			与dom的操作就只需要交互一次,这样就能大大的减少与dom的交互次数,提高性能.
+				不是所有事件都适合事件代理,适合用事件代理的有:click,mousedown,mouseup,keydown,keyup,keypress.
+				值得注意的是,mouseover和mouseout虽然也有事件冒泡.但是处理他们的时候需要特别注意,因为需要经常计算他们的位置,处理起来不容易.
+			*/
+		</script>
+	</body>
+</html>

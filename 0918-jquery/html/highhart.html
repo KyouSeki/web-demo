@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>highcharts</title>
+		<link rel="stylesheet" href="../css/highcharts.css">
+	</head>
+	<body>
+		<div id="container" style="min-width:400px;height:400px"></div>
+		
+		<script src="../js/highcharts.js"></script>
+		<script type="text/javascript">
+			var chart = new Highcharts.Chart('container',{
+				title:{
+					text:'不同城市的月平均气温',
+					x:-20
+				},
+				subtitle:{
+					text:'数据来源:worldClimate.com',
+					x:-20
+				},
+				xAxis:{
+					crosshair:{
+						width:2
+					},
+					categories:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月']
+				},
+				yAxis:{
+					title:{
+						text:'温度°C'
+					},
+					plotLines:[{
+						value:0,
+						width:1,
+						color:'#808080'
+					}]
+				},
+				tooltip:{
+					valueSuffix:'°C',
+					shared:true
+				},
+				legend:{
+					layout:'vertical',
+					align:'right',
+					verticalAlign:'middle',
+					borderWidth:0
+				},
+				series:[{
+					name:'东京',
+					data:[7.0,6.9,9.5,14.5,18.2,21.5,26.5,21.4,21.1,2.3,12.2,23.2]
+				},{
+					name:'纽约',
+					data:[-0.2,0.8,5.7,11.3,17.0,22.0,24.8,6.9,9.5,14.5,18.2,21.5]
+				},{
+					name:'大连',
+					data:[-10.2,-12.8,2.7,14.5,22.0,28.0,29.8,30.9,28.5,23.5,15.2,-12.5]
+				},
+				]
+			})
+		</script>
+	</body>
+</html>

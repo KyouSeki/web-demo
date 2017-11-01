@@ -1,0 +1,57 @@
+/*css hack 属性注释法*/
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+/*    星号*  只能在ie7以下浏览器生效*/
+    *background-color:green;
+    
+/*    加号+  只能在ie7以下浏览器生效*/
+/*    _下划线  只针对IE6*/
+    +color:red;
+}
+
+
+
+.menu{
+    width: 200px;
+    height: 200px;
+    background-color: beige;
+}
+
+/*    \9  只能在ie6到ie10有用*/
+/*    \8 IE8以上有用        */
+/*    \9\0只针对ie9和ie10好用*/
+.menu{
+     width: 50px\9\0;
+     height: 50px\9\0;
+}
+
+/*css hack 选择器前缀法*/
+/*      *+html .box 只针对IE7好用       */
+/*      *html .box  只针对IE6好用       */
+*+html .menu{
+        background-color:royalblue;
+    }
+
+
+/*只针对ie7以下好用*/
+@media screen\9{
+    .menu{
+        color: yellow;
+    }
+}
+
+/*只针对ie8好用*/
+@media \0screen{
+    .menu{
+        background-color: fuchsia;
+    }
+}
+
+/*只针对IE678有用*/
+@media \0screen, screen\9{
+    .menu{
+        border:5px solid #ddd;
+    }
+}

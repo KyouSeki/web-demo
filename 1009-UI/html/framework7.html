@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="../css/framework7.ios.css">
+    <link rel="stylesheet" href="../css/framework7.ios.colors.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+	<link rel="stylesheet" href="../Font-Awesome-3.2.1/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar nav-red theme-white">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding color-white">首页</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+				<a href="#" class="link icon-only open-panel "> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+	  
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+				<div class="swiper-container swiper-1">
+					<div class="swiper-pagination"></div>
+					<div class="swiper-wrapper">
+					  <div class="swiper-slide"></div>
+					  <div class="swiper-slide"></div>
+					  <div class="swiper-slide"></div>
+					</div>	 
+				</div>
+				<div class="list-block media-list index-main">
+				  <ul>
+					<li>
+					  <a href="#" class="item-link item-content">
+						<div class="item-media"><img src="../img/img1.jpg" width="50"></div>
+						<div class="item-inner">
+						  <div class="item-title-row">
+							<div class="item-title">爱投宝</div>
+						  </div>
+						  <div class="item-subtitle">低门槛,高流动性</div>
+						  <div class="item-text text-row">
+							<div>6%</div>
+							<div>无</div>
+							<div>1百起投</div>
+						  </div>
+						</div>
+					  </a>
+					</li>
+				  </ul>
+				</div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels theme-red">
+			<div class="toolbar-inner">
+				<a href="framework7.html" class="link active">
+					<i class="fa icon-map-marker"></i>
+					<span class="tabbar-label">首页</span>
+				</a>
+				<a href="aitou.html" class="link">
+					<i class="fa icon-star"></i>
+					<span class="tabbar-label">爱投精品</span>
+				</a>
+				<a href="zhuantou.html" class="link">
+					<i class="fa icon-star-empty"></i>
+					<span class="tabbar-label">专项投资</span>
+				</a>
+				<a href="shopping.html" class="link">
+					<i class="fa icon-inbox"></i>
+					<span class="tabbar-label">积分商城</span>
+				</a>
+				<a href="user-center.html" class="link">
+					<i class="fa icon-play-circle"></i>
+					<span class="tabbar-label">我的账户</span>
+				</a>
+			</div>
+		</div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="../js/my-app.js"></script>
+  </body>
+</html>

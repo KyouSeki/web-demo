@@ -1,0 +1,99 @@
+/*list-style 复合属性:list-style-type list-style-image list-style-position*/
+ul li{
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: url("");
+}
+/*table border-collapse:collapse合并单元格边线/separate默认值,单元格分开;border-spacing等于cellspacing,调单元格之间的距离*/
+table{
+    width: 400px;
+    height: 300px;
+/*    border-spacing: 0;   */
+    border-collapse: collapse;
+}
+table,tr,td{
+    border: 1px solid #ddd;
+}
+/*overflow定义内部的元素超出框以后会怎么样
+overflow-x: scroll
+overflow-y: scroll
+        hidden:超出内容会被剪掉,并且剪掉内容不可见
+        visible:默认值,超出内容会被显示
+        scroll:超出内容会被剪掉,并且可以用滚动条查看被剪掉内容
+        auto:如果有超出内容会加滚动条,没有就不会加.
+*/
+/*
+vertical-align:设置文本的垂直对齐方式.1:只对行内元素和行内块元素有效  2:需要配合行高一起使用.
+        middle:把元素放置在父元素的中部
+        baseline:默认值,与父元素基线对齐
+        top:把元素的顶端与行中最高元素的顶端对齐
+        text-top:把元素的顶端和父元素字的顶端对齐
+*/
+.over{
+    overflow: scroll;
+    width: 400px;
+    height: 300px;
+    background-color: antiquewhite;
+}
+.over .over-a{
+    width: 300px;
+    height: 200px;
+    background-color: aqua;
+}
+.over .over-b{
+    width: 500px;
+    height: 200px;
+    background-color: coral;
+}
+img{
+    width: 30px;
+    height: 30px;
+    vertical-align:middle;
+}
+.text-box{
+    height: 300px;
+    border: 1px solid #ddd;
+    line-height: 60px;
+/*    overflow: scroll;*/
+    vertical-align: middle;
+}
+/*
+white-space:元素内的空白怎么处理
+        normal:默认值,文字会折行
+        nowrap:文字不会自动折行,直到遇到br为止
+        pre:文本怎么写浏览器就会怎么显示,类似html中的<pre>标签.
+        pre-wrap:和上面一样空白符会在浏览器中保留,但是遇到块的边界也会正常换行
+        pre-line:空白符会被合并,但是可以显示文本中的换行
+*/
+.txt{
+    border:1px solid #ddd;
+    width: 300px;
+    height: 100px;
+    line-height: 30px;
+    font-size: 20px;
+    white-space:normal;
+    overflow: scroll;
+    
+/*
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+*/
+}
+/*
+text-overflow:当文本溢出包含它的元素时,如何处理,搭配overflow和white-space一起使用
+            clip:只修剪文本
+            ellipsis:显示省略号来代替被修剪的文字
+*/
+/*
+    word-wrap:设置内容折行的方法
+            normal:默认值,不会切断英文单词
+            break-word:在长单词或URL地址内部进行换行
+
+    word-break:break-all;可以在任何位置截断单词.
+*/
+/*
+    word-spacing:px;单词之间的距离
+    letter-spacing:px;字母或汉字之间的距离
+*/
+

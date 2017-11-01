@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			form{
+				width: 500px;
+				margin: 30px auto;
+				padding: 50px;
+				border:1px solid #ddd;
+				text-align: center;
+			}
+			.myForm div label{
+				display:inline-block;
+				width: 100px;
+				text-align: right;
+			}
+			.myForm div{
+				padding: 10px;
+			}
+		</style>
+		<script src="../js/angular.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myController">
+		<div>
+			<table border="1" cellpadding="10" cellspacing="0" width="600px">
+				<tr>
+					<td>商品名</td>
+					<td>单价</td>
+					<td>数量</td>
+					<td>总价</td>
+				</tr>
+				<tr ng-repeat="good in goods">
+					<td>{{good.goodsName}}</td>
+					<td>{{good.goodsPrice | currency:'￥'}}</td>
+					<td><input ng-model="good.goodsNum"></td>
+					<td>￥{{good.goodsNum*good.goodsPrice}}</td>
+				</tr>
+			</table>
+		</div>
+		<hr/>
+		<form class="myForm" name="myForm" action="http://www.bilibili.com">
+			<div>
+				<h2>注册</h2>
+			</div>
+			<div>
+				<label>用户名:</label>
+				<input type="text" name="userName" ng-model="userName" ng-pattern="/^[0-9A-z]{6,8}$/" ng-required="true"/>
+				<p ng-show="myForm.userName.$error.pattern">用户名必须为6到8位英文或数字</p>
+			</div>
+			<div>
+				<label>密码:</label>
+				<input type="password" name="pwd" ng-model="pwd" ng-pattern="/^[0-9]{6}$/" ng-required="true"/>
+				<p ng-show="myForm.pwd.$error.pattern">密码必须为6位数字</p>
+			</div>
+			<div>
+				<label>确认密码:</label>
+				<input type="password" name="pwd2" ng-model="pwd2" ng-required="true"/>
+				<p ng-show="pwd2!=pwd">确认密码必须和密码相同</p>
+			</div>
+			<div>
+				<label>电子邮箱</label>
+				<input type="text" name="email" ng-model="email" ng-pattern="/@{1}/" ng-required="true"/>
+				<p ng-show="myForm.email.$error.pattern">请输入正确的邮箱地址</p>
+			</div>
+			<div>
+				<label>电话</label>
+				<input type="text"/>
+			</div>
+			<div>
+				<button type="submit" ng-disabled="myForm.$invalid">注册</button>
+			</div>
+		</form>
+		<script>
+			var app = angular.module("myApp",[]);
+			app.controller("myController",function($scope){
+				console.log(myForm.userName);
+				
+				$scope.goods=[{
+					"goodsName":"apple",
+					"goodsPrice":2,
+					"goodsNum":1
+				},{
+					"goodsName":"momo",
+					"goodsPrice":29,
+					"goodsNum":2
+				},{
+					"goodsName":"banana",
+					"goodsPrice":5,
+					"goodsNum":1
+				}]
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<style></style>
+		<script src="../js/angular.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="first">
+			父级:<input type="text" ng-model="father">
+<!--			<div my-hello son-data="father"></div>-->
+			
+			<div class="" ng-click="hello()">点击</div>
+			<my-hello son-data="hello()"></my-hello>
+		</div>
+		<script>
+			//自定义指令
+			
+			//restrict :E:元素 C:class类 A:attribute属性 M:注释
+//				定义指令已什么形式存在,可以定义多个形式--restrict:"ECA";
+			
+//			replace: true和false表示是否将自定义的指令标签替换为template中的内容
+				
+//			template: 自定义的内容
+//			templateUrl:从指定地址获取模板内容,即你要在指令所在的容器中插入的一个html文件
+//			注释的写法<--! directive.my-hello -->
+			
+		/*	隔离的scope,通常用于创建可复用的指令,也就是他不用管父scope中的model
+			然而虽然说是"隔离",但通常我们还是需要让这个子scope跟父scope中的变量进行绑定,
+			绑定的策略有3种:
+			@:单向绑定,外部scope能够影响内部scope,但反过来不成立
+			=:双向绑定,外部scope和内部scope可以互相改变,双向绑定时标签里不需要写{{}}
+			@和=的不同之处在于,@是针对字符串引用,而=是针对某个对象引用.
+			
+			&:把内部scope的函数的返回值和外部scope的任何属性绑定起来
+			不写scope的时候是默认值false.直接继承父级.可以输出父级的model值.
+			*/
+			
+//			link属性,表示当directive被angular编译后,执行该方法.这个方法接受3个参数.
+//				a):scope表示controller下面的数据.
+//				b):element表示当前的DOM元素.
+//				c):attr表示这个DOM元素上的自定义属性
+			
+			var app = angular.module("myApp",[]);
+			app.controller("first",function($scope){
+				$scope.hello = function(){
+					console.log("hello");
+				}
+			})
+			//不能写控制器里,return里写参数.
+			app.directive("myHello",function(){
+				return{
+					restrict:"ECA",
+					replace:true,
+//					template:"<input type='text' ng-model='sonData'>",
+					template:"<h1 ng-click='sonData()'>h1点击</h1>",
+					scope:{
+						sonData:"&"
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>	
+		<label>所属栏目:</label>
+		<select class="form-mk form-mk1" id="lanmu">
+			<option value="tucao">吐槽</option>
+			<option value="music">音乐</option>
+			<option value="anime">动画</option>
+			<option value="neru">睡觉</option>
+			<option value="asobi">娱乐</option>
+		</select>
+		<span>/</span>
+		<select class="form-mk form-mk1" id="lan_select">
+			<option value="tucao">aa</option>
+			<option value="music">bb</option>
+			<option value="anime">cc</option>
+			<option value="neru">dd</option>
+			<option value="asobi">ee</option>
+		</select>
+		<em class="star">*</em>
+<!--		省市区级联-->
+		<div id="address">
+			<select id="province"></select>
+			<select id="city"></select>
+			<select id="district"></select>
+		</div>
+		<button id="btn">获取</button>
+		<button id="show">回显</button>
+		
+		<script src="../js/jquery.js"></script>
+		<script src="../js/distpicker.data.js"></script>
+		<script src="../js/distpicker.js"></script>
+		
+		<script>
+			var data ={
+				"province":"山西省",
+				"city":"太原市",
+				"district":"小店区"
+			}
+			//调用方法
+			//$("#address").distpicker();
+			//获取城市的值
+			$("#btn").click(function(){
+				var pVal = $("#province").val();
+				var cVal = $("#city").val();
+				var dVal = $("#district").val();
+				console.log(pVal,cVal,dVal);
+			})
+			//回显
+			$("#show").click(function(){
+				$("#address").distpicker({
+					province:data.province,
+					city:data.city,
+					district:data.district,
+					autoSelect:true
+				})
+			})
+		</script>
+	</body>
+</html>

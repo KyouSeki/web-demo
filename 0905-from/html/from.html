@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>from表单</title>
+	</head>
+	<body>
+		<form id="" class="" name="myForm" action="action.html" method="get" enctype="multipart/form-data">
+			<label for="name">用户名:</label>
+			<input id="name" type="text" name="userName"/><br/>
+			<label>密码:</label>
+			<input type="password" name="password"/><br/>
+			<label>性别</label>
+			<input type="radio" name="sex" value="男"/>男
+			<input type="radio" name="sex" value="女"/>女
+			<input type="radio" name="sex" value="不确定"/>不确定
+			<br/>
+			<label>爱好:</label>
+			<input id="eat" type="checkbox" name="hobby" value="睡觉"/><label for="eat">睡觉</label>
+			<input id="eat2" type="checkbox" name="hobby" value="吃饭"/><label for="eat2">吃饭</label>
+			<input id="eat3" type="checkbox" name="hobby" value="吃土"/><label for="eat3">吃土</label><br/>
+			
+			<label id="myCity">应该怎么办啊</label><br/>
+			<select id="city">
+				<option value="dl">请选择</option>
+				<option value="sh">上海</option>
+				<option value="bj">北京</option>
+				<option value="gy">贵阳</option>
+			</select>
+			<label>当然是选择原谅他了</label><br/>
+			<select id="color">
+				<option value="dl">请选择</option>
+				<option value="sh">apple</option>
+				<option value="bj">orange</option>
+				<option value="gy">banana</option>
+			</select>
+			<button id="btn" type="button">提交</button><br/>
+		</form>
+		<script type="text/javascript" src="../js/form.js"></script>
+	</body>
+</html>

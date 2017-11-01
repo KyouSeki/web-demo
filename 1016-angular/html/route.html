@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			form{
+				width: 500px;
+				margin: 30px auto;
+				padding: 50px;
+				border:1px solid #ddd;
+				text-align: center;
+			}
+			.myForm div label{
+				display:inline-block;
+				width: 100px;
+				text-align: right;
+			}
+			.myForm div{
+				padding: 10px;
+			}
+			.phone{
+				width: 400px;
+				height: 800px;
+				text-align: center;
+			}
+			.phone ul li{
+				list-style: none;
+				display: inline-block;
+				width: 100px;
+				border:1px solid #ddd;
+			}
+		</style>
+		<script src="../js/angular.js"></script>
+		<script src="../js/angular-route.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myController">
+		<div>
+			<a href="#/">red</a>
+			<a href="#/green">green</a>
+			<a href="#/blue">blue</a>
+<!--			<div ng-view></div>-->
+		</div>
+		<div class="phone">
+			<div ng-view></div>
+			<ul>
+				<li><a href="#/index">首页</a></li>
+				<li><a href="#/money">账户</a></li>
+				<li><a href="#/center">个人中心</a></li>
+			</ul>
+		</div>
+		<script>
+			//route  和ng-view一起用,模板里的东西会被插入到ng-view里
+			var app = angular.module("myApp",["ngRoute"]);
+			app.controller("myController",function($scope){
+
+			});
+			//when(url,{template&templateUrl:"内容"})
+		/*	app.config(function($routeProvider){
+				$routeProvider
+					.when("/",{template:"红色的页"})
+					.when("/green",{template:"绿色的页"})
+					.when("/blue",{templateUrl:"template.html"})
+					.otherwise({redirectTo:'/'})
+			})*/
+			app.config(function($routeProvider){
+				$routeProvider
+					.when("/index",{template:"首页"})
+					.when("/money",{template:"我的账户"})
+					.when("/center",{template:"个人中心"})
+			})
+		</script>
+	</body>
+</html>

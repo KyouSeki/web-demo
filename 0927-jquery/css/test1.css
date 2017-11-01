@@ -1,0 +1,56 @@
+section{
+	height: 440px;
+}
+aside{
+	float: left;
+}
+ul{
+	position: relative;
+	padding-left: 60px;
+	width: 280px;
+	list-style: none;
+	background-color: #bfbdb9;
+}
+ul li{
+	position: relative;
+	border-bottom: 1px solid #fff;
+	height: 70px;
+	line-height: 70px;
+	font-size: 16px;
+	color: #fff;
+	z-index: 10;
+}
+.mark{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 340px;
+	border-bottom: 0;
+	background-color: #ff6800;
+	z-index: 2;
+}
+.mark i{
+	position: absolute;
+	top: 26px;
+	left: 340px;	
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #ff6800;
+	
+}
+.body-box{
+	padding: 30px;
+	float: left;
+}
+.body-box img{
+	display: block;
+	width: 393px;
+	height: 270px;
+	margin:0 auto;
+	margin-top: 14px;
+}
+.hide{
+	display: none;
+}

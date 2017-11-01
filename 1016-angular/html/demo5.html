@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			form{
+				width: 300px;
+				margin: 30px auto;
+				padding: 50px;
+				border:1px solid #ddd;
+			}
+		</style>
+		<script src="../js/angular.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myController">
+<!--	ng-minlength="3":最小长度3
+		ng-maxlength="3":最大长度3
+		ng-pattern="/正则/"  正则表达式
+		ng-required  等于ture则必填
+		$dirty  表单有填写记录
+		$valid  字段内容合法
+		$invalid  字段内容非法
+		$pristine  表单没有填写记录
+-->
+		<form name="myForm" action="http://www.bilibili.com">
+			<label>姓名</label>
+			<input type="text" name="userName" ng-model="userName" ng-pattern="/^[0-9A-z]{6,10}$/" ng-required="true"/><br/>
+			<span ng-show="myForm.userName.$error.pattern">输入的name必须是数字+英文</span><br/>
+			<label>密码</label>
+			<input type="password" name="pwd" ng-model="pwd" ng-minlength="1" ng-maxlength="6"/><br/>
+			<span ng-show="myForm.pwd.$error.maxlength">输入的密码最多为6位</span><br/>
+<!--		invalid是不合法的意思.	-->
+			<button type="submit" ng-disabled="myForm.$invalid">提交</button>
+		</form>
+		<script>
+			var app = angular.module("myApp",[]);
+			app.controller("myController",function($scope){
+				console.log(myForm.userName.$error.pattern);
+				$scope.goods=[{
+					"goodsName":"apple",
+					"goodsPrice":2,
+					"goodsNum":1
+				},{
+					"goodsName":"momo",
+					"goodsPrice":29,
+					"goodsNum":2
+				},{
+					"goodsName":"banana",
+					"goodsPrice":5,
+					"goodsNum":1
+				}]
+			})
+		</script>
+	</body>
+</html>

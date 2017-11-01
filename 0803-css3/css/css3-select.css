@@ -1,0 +1,186 @@
+/*      层次选择器       */
+/*1.后代选择器,用空格隔开,可以找到所有后代中的目标*/
+.list li,
+.list-re li{
+    list-style: none;
+}
+.lay-list li p strong{
+    display: inline-block;
+    height: 50px;
+    background-color: aquamarine;
+}
+
+/*2.子选择器,用>隔开,只匹配当前元素的子元素,不包括子元素的再下一级元素*/
+.lay-list>li{
+    height: 50px;
+    background-color: antiquewhite;
+    margin-top: 5px;
+}
+
+/*3.相邻兄弟选择器,用+隔开,匹配当前元素之后紧接着的第一个兄弟元素*/
+.base-box+.lay-list{
+    margin-left: 100px;
+}
+.list li{
+    width: 50px;
+    height: 50px;
+    background-color: chartreuse;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 10px;
+}
+/*除了第一个li全都变色,因为list>li选择了所有的li,这些li的相邻兄弟不包括第一个li*/
+/*
+
+.list>li+li{
+    color: orange;
+}
+*/
+
+/*4.通用兄弟选择器,用~隔开,匹配当前元素之后所有的兄弟元素.*/
+.list>.active~li{
+    color: red;
+}
+/*      伪类选择器       */
+/*----动态伪类选择器: link visited hover active  focus*/
+
+/*:focus-目标获取焦点时*/
+input:focus{
+    background-color: aqua;
+}
+
+/*        UI伪类选择器      */
+/*:checked-目标被选勾选时,多用于radio,checkbox*/
+input[type="checkbox"]:checked{
+    width: 30px;
+    height: 30px;
+}
+
+/*:disabled-目标不可用时*/
+input:disabled{
+    background-color: black;
+}
+/*:enabled-目标可用时*/
+input:enabled{
+    background-color:antiquewhite;
+}
+
+/*      结构伪类选择器:first-child  :last-child  :nth-child(n) n:整数,关键字odd even,表达式2n-1 2n -n-3  :root
+    :nth-of-type(n)
+    :nth-last-of-type(n)
+    :first-of-type等价于nth-of-type(1)
+    :last-of-type等价于nth-last-of-type(1)
+    :only-child
+*/
+
+.list-re li:first-child{
+    color: orange;
+}
+/*:root-匹配根元素*/
+:root{
+    background-color: aliceblue;
+}
+
+.list-re li:nth-child(-n+3){
+    color: blue;
+}
+/*:nth-last-child(n)-表示选择一个元素的倒数第n个元素*/
+.list-re li:nth-last-child(2){
+    color: crimson;
+}
+/*:nth-of-type(n)-表示限定选择li中的第n个元素,可以避免:first-child  :last-child  :nth-child(n)遇到的li中有别的div的情况*/
+.list-re li:nth-of-type(3){
+    color: darkviolet;
+}
+
+/*:only-child=表示标签内仅有strong这一个元素时选中该元素,不可以有其他元素*/
+.box2 strong:only-child{
+    color: orange;
+}
+
+/*:only-of-type=表示标签内的strong元素只有一个时选中该元素,可以有别的元素*/
+.box2 strong:only-of-type{
+    color: orange;
+}
+/*:empty=表示标签内没有任何文本以及空格时*/
+.box3:empty{
+    width:100px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+/*          否定伪类选择器 :not(n)  n可以是类选择器,属性选择器,伪类选择器等等        */
+/*
+.list4 li:not(:first-child){
+    color: yellow;
+}*/
+
+/*
+.list4 li:not(div){
+    background-color: yellow;
+}
+*/
+.list4 li:not(.active){
+    color: yellow;
+}
+input:not([type="checkbox"]){
+    width: 500px;
+}
+
+/*伪元素选择器 css3为了区分和伪类选择器的区别,可以写::两个冒号*/
+/*:after 设置伪元素在该元素内最后 ,  :before 设置伪元素在该元素内开头*/
+.box3{
+    background-color: darkgray;
+}
+.box3 p{
+    float:left;
+    margin: 0;
+    height: 30px;
+    background-color: aqua;
+}
+.clear:after{
+    display:block;
+    content: "";
+    clear:both;
+}
+
+/*处理第一个字母:first-letter*/
+/*处理第一排文字:first-line*/
+.p-text:first-letter{
+    font-size: 24px;
+    color: red;
+}
+/*::selection处理被鼠标左键框选的文字的背景色和字体颜色*/
+::selection{
+    background-color:antiquewhite;
+    color:firebrick;
+}
+
+/*        属性选择器     */
+/*:E[attr] 选择含有arrt(属性)的元素*/
+.box4[id]{
+    color: red;
+}
+
+/*:E[attr="n"] 选择arrt(属性)为n的元素*/
+input[type="text"]{
+    width: 600px;
+}
+/*:e|="val" 匹配以val-开头的元素,-作为节点,匹配-前一个单词*/
+ul[class|="article"]{
+    color: red;
+}
+/*:e^="val" 匹配开头包含val的元素*/
+/*:e$="val" 匹配结尾包含val的元素*/
+
+ul[class^="article"]{
+    background-color: gold;
+}
+
+/*:e~="val" 匹配含有以空格分开的val这个词的元素*/
+/*:e*="val" 匹配任意位置包含val这个字母的元素*/
+
+ul[class*="tic"]{
+    margin-top: 30px;
+}

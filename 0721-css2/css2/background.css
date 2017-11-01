@@ -1,0 +1,77 @@
+/*
+backround,复合属性-
+    ;color:
+    ;image:url("")
+    ;repeat:repeat(默认值,重复)/no-repeat不重复/repeat-x(x轴方向重复)/repeat-y(y轴方向重复)
+    ;position:写一个属性代表xy都遵照这个属性,left center代表x轴方向左y轴方向居中,还可以写百分比,和像素!
+    ;size:cover保持图片比例填充满背景;contain保持图片比例直到其中一边达到背景最宽处;px可以写两个像素作为单位;100% auto,保持宽,自适应.
+*/
+.bg-box{
+    width: 400px;
+    height: 800px;
+    background-color: cornsilk;
+    background-image: url("../images/2w.png");
+    background-repeat: no-repeat;
+    background-position:0 0;
+    background-size:cover;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.top{
+    height: 40px;
+    border-bottom: 1px dashed #ddd;
+}
+.top .icon{
+    float: left;
+    display: block;
+    margin: 12px 7px;
+    width: 18px;
+    height: 16px;
+    background: url("../images/icon-3.png") no-repeat 0 -16px;
+}
+.top .icon:hover{
+    background: url("../images/icon-3.png") no-repeat 0 0;
+}
+.icon.weixin{
+    background: url("../images/icon-3.png") no-repeat -18px -16px;
+}
+.icon.weixin:hover{
+    background: url("../images/icon-3.png") no-repeat -18px 0;
+}
+.icon.qq{
+    background: url("../images/icon-3.png") no-repeat -36px -16px;
+}
+.icon.qq:hover{
+    background: url("../images/icon-3.png") no-repeat -36px 0;
+}
+.app{
+    font-family: "microsoft YaHei";
+    font-size: 12px;
+    color: #a0a0a0;
+    display: block;
+    float: left;
+    margin: 7px 16px;
+    padding: 0 5px;
+    width: 70px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #a0a0a0;
+    border-radius: 3px;
+}
+.app .app-img{
+    display: block;
+    float: left;
+    margin: 6px 5px;
+    width: 8px;
+    height: 13px;
+    background:url("../images/icon-3.png") no-repeat -59px -16px;
+}
+.app:hover .app-img{
+    background:url("../images/icon-3.png") no-repeat -72px -16px;
+}
+.app:hover{
+    color: #fcae26;
+    border: 1px solid #fcae26;
+}

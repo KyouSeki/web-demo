@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<style></style>
+		<script src="../js/angular.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myController">
+		<div>
+			<input type="text" ng-model="myValue"/>
+			<strong>{{myValue}}</strong>
+			<input type="checkbox" ng-model="myCheck"/>
+			<strong>{{myCheck}}</strong>
+			<input type="radio" ng-model="myRadio" name="sex" value="nan"/>
+			<input type="radio" ng-model="myRadio" name="sex" value="nv"/>
+			<strong>{{myRadio}}</strong>
+			<select ng-model="myColor">
+				<option value="red">红色</option>
+				<option value="green">绿色</option>
+				<option value="yellow">黄色</option>
+			</select>
+			<strong>{{myColor}}</strong>
+			<ul>
+				<li>
+					全选<input type="checkbox" ng-model="checkAll">
+				</li>
+				<li>
+					<input type="checkbox" ng-checked=checkAll>
+				</li>
+				<li>
+					<input type="checkbox" ng-checked=checkAll>
+				</li>
+				<li>
+					<input type="checkbox" ng-checked=checkAll>
+				</li>
+			</ul>
+		</div>
+		<script>
+			var app = angular.module("myApp",[]);
+			app.controller("myController",function($scope){
+				//ng-model 绑定了HTML表单元素到scope变量中.实现双向数据绑定, ng-model代表的是元素的value
+				//<input> <select> <textarea>,元素支持该指令.
+				//ng-checked 属性返回true代表被选中.返回false代表不选.
+				
+			})				
+		</script>
+	</body>
+</html>

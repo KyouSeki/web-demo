@@ -1,0 +1,41 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+aside{
+	position: fixed;
+	top: 20px;
+}
+.body-box{
+	margin-left: 120px;
+}
+.body-box div{
+	width: 1200px;
+	height: 900px;
+}
+.body-box .f1{
+	background-color: azure;
+}
+.body-box .f2{
+	background-color:cornsilk;
+}
+.body-box .f3{
+	background-color:darkcyan;
+}
+.body-box .f4{
+	background-color:deepskyblue;
+}
+.body-box .f5{
+	background-color:darkorange;
+}
+#list{
+	list-style: none;
+}
+#list li{
+	width: 60px;
+	height: 30px;
+	text-align: center;
+}
+#list li.active{
+	background-color: cornflowerblue;
+}

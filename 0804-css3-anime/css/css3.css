@@ -1,0 +1,341 @@
+/*
+浏览器前缀
+-webkit-
+-o-
+-moz-
+-ms-
+
+transition:平滑过渡,在鼠标移动或者获取焦点等等状态时,可以平滑改变样式的属性,多个属性变化时,用逗号隔开.
+    四个属性:执行变换的属性-transition-property:
+                可以写none(都不变,没啥用),all(所有属性变,默认值),想变的样式名(color,background-color,width等)
+            变换所需时间-transition-duration:
+                s秒
+            动画效果-transiton-timing-function:
+                1.ease(逐渐变慢)
+                2.linear(匀速)
+                3.ease-in(加速)
+                4.ease-out(减速)
+                5.ease-in-out(加速然后减速)
+                6.cubic-bezier:(自己定义一个贝塞尔曲线)
+            变化前的延迟时间-transition-delay:
+                s秒
+*/
+.rain{
+    width: 100px;
+    height: 200px;
+    background-color: aquamarine;
+    transition: color .3s ease-in, background-color .3s ease-in;
+}
+.rain:hover{
+    background-color: pink;
+    color:seashell;
+}
+
+.clear:after{
+    display: block;
+    content: "";
+    clear: both;
+    zoom:1;   
+}
+body{
+    background-color: #f0f3f5;
+}
+.box{
+    font-family: "microsoft YaHei";
+    width: 1322px;
+    margin: 0 auto;
+}
+.item{
+    float:left;
+    background-color: #fff;
+    margin-right: 22px;
+}
+.item:last-child{
+    margin-right: 0;
+}
+.item .item-top,
+.item .item-bottom{
+    padding: 0 22px;
+    width: 270px;
+    transition: all .2s linear;
+}
+.item-top .top-body{
+    padding-top: 110px;
+    padding-bottom: 90px;
+    border-bottom: 1px dashed #b5b5b5;
+}
+.item .item-top .top-body i{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 4px solid #1eaadc;
+    border-radius: 50%;
+    background:url("../images/transition-icons.png") no-repeat 8px -74px;
+}
+.item:nth-child(2) .item-top .top-body i{
+    background-position: -74px -74px;
+}
+.item:nth-child(3) .item-top .top-body i{
+    background-position: -156px -74px;
+}
+.item:nth-child(4) .item-top .top-body i{
+    background-position: -238px -74px;
+}
+.item-top .top-body h2{
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin: 30px 0;
+}
+.item-top .top-body p{
+    line-height: 24px;
+    font-size: 12px;
+    color: #828a8c;
+    text-align: center;
+}
+.item .item-bottom{
+    padding-top: 92px;
+}
+.item-bottom h3{
+    margin: 0;
+    font-weight: normal;
+    font-size: 18px;
+    color: #1eaadc;
+}
+.item-bottom ul{
+    margin: 0;
+    margin-top: 24px;
+    padding: 0;
+    padding-bottom: 30px;
+}
+.item-bottom ul li{
+    list-style: none;
+    line-height: 24px;
+    font-size: 12px;
+    color: #828a8c;
+}
+.item-bottom ul li i{
+    display: block;
+    float: left;
+    margin: 9px 10px 9px 0;
+    width: 6px;
+    height: 6px;
+    background-color: #1eaadc;
+    border-radius: 50%;
+}
+.item:hover .item-top{
+    background-color: #1eaadc;
+}
+.item:hover .item-top .top-body{
+    border-color: #fff;
+}
+.item:hover .item-bottom ul li i,
+.item:hover .item-top i{
+    background-color: #fff;
+    border-color: #fff;
+}
+.item:hover .item-top p,
+.item:hover .item-top h2{
+    color: #fff;
+}
+.item:hover .item-bottom{
+    background-color: #0091c3;
+}
+.item:hover .item-bottom ul li,
+.item:hover .item-bottom h3{
+    color: #fff;
+}
+
+/*
+    transform:
+        rotate:旋转  rotate(角度deg);
+        translate(x,y) 位移;  不脱离文档流,但是层级会变高,可以控制覆盖别的元素.
+        scale:缩放  scale(x,y),xy写缩放的倍数.
+        skew:扭曲   x轴和y轴的角度
+        matrix:矩阵
+
+    transform-origin:设置定位点,可以写两个坐标
+        关键字left/top/right/bottom/center
+        数字 0 0
+        像素 50px 50px 
+        百分比 50% 50%    
+*/
+
+.sunny{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color:green;
+    color: orange;
+    transition:All 2s linear ;
+    animation: move .2s linear infinite alternate;
+}
+
+.sunny:hover{
+    transform:translate(200px,100px);
+    transform-origin: top left;
+}
+
+
+
+/*
+关键帧:定义关键帧,然后通过animation属性引用
+@keyframes 名称{
+form{}   	 0{
+        	属性:值;
+			属性:值;
+			}
+			25%{}
+			...
+to{}   		100%{}
+        }
+    
+    animation:复合属性
+        animation-name:引用的关键帧的名称,多个用逗号隔开.
+        animation-duration:动画持续时间,单位s.
+        animation-timing-function:linear/ease-in/ease-out
+        animation-delay:元素动画的开始时间
+        animation-iteration-count:指定动画的循环次数,可以写数字和infinite;
+        animation-direction:reverse(反向播放)/alternate(奇数次正播,偶数次反播)/alternate-reverse(偶数次正播,奇数次反播)
+        
+*/
+
+@keyframes move {
+    0{
+        left:0;
+        top: 0;
+    }
+    25%{
+        left: 200px;
+        top: 0;
+    }
+    50%{
+        left: 200px;
+        top: 200px;
+    }
+    75%{
+        left: 0; top: 200px;
+    }
+    100%{
+        left: 0; top: 0;
+    }
+}
+clear:after{
+    display: block;
+    zoom:1;
+    content: "";
+    clear: both;
+}
+body{
+   background-color: #fff;
+}
+.heart{
+    margin: 50px auto;
+    width:200px;
+    height: 200px;
+    animation: beats .5s ease-in infinite;
+}
+.heart .heart-top,
+.heart .heart-bottom{
+    background-color: pink;
+}
+.heart .heart-top{
+    width: 100px;
+    height: 100px;
+    border-radius: 50% 50% 0 0;
+}
+.heart .heart-top.left{
+    float: left;
+    transform: rotate(-45deg) translate(8px,0px);
+}
+.heart .heart-top.right{
+    float:right;
+    transform: rotate(45deg) translate(-8px,0px);
+}
+.heart .heart-bottom{
+    width: 100px;
+    height: 100px;
+    transform:rotate(45deg) translate(-8px,-79px);
+    transform-origin: center center;
+    border-radius:  50% 0 0 0;
+}
+@keyframes beats{
+    0{
+        transform: scale(.9,.9);
+    }
+    100%{
+        transform: scale(1.2,1.2);
+    }
+}
+.pic-box{
+    margin: 100px auto;
+    width: 1290px;
+}
+.pic img{
+    display: inline-block;
+    margin: 10px;
+    transform-origin: center center;
+    transition: all .2s linear;
+}
+.pic img:hover{
+    transform: scale(1.3,1.3);
+    
+}
+/*
+.main-area{
+    height: 200px;
+    background-color: pink;
+}
+*/
+
+/*直接在css里写媒体特性*/
+/*
+@media screen and (max-width:600px){
+    .main-area{
+        height: 200px;
+        background-color: pink;
+    }
+}
+*/
+clear:after{
+    content: "";
+    display: block;
+    clear: both;
+    zoom:1;
+}
+.top{
+    height: 300px;
+    background-color:red;
+}
+.center{
+    width: 1000px;
+}
+.center .c1{
+    float: left;
+    margin:10px 10px 10px 0;
+    width: 200px;
+    height: 300px;
+    background-color: aquamarine;
+}
+.center .c2{
+    float: left;
+    margin:10px 10px 10px 0;
+    width: 300px;
+    height: 300px;
+    background-color: chartreuse;
+}
+.center .c3{
+    float: left;
+    overflow: hidden;
+    margin:10px 10px 10px 0;
+    width: 400px;
+    height: 300px;
+    background-color: yellow;
+}
+.bottom{
+    height: 500px;
+    background-color: deepskyblue;
+}

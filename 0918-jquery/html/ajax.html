@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<title>highcharts</title>
+		
+	</head>
+	<body>
+
+		<ul id="list">
+			<li>1312</li>
+			<li>23123</li>
+			<li>313</li>
+			<li>4123</li>
+		</ul>
+		<script src="../js/jquery.js"></script>
+		<script>
+		/*
+		each遍历的两种写法
+		1.$("").each(function(参数1,参数2){});对象的遍历,第一个参数表示下标位置,第二个参数表示元素本身
+		2.$.each(arr1,function(){});数组的遍历
+		each循环得到的val是元素本身,不是jq封装对象,不可以直接使用jq的方法,需要在前面加$才可以.
+		each循环的弹出方法是return false.不能使用break和continue
+		
+		DOM元素.data("属性","属性值")可以设定自定义属性的值.
+		DOM元素.data("属性")可以获取自定义属性的值.
+		*/
+			$("ul li").each(function(i,v){
+				console.log(i,v)
+			})
+			var arr1 = [["123","456"],["789","jqk"]];
+			var obj01 ={
+				"username":"Tom",
+				"age":"123",
+				"code":"1"
+			}
+			$.each(obj01,function(key,value){
+					//console.log(key,value);				
+			});
+			$.each(arr1,function(key,value){
+					console.log(value);	
+				$.each(value,function(i,j){
+					//console.log(j);				
+				})
+			});
+		</script>
+	</body>
+</html>

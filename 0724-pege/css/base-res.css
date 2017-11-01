@@ -1,0 +1,147 @@
+.main{
+    width: 100%;
+}
+.top-tel,
+.top-icon,
+.top-spac,
+.menu-box,
+.menu-box-button,
+.head-list,
+.body-img p,
+.body-img button,
+.item,
+.corporaton,
+.foot-top,
+.foot-bottom-right,
+.foot-bottom-left p:first-child{
+    display: none;
+}
+.top-user{
+    border-right: 0;
+}
+.head-box .main .logo{
+    margin-left: 10px;
+}
+.menu-res{
+    display: block;
+    width: 62px;
+    height: 32px;
+    margin: 28px 10px;
+    border: 1px solid #ce1329;
+    border-radius: 8px;
+    background: url("../images/sprite.png") no-repeat -394px -625px;
+}
+/*
+.menu-res:hover ul{
+    display: block;
+}
+*/
+.menu-res div{
+    position: absolute;
+    top: 130px;
+    left: 0;
+	display: none;
+    width: 100%;  
+}
+.menu-res ul{
+    padding-left: 14px;
+    background: url("../images/shade.png");
+}
+.menu-res ul li{
+    height: 46px;
+    line-height: 46px;
+    border-bottom: 1px solid #fff;
+}
+.menu-res ul li:last-child{
+    border-bottom: 0;
+}
+.menu-res ul li a{
+    color: #fff;
+    font-size: 14px;
+}
+.menu-res ul li:first-child a{
+    font-size: 16px;
+}
+.banner{
+    height: 150px;
+    background-size: cover;
+}
+.head-ft{
+    margin: 10px;
+}
+.head-ft .main .box-img{
+    float: none;
+    padding: 10px 10px 10px 110px;
+    width: auto;
+    height: 82px;
+}
+.box-img-text{
+    margin-top: 8px;
+}
+.box-img i{
+    margin: 0 30px 0 -94px;
+}
+.body{
+    margin: 10px;
+}
+.body-img{
+    float: none;
+    padding: 0 10px;
+    width: auto;
+    height: 40px;
+    background: 0;
+    background-color: #30b4fc;
+}
+.body2 .body-img{
+   background-color: #44d7c4; 
+}
+.body-img h1{
+    float: left;
+    font-size: 22px;
+    line-height: 40px;
+    margin: 0;
+}
+.body-img a{
+    display: block;
+    float: right;
+    line-height: 40px;
+    color: #fff;
+    font-size: 12px;
+}
+.body-item{
+    float: none;
+    padding:10px;
+    width: auto;
+    border: 0;
+}
+.item-maru{
+    margin:12px auto;
+}
+.item-text{
+    width: auto;
+}
+.item-text .item-text-left{
+    padding-right: 20px;
+}
+.item-text .item-text-right{
+    padding-left: 20px;
+}
+.item-btn{
+    width: 100%;
+}
+.foot-bottom-left{
+    float: none;
+    padding: 60px 10px;
+    text-align: center;
+}
+.foot-bottom-left p span{
+    display: block;
+}
+.item-border{
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #30b4fc;
+}
+.item-border.border2{
+    border-bottom-color: #44d7c4;
+}

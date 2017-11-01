@@ -1,0 +1,31 @@
+@media screen and (max-width:768px) and (min-width:480px){
+    .center{
+        width: auto;
+    }
+    .center .c1{
+        margin-right: 2%;
+        width: 48%;
+    }
+    .center .c2{
+        margin-right: 0;
+        width: 50%;
+    }
+    .center .c3{
+        float: none;
+    }
+}
+
+@media screen and (max-width:480px){
+    .center{
+        width: 100%;
+    }
+    .center .c1,
+    .center .c2,
+    .center .c3{
+        float: none;
+        width: auto;
+        line-height: 300px;
+        text-align: center;
+        margin-bottom: 0;
+        margin-right: 0;
+}

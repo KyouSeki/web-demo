@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			.color-red{
+				color:red;
+			}
+		</style>
+		<script src="../js/angular.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myController">
+		<table>
+<!--			ng-class的另一种写法,直接写参数,然后在函数里把定义的class赋值给这个参数-->
+
+			<tr ng-class-even="colorRed" ng-repeat="new in news">
+				<td>{{new.title}}</td>
+				<td>{{new.text}}</td>
+				<td>{{new.data}}</td>
+			</tr>
+		</table>
+			<input type="text" ng-model="plusNum" ng-list="+">
+			<strong>{{plusNum}}</strong>
+			<strong ng-click="plus()">=</strong>
+			<strong ng-bind="sum"></strong>
+			<hr/>
+		<a ng-href="{{url}}" href="www.baidu.com">{{name}}</a>
+		<button ng-click="shift()">切换</button>
+		
+		<select ng-model="myColor">
+			<option value="red">红色</option>
+			<option value="blue">蓝色</option>
+			<option value="green">绿色</option>
+		</select>
+		<div ng-switch="myColor">
+			<p ng-switch-when="red">red</p>
+			<p ng-switch-when="green">green</p>
+			<p ng-switch-when="blue">blue</p>
+			<p ng-switch-default>几个值都不对的话默认显示</p>
+		</div>
+		<label>姓名:</label>
+		<input type="text" ng-value="username">
+		<button type="button" ng-disabled="!aa">注册</button>
+		<input type="checkbox" ng-model="aa">同意注册协议
+		<hr/>
+		<select>
+			<option ng-model="colors" ng-repeat="color in colors track by $index" ng-init="colors.colors[2]">{{color}}</option>
+		</select>
+		<select ng-model="myNews" ng-options="new.data as new.title for new in news" ng-init="myNews.news[2]">
+			<option>{{new}}</option>
+		</select>
+		<hr/>
+<!--		不设置ng-model的话,不可以使用{{变量}}进行双向绑定 -->
+		<input type="text" ng-change="myChange=myChange+1" ng-model="myInput" ng-init="myChange=0"><strong>{{myChange}}</strong>
+		<script>
+			var app = angular.module("myApp",[]);
+			app.controller("myController",function($scope){
+				//ng-class-even  类似ng-class,但是只在偶数行起作用,搭配ng-repeat使用
+				//ng-list  将文本转换为数组,属性值写用来分隔的字符
+				//ng-src 指定<img>元素的src地址 
+				//ng-href 为<a>元素指定链接  语法:<a ng-href="string"或者ng-href="{{变量}}">
+				/*ng-switch 指定根据表达式显示或隐藏对应的部分  当valueN等于里面的某一个value时,获取他的值,否则获取默认值.
+					语法
+					<element ng-switch="valueN">
+						<element ng-switch-when="value1"></element>
+						<element ng-switch-when="value2"></element>
+						<element ng-switch-when="value3"></element>
+						<element ng-switch-default></element>
+					</element>
+				*/
+				//ng-model 绑定了HTML表单元素到scope变量中.实现双向数据绑定, ng-model代表的是元素的value
+				//ng-value 规定input元素的value值,是一个单项绑定.无法传递到scope变量中
+				//ng-checked 
+				//ng-readonly = "表达式"
+				//ng-disabled 规定一个元素是否被禁用,true,false
+				//ng-selected 指定元素的selected属性,一般用来select上
+				/*
+				ng-options  要配和ng-model用
+				对于数组的写法:label for value in array
+				
+				对于对象的写法:select as label.key for value in array
+						对应:value值 as 文本值 for 每一条数据 in Object对象
+				*/
+				
+				//事件
+				
+				//ng-change 目标改变时发生的行为和ng-model搭配使用
+				//ng-copy   规定拷贝事件的行为
+				//ng-cut	规定剪切事件的行为
+				//ng-paste	规定粘贴事件的行为
+				
+				$scope.colorRed = "color-red";
+				
+				$scope.news = [{
+					"title":"四幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/15"
+				},{
+					"title":"3幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/13"
+				},{
+					"title":"2幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/14"
+				},{
+					"title":"1幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/13"
+				},{
+					"title":"0幻神归位",
+					"text":"dadasdasdadadad",
+					"data":"2017/10/12"
+				}]
+				$scope.plus = function(){
+				/*	var numLength = $scope.plusNum.length
+					var myNum = 0;
+					for(var i=0;i<numLength;i++){
+						myNum+=parseInt($scope.plusNum[i]);	
+					}
+					console.log(myNum);
+					$scope.sum = myNum;*/
+					
+//					angular.forEach(目标,function(data){}),angular提供的循环
+					$scope.sum = 0;
+					angular.forEach($scope.plusNum,function(data){
+						$scope.sum = $scope.sum*1+data*1;
+					})
+				}	
+					$scope.name="百度";
+				$scope.shift = function(){
+					if($scope.name=="百度"){
+						$scope.name="京东";
+						$scope.url = 'www.JD.com';
+					}else{
+						$scope.name="百度";
+						$scope.url = 'www.baidu.com';
+					}
+				}
+				
+				//ng-scope
+				$scope.mySwi = "bb";
+				
+				//ng-value
+				$scope.username="Tom";
+				
+				//ng-option
+				$scope.colors=["red","green","pink"]
+				
+				//ng-change
+//				var i=1;
+//				$scope.myChan = function(){
+//					$scope.myChange = i++;
+//				}
+			})
+			
+		</script>
+	</body>
+</html>

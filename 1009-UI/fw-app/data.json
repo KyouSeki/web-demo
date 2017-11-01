@@ -1,0 +1,44 @@
+{
+    "userName" :"Tom",
+    "sex":"1",
+    "hobby":[1,2,3],
+    "family":[{
+        "father":"Loe",
+        "mother":"lili"
+    },{
+        "sister":"meimei",
+        "brother":"lilei"
+    }],
+    "list":[
+        {
+            "num":1,
+            "phone":1,
+            "add":"lala"
+            
+        },
+        {
+            "num":2,
+            "phone":1,
+            "add":"lala"
+            
+        },
+        {
+            "num":3,
+            "phone":1,
+            "add":"lala"
+            
+        },
+        {
+            "num":4,
+            "phone":1,
+            "add":"lala"
+            
+        },
+        {
+            "num":5,
+            "phone":1,
+            "add":"lala"
+            
+        }
+    ]
+}

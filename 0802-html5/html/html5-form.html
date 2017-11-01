@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+<!--        html5新增的form表单元素-->
+        
+<!--       datalist:在输入框里输入的时候可以自动匹配datalist中的value数据,需要搭配input的list属性使用. -->
+        输入内容:<input type="text" list="fruit">
+        <datalist id="fruit">
+            <option value="apple"></option>
+            <option value="orange"></option>
+            <option value="banana"></option>
+        </datalist>
+        <output></output>
+        
+<!--        input type属性新增的值-->
+<!--        表单提交的时候会通过name把表单的value值提交到 action指定的地址-->
+        <form action="http://192.168.1.1:8080/loan/apple">
+            姓名:<input type="text" name="username" value="嘿"><br/>
+            颜色:<input type="color" name="usercolor"><br/>
+            时间日期(年月日):<input type="date" name="userdate"><br/>
+            时间日期(年月日时分秒):<input type="datetime"><br/>
+            datetime-local:<input type="datetime-local"><br/>
+            年月:<input type="month" nama="usermonth"><br/>
+            邮箱:<input type="email" nama="useremail"><br/>
+            数字类型:<input type="number" name="username" min="10" max="16" step="2"><br/>
+            滑动条:<input type="range" name=""><br/>
+            搜索:<input type="search" name=""><br/>
+            时间:<input type="time" name=""><br/>
+            星期:<input type="week" name=""><br/>
+            网址:<input type="url" name=""><br/>
+            <input type="submit" value="提交">
+            
+        </form>
+    </body>
+</html>

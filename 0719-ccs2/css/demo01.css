@@ -1,0 +1,44 @@
+/*属性color  text-align:只对文本和行元素有用,对块元素没有用.*/
+.box{
+    color:rgb(35,102,236);
+    text-align:center;
+    width: 500px;
+    background-color:floralwhite;
+}
+
+.box p{
+    width: 300px;
+    background-color: azure;
+    text-decoration: underline;
+}
+/*text-decoration:none/underline/line-through/overline*/
+/*text-indent:文本缩进*/
+/*text-transform 文本转换,uppercase字母变大写,lowercase字母变小写,capitalize首字母变大写*/
+.box a{
+    text-decoration:overline;
+}
+.sakura{
+    text-indent: 40px;
+}
+.english{
+    text-transform:uppercase;
+    text-transform:lowercase;
+}
+/*字体属性*/
+/*font*/
+/*font-family*/
+/*font-size: 单位有像素,em,rem百分比*/
+body{
+    font-family:"Microsoft YaHei",Arial;
+    font-size:12px;
+}
+strong{
+    font-weight: normal;
+    font-style: italic;
+}
+/*font-style*/
+i{
+    font-style: normal;
+}
+/*font复合属性,顺序为:font-style font-weight(前两个可以不写) font-size/line-height font-family*/
+
