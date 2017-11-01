@@ -1,0 +1,472 @@
+<!doctype html>
+<!--  20 条new news写在json文件里,然后取前8条放在网站公告-->
+<html>
+    <head>
+<!--        响应式的响应头-->
+        <meta charset="utf-8">
+        <meta name="viewport" 
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta http-equiv="pragma" content="no-cache" />
+
+        <link rel="stylesheet" href="../css/base.css"/>
+        <link rel="stylesheet" href="../css/base-res.css" media="screen and (max-width:480px)"/>
+        
+    </head>
+    <body>
+        <div class="head">
+            <div class="main clear">
+                <div class="top-tel clear">
+                    <i></i>
+                    <p>400 888 8888<span>(9:00-18:00)</span></p>
+                </div>
+                <div class="top-icon">
+                    <i class="icon weibo">
+						<div class="qt weibo-qt">
+							<i class="qt-img"></i>
+							<p>连盈贷交流群</p>
+							<em class="sankaku"></em>
+						</div>
+					</i>
+                    <i class="icon weixin">
+						<div class="qt weibo-qt">
+							<i class="qt-img"></i>
+							<p>连盈贷交流群</p>
+							<em class="sankaku"></em>
+						</div>
+					</i>
+                    <i class="icon qq">
+						<div class="qt weibo-qt">
+							<i class="qt-img"></i>
+							<p>连盈贷交流群</p>
+							<em class="sankaku"></em>
+						</div>
+					</i>
+                    <span class="app"><i class="app-img"></i>手机APP</span>
+                </div>
+                <div class="top-spac"></div>
+                <div class="top-user clear">
+                    <span>你好,KyouSeki<em></em></span>
+                    <a href="register.html" class="log">注册</a>
+                    <span>退出</span>
+                </div>
+            </div>
+            <div class="head-box">
+                <div class="main clear">
+                    <a href="index.html" class="logo"></a>
+                    <div class="menu">
+                        <div class="menu-res" id="menuRes">
+                            <div id="listRes">
+                                <ul>
+                                    <li><a href="index.html">首页</a></li>
+                                    <li><a>投资理财</a></li>
+                                    <li><a>融资合作</a></li>
+                                    <li><a>安全保障</a></li>
+                                    <li><a>关于我们</a></li>
+                                    <li><a href="userCenter.html">个人中心</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="menu-box">
+                            <a href="index.html">首页</a>
+                        </div>
+                        <div class="menu-box">
+                            <a href="">投资理财</a>
+                            <ul>
+                                <li>投资计划</li>
+                                <li>投资项目列表</li>
+                            </ul>
+                        </div>
+                        <div class="menu-box">
+                            <a href="">融资合作</a>
+                            <ul>
+                                <li>投资计划</li>
+                                <li>投资计划</li>
+                            </ul>
+                        </div>
+                        <div class="menu-box">
+                            <a href="">安全保障</a>
+                            <ul>
+                                <li>投资计划</li>
+                                <li>投资计划</li>
+                            </ul>
+                        </div>
+                        <div class="menu-box">
+                            <a href="">关于我们</a>
+                            <ul>
+                                <li>投资计划投资计划</li>
+                                <li>投资计划</li>
+                            </ul>
+                        </div>
+                        <div class="menu-box-button clear">
+                            <a href="userCenter.html"><button type="button"><i></i>个人中心</button></a> 
+                        </div>
+                    </div>
+                </div>
+				<div class="banner-box">
+					<div class="left arr" id="prev">&larr;</div>
+					<div class="banner-list clear">
+						<div class="banner-f" id="0">
+							<img class="banner" src="../images/img-1.png" alt="1"/>
+						</div>
+						<div class="banner-f" id="1">
+							<img class="banner" src="../images/pic1.jpg" alt="2"/>
+						</div>
+						<div class="banner-f" id="2">
+							<img class="banner" src="../images/pic2.jpg" alt="3"/>
+						</div>
+						<div class="banner-f" id="3">
+							<img class="banner" src="../images/pic3.jpg" alt="4"/>
+						</div>
+						<div class="banner-f" id="4">
+							<img class="banner" src="../images/pic4.jpg" alt="5"/>
+						</div>
+						<div class="banner-f" id="5">
+							<img class="banner" src="../images/pic5.jpg" alt="6"/>
+						</div>
+						<!--<div class="banner-f" id="banner-f7">
+							<img class="banner" src="../images/img-1.png"/>
+						</div>-->
+					</div>
+					<div class="banner-border">
+						<a class="active"></a>
+						<a></a>
+						<a></a>
+						<a></a>
+						<a></a>
+						<a></a>
+					</div>
+					<div class="right arr" id="next">&rarr;</div>
+				</div>
+            </div>
+            <div class="head-ft">
+                <div class="head-list">
+                    <div class="main clear">
+                        <div class="head-list-left head-list-bd clear">
+                            <i></i>
+                            <span>最新公告</span>
+                        </div>
+						<div id="list_box">
+							<div class="head-list-center head-list-bd" id="news_box">
+								<div class="news-box">
+									<span class="border-left">韩寒会画画</span>
+									<span class="border-right">2017-07-24</span>
+								</div>
+								<div class="news-box">
+									<span class="border-left">后悔画韩红</span>
+									<span class="border-right">2017-07-25</span>
+								</div>
+								<div class="news-box">
+									<span class="border-left">韩寒和韩红嘿嘿</span>
+									<span class="border-right">2017-07-26</span>
+								</div>
+								<div class="news-box">
+									<span class="border-left">韩红喊韩寒坏坏</span>
+									<span class="border-right">2017-07-27</span>
+								</div>
+							</div>
+						</div>
+                        <div class="head-list-right">                            
+                            <button>查看更多</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main clear">
+                    <div class="box-img clear">
+                        <i></i>
+                        <div class="box-img-text">
+                            <h2>好收益</h2>
+                            <span>年华收益达15%，即活期存款的4242倍</span>
+                        </div>
+                    </div>
+                    <div class="box-img clear">
+                        <i class="box-img2"></i>
+                        <div class="box-img-text">
+                            <h2>风险备用金</h2>
+                            <span>平台设立风险备用金，确保本息安全</span>
+                        </div>
+                    </div>
+                    <div class="box-img clear">
+                        <i class="box-img3"></i>
+                        <div class="box-img-text">
+                            <h2>资金托管</h2>
+                            <span>用户资金有第三方平台托管</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="body clear">
+                <div class="body-img">
+                    <h1>融资宝</h1>
+                    <p>200%质押覆盖</p>
+                    <button>查看更多&nbsp;&nbsp;&nbsp;&gt;</button>
+                    <a>查看更多&nbsp;&nbsp;&nbsp;&gt;</a>
+                </div>
+                <div class="body-item">
+                    <div class="item-border">
+                        <h4>融资宝000001期</h4>
+                        <div class="maru-box">
+                            <div class="item-maru clear">
+                                <strong>45.8<i>%</i>
+                                    <p>年化收益</p>
+                                </strong>
+                            </div>
+                            <div class="past">24%</div>
+                        </div>
+                        <div class="item-text clear">
+                            <div class="item-text-box">
+                                <div class="item-text-left">
+                                    <h3>45</h3>
+                                    <span>理财期限(天)</span>
+                                </div>
+                            </div>
+                            <div class="item-text-box">
+                                <div class="item-text-right">
+                                    <h3>100</h3>
+                                    <span>项目总额(万元)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="item-btn">立即投资</button>
+                    </div>
+                </div>
+                <div class="body-item">
+                    <div class="item-border">
+                        <h4>融资宝000001期</h4>
+                        <div class="maru-box">
+                            <div class="item-maru clear">
+                                <strong>51.80<i>%</i>
+                                    <p>年化收益</p>
+                                </strong>
+                            </div>
+                            <div class="past">24%</div>
+                        </div>
+                        <div class="item-text clear">
+                            <div class="item-text-box">
+                                <div class="item-text-left">
+                                    <h3>45</h3>
+                                    <span>理财期限(天)</span>
+                                </div>
+                            </div>
+                            <div class="item-text-box">
+                                <div class="item-text-right">
+                                    <h3>1000</h3>
+                                    <span>项目总额(万元)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="item-btn">立即投资</button>
+                    </div>
+                </div>
+                <div class="body-item">
+                    <h4>融资宝000001期</h4>
+                    <div class="maru-box">
+                        <div class="item-maru clear">
+                            <strong>0<i>%</i>
+                                <p>年化收益</p>
+                            </strong>
+                        </div>
+                        <div class="past">24%</div>
+                    </div>
+                    <div class="item-text clear">
+                        <div class="item-text-box">
+                            <div class="item-text-left">
+                                <h3>45</h3>
+                                <span>理财期限(天)</span>
+                            </div>
+                        </div>
+                        <div class="item-text-box">
+                            <div class="item-text-right">
+                                <h3>1000</h3>
+                                <span>项目总额(万元)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="item-btn" disabled>已满额</button>
+                </div>
+            </div>
+            <div class="body body2 clear">
+                <div class="body-img body-img2">
+                    <h1>优选计划</h1>
+                    <p>优质债权包</p>
+                    <button>查看更多&nbsp;&nbsp;&nbsp;&gt;</button>
+                    <a>查看更多&nbsp;&nbsp;&nbsp;&gt;</a>
+                </div>
+                <div class="body-item">
+                    <div class="item-border border2">
+                        <h4>优选计划000001期</h4>
+                        <div class="maru-box">
+                            <div class="item-maru clear">
+                                <strong>8.80<i>%</i>
+                                    <p>年化收益</p>
+                                </strong>
+                            </div>
+                            <div class="past">24%</div>
+                        </div>
+                        <div class="item-text clear">
+                            <div class="item-text-box">
+                                <div class="item-text-left">
+                                    <h3>45</h3>
+                                    <span>理财期限(天)</span>
+                                </div>
+                            </div>
+                            <div class="item-text-box">
+                                <div class="item-text-right">
+                                    <h3>1000</h3>
+                                    <span>项目总额(万元)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="item-btn">立即投资</button>
+                    </div>
+                </div>
+                <div class="body-item">
+                    <div class="item-border border2">
+                        <h4>优选计划000001期</h4>
+                        <div class="maru-box">
+                            <div class="item-maru clear">
+                                <strong>8.80<i>%</i>
+                                    <p>年化收益</p>
+                                </strong>
+                            </div>
+                            <div class="past">24%</div>
+                        </div>
+                        <div class="item-text clear">
+                            <div class="item-text-box">
+                                <div class="item-text-left">
+                                    <h3>45</h3>
+                                    <span>理财期限(天)</span>
+                                </div>
+                            </div>
+                            <div class="item-text-box">
+                                <div class="item-text-right">
+                                    <h3>1000</h3>
+                                    <span>项目总额(万元)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="item-btn" disabled>已满额</button>
+                    </div>
+                </div>
+                <div class="body-item">
+                    <h4>优选计划000002期</h4>
+                    <div class="maru-box">
+                        <div class="item-maru clear">
+                            <strong>8.80<i>%</i>
+                                <p>年化收益</p>
+                            </strong>
+                        </div>
+                        <div class="past">24%</div>
+                    </div>
+                    <div class="item-text clear">
+                        <div class="item-text-box">
+                            <div class="item-text-left">
+                                <h3>45</h3>
+                                <span>理财期限(天)</span>
+                            </div>
+                        </div>
+                        <div class="item-text-box">
+                            <div class="item-text-right">
+                                <h3>1000</h3>
+                                <span>项目总额(万元)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="item-btn" disabled>已满额</button>
+                </div>
+            </div>
+            <div class="item clear">
+                <div class="item-left clear">
+                    <div class="item-left-top clear">
+                        <h5>网站公告</h5>
+                        <a>更多&nbsp;&gt;</a>
+                    </div>
+                    <div class="item-left-bottom">
+                        <ul id="news_list">
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-center clear">
+                    <div class="item-left-top clear">
+                        <h5>理财攻略</h5>
+                        <a>更多&nbsp;&gt;</a>
+                    </div>
+                    <div class="item-center-bd clear">
+                        <i></i>
+                        <h6>每月2000工资,你会怎么理财</h6>
+                        <p>从每月2000，到本金10万，再到本金100万，假如让你面对不同的理财人生，你会如何规划不同的生活？每周固定投......估计可达到10%。<a href="">【详情】</a></p>
+                    </div>
+                </div>
+                <div class="item-right">
+                    <h1>连盈贷APP</h1>
+                    <i></i>
+                    <p>扫我 为您提供更便捷的服务</p>
+                </div>
+            </div>
+            <div class="corporaton item-left-top clear">
+                <h5>合作机构</h5>
+                <i></i>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="foot-top">
+                <div class="main clear">
+                    <div class="foot-box-left clear">
+                        <ul>
+                            <li class="li-title">关于我们</li>
+                            <li>资质认证</li>
+                            <li>法律合规</li>
+                            <li>创始团队</li>
+                            <li>联系我们</li>
+                        </ul>
+                        <ul>
+                            <li class="li-title title-logo2">安全保障</li>
+                            <li>产品安全</li>
+                            <li>资金安全</li>
+                            <li>交易安全</li>
+                            <li>系统安全</li>
+                        </ul>
+                        <ul>
+                            <li class="li-title title-logo3">理财攻略</li>
+                            <li>媒体报道</li>
+                            <li>网站公告</li>
+                            <li>加入我们</li>
+                        </ul>
+                    </div>
+                    <div class="foot-box-center">
+                        <h6>关注我们</h6>
+                        <ul class="clear">
+                            <li><i></i><p>微信订阅号</p></li>
+                            <li class="li-center"><i></i><p>微信服务号</p></li>
+                            <li><i></i><p>APP下载</p></li>
+                        </ul>
+                    </div>
+                    <div class="foot-box-right">
+                        <ul>
+                            <li class="li-title">客服热线</li>
+                            <li><i></i><strong>4006 517 588</strong></li>
+                            <li class="li-center"><i class="right-icon2"></i><span>在线咨询&nbsp;&nbsp;09:00~18:30</span></li>
+                            <li><i class="right-icon3"></i><em>service@safetou.com</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <div class="main clear">
+                    <div class="foot-bottom-left">
+                        <p>友情链接： 网贷之家&nbsp;&nbsp;网贷中国&nbsp;&nbsp;网贷投行&nbsp;&nbsp;钜洲资产&nbsp;&nbsp;快钱支付&nbsp;&nbsp;财通资产</p>
+                        <p><span>京ICP备15008579号-1</span>&nbsp;北京市海淀区西三环72号世纪经贸大厦A座1006</p>
+                    </div>
+                    <div class="foot-bottom-right"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/common.js"></script>
+	<script language="javascript" type="text/javascript" src="../js/index.js"></script>
+</html>

@@ -1,0 +1,23 @@
+{
+	"userPassword":{
+		"isPassword":true,
+		"stress":"1"
+	},
+	"bindPhone":{
+		"isBind":true,
+		"phone":"18609860859"
+	},
+	"realName":false,
+	"tradePassword":{
+		"isPassword":true,
+		"stress":"2"
+	},
+	"bindCard":{
+		"isBind":true,
+		"cardNum":"5443333211212244964"
+	},
+	"bindEmail":{
+		"isBind":false,
+		"Email":"testarossa@vip.qq.com"
+	}
+}
