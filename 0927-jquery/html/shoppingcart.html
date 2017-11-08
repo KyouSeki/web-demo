@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 	<head>
+		<meta charset="UTF-8"/>
 		<style>
 			
 		</style>
@@ -9,8 +10,86 @@
 	<body>
 		<section class="content">
 			<form>
-				<div>
-					<div class="b-name"><input type="checkbox" id="all_check"><label>店铺:波波波波波</label></div>
+				<div class="shop-box">
+					<div class="b-name"><input type="checkbox" id="all_check" class="shop-check"><label>店铺:波波波波波</label></div>
+					<ul class="list">
+						<li class="clearfix">
+							<input type="checkbox" class="check">
+							<img src="../images/shop1.jpg">
+							<h6 class="title">欧莱雅火山泥洗面奶欧莱雅火山泥洗面奶欧莱雅火山泥洗面奶</h6>
+							<div class="size">
+								<p>规格:默认</p>
+								<p>尺寸:16*16*3(cm)</p>
+							</div>
+							<strong>￥<i class="money">38</i></strong>
+							<div class="num-box">
+								<a class="mainas">-</a>
+								<input class="shop-num" type=text value="1">
+								<a class="plus">+</a>
+							</div>
+							<strong>￥<i  class="moneys">38</i></strong>
+							<p class="delete">移除商品</p>
+						</li>
+						<li class="clearfix">
+							<input type="checkbox" class="check">
+							<img src="../images/shop2.jpg">
+							<h6 class="title">响水乡水箱水</h6>
+							<div class="size">
+								<p>规格:默认</p>
+								<p>尺寸:23*23*3(cm)</p>
+							</div>
+							<strong>￥<i class="money">198</i></strong>
+							<div class="num-box">
+								<a class="mainas">-</a>
+								<input class="shop-num" type=text value="1">
+								<a class="plus">+</a>
+							</div>
+							<strong>￥<i  class="moneys">198</i></strong>
+							<p class="delete">移除商品</p>
+						</li>
+					</ul>
+				</div>
+				<div class="shop-box">
+					<div class="b-name"><input type="checkbox" class="shop-check"><label>店铺:呵呵呵</label></div>
+					<ul class="list">
+						<li class="clearfix">
+							<input type="checkbox" class="check">
+							<img src="../images/shop1.jpg">
+							<h6 class="title">欧莱雅火山泥洗面奶欧莱雅火山泥洗面奶欧莱雅火山泥洗面奶</h6>
+							<div class="size">
+								<p>规格:默认</p>
+								<p>尺寸:16*16*3(cm)</p>
+							</div>
+							<strong>￥<i class="money">38</i></strong>
+							<div class="num-box">
+								<a class="mainas">-</a>
+								<input class="shop-num" type=text value="1">
+								<a class="plus">+</a>
+							</div>
+							<strong>￥<i  class="moneys">38</i></strong>
+							<p class="delete">移除商品</p>
+						</li>
+						<li class="clearfix">
+							<input type="checkbox" class="check">
+							<img src="../images/shop2.jpg">
+							<h6 class="title">响水乡水箱水</h6>
+							<div class="size">
+								<p>规格:默认</p>
+								<p>尺寸:23*23*3(cm)</p>
+							</div>
+							<strong>￥<i class="money">198</i></strong>
+							<div class="num-box">
+								<a class="mainas">-</a>
+								<input class="shop-num" type=text value="1">
+								<a class="plus">+</a>
+							</div>
+							<strong>￥<i  class="moneys">198</i></strong>
+							<p class="delete">移除商品</p>
+						</li>
+					</ul>
+				</div>
+				<div class="shop-box">
+					<div class="b-name"><input type="checkbox" class="shop-check"><label>店铺:啧啧啧</label></div>
 					<ul class="list">
 						<li class="clearfix">
 							<input type="checkbox" class="check">
@@ -59,20 +138,15 @@
 		</section>
 		<script src="../js/jquery.js"></script>
 		<script>
-			$("#all_check").click(function(){
-				var allMoney = 0;
-				var allNum =0;
-				if($("#all_check").prop("checked")){
-					$(".check").prop("checked",true);
-					$(".check:checked").each(function(num,val){
-						allMoney += parseInt($(this).siblings("strong").find(".moneys").text());
-						allNum += parseInt($(this).siblings(".num-box").find(".shop-num").val());
-					})
+			//购物车
+			//店铺全选
+			$(".shop-check").click(function(){
+				if($(this).prop("checked")){
+                    $(this).parents(".shop-box").find(".check").prop("checked",true);
 				}else{
-					$(".check").prop("checked",false);
+                    $(this).parents(".shop-box").find(".check").prop("checked",false);
 				}
-				$("#money").text(allMoney);
-				$("#num").text(allNum);
+                moneyChange()
 			})
 			$(".mainas").click(function(){
 				var i = $(this).siblings(".shop-num").val();
@@ -80,46 +154,37 @@
 					$(this).siblings(".shop-num").prop("value",--i);
 					var money = $(this).parent().siblings().children(".money").html();
 					$(this).parent().siblings().children(".moneys").text(i*money);
-					if($(this).parent().siblings(".check").prop("checked")){
-						var allMoney = 0;
-						var allNum =0;
-						$(".check:checked").each(function(num,val){
-							allMoney += parseInt($(this).siblings("strong").find(".moneys").text());
-							allNum += parseInt($(this).siblings(".num-box").find(".shop-num").val());
-						})	
-						$("#money").text(allMoney);
-						$("#num").text(allNum);
-					}
 				}else{
 					i=1;
 				}
+                moneyChange()
 			})
 			$(".plus").click(function(){
 				var n = $(this).siblings(".shop-num").val();
 				$(this).siblings(".shop-num").prop("value",++n);
 				var money = $(this).parent().siblings().children(".money").html();	
 				$(this).parent().siblings().children(".moneys").text(n*money);
-				if($(this).parent().siblings(".check").prop("checked")){
-					var allMoney = 0;
-					var allNum =0;
-					$(".check:checked").each(function(num,val){
-						allMoney += parseInt($(this).siblings("strong").find(".moneys").text());
-						allNum += parseInt($(this).siblings(".num-box").find(".shop-num").val());
-					})	
-					$("#money").text(allMoney);
-					$("#num").text(allNum);
-				}
+				moneyChange()
 			})
 			$(".check").click(function(){
-				var allMoney = 0;
-				var allNum =0;
-				$(".check:checked").each(function(num,val){
-					allMoney += parseInt($(this).siblings("strong").find(".moneys").text());
-					allNum += parseInt($(this).siblings(".num-box").find(".shop-num").val());
-				})
-				$("#money").text(allMoney);
-				$("#num").text(allNum);
+                if($(this).parents(".list").find(".check:checked").length==$(this).parents(".list").find(".check").length){
+                    $(this).parents(".shop-box").find(".shop-check").prop("checked",true);
+                }else{
+                    $(this).parents(".shop-box").find(".shop-check").prop("checked",false);
+                }
+                moneyChange()
 			});
+				//价格变化共通方法
+            function moneyChange(){
+                var allMoney = 0;
+                var allNum =0;
+                $(".check:checked").each(function(num,val){
+                    allMoney += parseInt($(this).siblings("strong").find(".moneys").text());
+                    allNum += parseInt($(this).siblings(".num-box").find(".shop-num").val());
+                })
+                $("#money").text(allMoney);
+                $("#num").text(allNum);
+            }
 			//trim() 去除字符串首尾的空格
 		</script>
 	</body>
